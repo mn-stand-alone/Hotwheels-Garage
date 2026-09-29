@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>犇犇的车库 · 车库图鉴</title>
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .g-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 22px; }
+  .g-head h1 { font-family: var(--title-font); font-weight: 400; font-size: clamp(38px, 5vw, 60px); margin: 0; line-height: 1; transform: skewX(-8deg); color: var(--hw-yellow); text-shadow: 0 4px 0 #6b0e0a; }
+  .g-sum { min-width: min(420px, 100%); flex: 1; max-width: 520px; }
+  .g-sum .row { display: flex; justify-content: space-between; margin-bottom: 8px; color: var(--muted); }
+  .g-sum .row b { color: var(--text); font-size: 20px; }
+  .filters { position: sticky; top: 64px; z-index: 20; display: flex; gap: 10px; flex-wrap: wrap; padding: 12px; margin: 0 -12px 24px; border-radius: 14px; background: rgba(22, 22, 28, .92); backdrop-filter: blur(8px); border: 1px solid var(--line); }
+  .filters input, .filters select { background: var(--asphalt-3); color: var(--text); border: 1px solid var(--line); border-radius: 10px; padding: 9px 12px; font: inherit; font-size: 14px; }
+  .filters input { flex: 1; min-width: 180px; }
+  .filters input:focus, .filters select:focus { outline: 2px solid var(--hw-orange); }
+  .batch { margin-bottom: 40px; }
+  .batch-head { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+  .badge { font-family: var(--title-font); font-size: 26px; padding: 2px 14px; border-radius: 8px; background: var(--hw-red); color: #fff; transform: skewX(-10deg); box-shadow: 4px 4px 0 #000; }
+  .batch-head .count { color: var(--muted); }
+  .batch-head .count b { color: var(--hw-yellow); }
+  .batch-head .mini { flex: 1; max-width: 240px; height: 8px; }
+  .batch-head .done { color: var(--hw-yellow); font-weight: 800; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; }
+  .slot { position: relative; aspect-ratio: 1; border-radius: 12px; overflow: hidden; cursor: pointer; background: #fff; transition: transform .2s, box-shadow .2s; }
+  .slot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .slot.own { box-shadow: 0 0 0 3px var(--rc), 0 8px 20px rgba(0,0,0,.4); }
+  .slot.own.r-epic, .slot.own.r-legend { box-shadow: 0 0 0 3px var(--rc), 0 0 22px var(--rc); }
+  .slot.own:hover { transform: translateY(-4px) scale(1.03); }
+  .slot.own .rt { position: absolute; left: 6px; top: 6px; }
+  .slot.lock { background: #2a2a33; box-shadow: 0 0 0 1px var(--line); }
+  .slot.lock .card-back .q { width: 38%; font-size: 26px; box-shadow: 0 0 0 4px #111, 0 0 0 6px #555; background: radial-gradient(circle at 35% 30%, #777, #444); color: #1a1a1a; }
+  .slot.lock .card-back .stripe { background: linear-gradient(90deg, #444, #333); }
+  .slot.lock .lb { position: absolute; right: 6px; bottom: 6px; font-size: 11px; color: #888; font-weight: 800; }
+  .slot.lock:hover .card-back .q { background: radial-gradient(circle at 35% 30%, #fff3a8, var(--hw-yellow) 45%, var(--hw-orange)); box-shadow: 0 0 0 4px #111, 0 0 0 6px var(--hw-red); }
+  .slot .nm { position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 8px 6px; font-size: 12px; color: #fff; background: linear-gradient(transparent, rgba(0,0,0,.8)); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; opacity: 0; transition: .2s; }
+  .slot.own:hover .nm { opacity: 1; }
+  .slot.flash { animation: flashSlot 1.4s ease-in-out 3; }
+  @keyframes flashSlot { 50% { box-shadow: 0 0 0 5px var(--hw-yellow), 0 0 40px var(--hw-yellow); } }
+  .empty { text-align: center; color: var(--muted); padding: 60px 0; }
+  @media (max-width: 640px) { .grid { grid-template-columns: repeat(3, 1fr); gap: 8px; } .filters { top: 96px; } }
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a class="logo" href="index.html">犇犇的车库</a>
+  <div class="nav-links"><a href="home.html">首页</a><a href="draw.html">抽卡</a><a href="garage.html" class="active">车库图鉴</a></div>
+  <div class="nav-stat">今日剩余 <b data-remain>0</b> 次</div>
+</nav>
+
+<main class="wrap">
+  <div class="g-head">
+    <h1>车库图鉴</h1>
+    <div class="g-sum">
+      <div class="row"><span>收集进度</span><span><b data-owned>0</b> / <span data-total>0</span></span></div>
+      <div class="progress"><i id="bar"></i></div>
+    </div>
+  </div>
+
+  <div class="filters">
+    <input id="q" type="search" placeholder="搜索车名 / 编号 / 系列 / 厂商…">
+    <select id="fBatch"><option value="">全部批次</option></select>
+    <select id="fSeries"><option value="">全部系列</option></select>
+    <select id="fRarity"><option value="">全部稀有度</option></select>
+    <select id="fOwn">
+      <option value="">全部</option>
+      <option value="own">已入库</option>
+      <option value="lock">未入库</option>
+    </select>
+  </div>
+
+  <div id="list"></div>
+</main>
+
+<script src="js/data.js"></script>
+<script src="js/store.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/garage.js"></script>
+</body>
+</html>

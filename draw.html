@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>犇犇的车库 · 抽卡</title>
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/draw.css">
+</head>
+<body>
+<nav class="nav">
+  <a class="logo" href="index.html">犇犇的车库</a>
+  <div class="nav-links"><a href="home.html">首页</a><a href="draw.html" class="active">抽卡</a><a href="garage.html">车库图鉴</a></div>
+  <div class="nav-stat">收藏 <b data-owned>0</b> / <span data-total>0</span></div>
+</nav>
+
+<main class="draw-page">
+  <canvas id="fx"></canvas>
+
+  <header class="draw-head">
+    <div class="fuel">
+      <span class="fuel-label">今日油量</span>
+      <div class="fuel-cells" id="fuel"></div>
+      <span class="fuel-num"><b data-remain>0</b> / 10</span>
+    </div>
+    <div class="cycle" id="cycle"></div>
+  </header>
+
+  <section class="stage" id="stage">
+    <div class="beams"></div>
+    <div class="bay">
+      <div class="bay-frame"></div>
+      <div class="bay-inside">
+        <div class="glow"></div>
+        <div class="flip" id="flip">
+          <div class="face back"><div class="card-back"><span class="stripe"></span><span class="q">?</span></div></div>
+          <div class="face front"><img id="frontImg" alt=""></div>
+        </div>
+        <div class="bay-door"><span class="tire"></span><span class="door-text">PULL TO DRAW</span></div>
+      </div>
+    </div>
+    <div class="result" id="result">
+      <span class="tag" id="rTag"></span>
+      <h2 id="rName"></h2>
+      <p id="rMeta"></p>
+    </div>
+  </section>
+
+  <section class="multi" id="multi" hidden>
+    <h2 class="multi-title">本次入库 <b id="multiCount"></b> 辆</h2>
+    <div class="multi-grid" id="multiGrid"></div>
+  </section>
+
+  <div class="controls" id="controls">
+    <button class="btn" id="drawOne"><span>🔥 抽一次</span></button>
+    <button class="btn yellow" id="drawAll"><span>⚡ 连抽 <b id="allN">10</b> 次</span></button>
+    <button class="btn ghost" id="again" hidden><span>收进车库，继续</span></button>
+    <a class="btn ghost" id="toGarage" href="garage.html" hidden><span>🏁 去车库看看</span></a>
+  </div>
+  <p class="hint" id="hint"></p>
+</main>
+
+<script src="js/data.js"></script>
+<script src="js/store.js"></script>
+<script src="js/fx.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/draw.js"></script>
+</body>
+</html>

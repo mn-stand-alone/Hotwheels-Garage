@@ -1,0 +1,116 @@
+.draw-page { position: relative; min-height: calc(100vh - 64px); padding: 24px 16px 60px; text-align: center; overflow: hidden; }
+#fx { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 60; }
+
+.draw-head { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 18px; }
+.cycle { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 16px; font-size: 13px; color: var(--muted); }
+.cycle b { color: var(--text); }
+.cycle-label b { color: var(--hw-yellow); }
+.cycle-tier .tag { font-style: normal; font-size: 11px; padding: 1px 6px; margin-right: 4px; }
+.fuel { display: inline-flex; align-items: center; gap: 14px; padding: 10px 20px; border-radius: 999px; background: var(--asphalt-2); border: 1px solid var(--line); }
+.fuel-label { color: var(--muted); font-size: 14px; }
+.fuel-cells { display: flex; gap: 5px; }
+.fuel-cells i { width: 16px; height: 22px; border-radius: 4px; background: var(--asphalt-3); transform: skewX(-12deg); transition: .3s; }
+.fuel-cells i.on { background: linear-gradient(180deg, var(--hw-yellow), var(--hw-orange)); box-shadow: 0 0 10px rgba(255, 106, 0, .6); }
+.fuel-num { font-size: 14px; color: var(--muted); }
+.fuel-num b { color: var(--hw-yellow); font-size: 20px; }
+
+/* ---------- 抽卡舞台 ---------- */
+.stage { --rc: var(--hw-orange); position: relative; width: min(420px, 86vw); margin: 0 auto; }
+.stage.hide { display: none; }
+.beams {
+  position: absolute; left: 50%; top: 45%; width: 220%; aspect-ratio: 1; transform: translate(-50%, -50%) scale(.3);
+  background: repeating-conic-gradient(from 0deg, color-mix(in srgb, var(--rc) 55%, transparent) 0 8deg, transparent 8deg 24deg);
+  -webkit-mask: radial-gradient(circle, #000 10%, transparent 62%); mask: radial-gradient(circle, #000 10%, transparent 62%);
+  opacity: 0; transition: opacity .6s, transform .8s; pointer-events: none;
+}
+.stage.open .beams { opacity: .5; transform: translate(-50%, -50%) scale(1); animation: spin 14s linear infinite; }
+.stage.open.r-epic .beams, .stage.open.r-legend .beams { opacity: .9; animation-duration: 5s; }
+@keyframes spin { to { transform: translate(-50%, -50%) scale(1) rotate(360deg); } }
+
+.bay { position: relative; aspect-ratio: 1; }
+.bay-frame { position: absolute; inset: -14px -14px -8px; border-radius: 18px 18px 6px 6px; background: linear-gradient(180deg, #2b2b33, #141418); box-shadow: inset 0 0 0 2px #3a3a45, 0 30px 70px rgba(0,0,0,.7); }
+.bay-frame::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 14px; border-radius: 18px 18px 0 0; background: repeating-linear-gradient(-45deg, #111 0 14px, var(--hw-yellow) 14px 28px); }
+.bay-inside { position: absolute; inset: 0; overflow: hidden; border-radius: 6px; perspective: 1200px; background: radial-gradient(circle at 50% 40%, #2a2a32, #0c0c10 75%); }
+.glow { position: absolute; inset: 0; opacity: 0; transition: opacity .5s; background: radial-gradient(circle at 50% 55%, var(--rc), transparent 65%); }
+.stage.charging .glow { opacity: .35; }
+.stage.open .glow { opacity: .9; }
+
+.bay-door {
+  position: absolute; inset: 0; z-index: 5; transform-origin: 50% 0;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.08), transparent 45%, rgba(0,0,0,.4)),
+    repeating-linear-gradient(180deg, #4a4a55 0 26px, #2b2b33 26px 29px, #1b1b21 29px 32px);
+  transition: transform 1s cubic-bezier(.7, 0, .3, 1);
+  display: grid; place-items: center; align-content: center; gap: 18px;
+}
+.bay-door::after { /* 门缝漏光 */
+  content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 6px;
+  background: var(--rc); box-shadow: 0 0 20px 6px var(--rc); opacity: 0; transition: opacity .3s;
+}
+.stage.charging .bay-door::after { opacity: 1; animation: leak .25s ease-in-out infinite alternate; }
+@keyframes leak { to { box-shadow: 0 0 40px 14px var(--rc); } }
+.stage.charging .bay-door { animation: rattle .12s linear infinite; }
+@keyframes rattle { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+.stage.open .bay-door { transform: translateY(-100%) scaleY(.1); animation: none; }
+.tire {
+  width: 96px; height: 96px; border-radius: 50%;
+  background: radial-gradient(circle, #ddd 0 18%, #777 19% 30%, #222 31% 58%, #111 59%);
+  box-shadow: 0 0 0 6px #0a0a0a, inset 0 0 0 10px #1a1a1a;
+  position: relative;
+}
+.tire::before { content: ""; position: absolute; inset: 22%; border-radius: 50%; background: repeating-conic-gradient(#bbb 0 20deg, #555 20deg 72deg); -webkit-mask: radial-gradient(circle, transparent 30%, #000 31%); mask: radial-gradient(circle, transparent 30%, #000 31%); }
+.stage.charging .tire { animation: wheel .25s linear infinite; }
+@keyframes wheel { to { transform: rotate(360deg); } }
+.door-text { font-weight: 900; letter-spacing: .4em; color: rgba(255,255,255,.3); font-size: 14px; }
+
+.flip {
+  position: absolute; left: 7%; top: 7%; width: 86%; height: 86%; z-index: 3;
+  transform-style: preserve-3d;
+  transform: translateY(110%) scale(.6);
+  transition: transform .9s cubic-bezier(.2, 1.2, .3, 1);
+}
+.stage.open .flip { transform: translateY(0) scale(1); }
+.stage.flipped .flip { transform: translateY(0) scale(1) rotateY(180deg); transition: transform .8s cubic-bezier(.4, 1.6, .5, 1); }
+.face { position: absolute; inset: 0; border-radius: 14px; overflow: hidden; backface-visibility: hidden; -webkit-backface-visibility: hidden; box-shadow: 0 0 0 4px var(--rc), 0 0 40px var(--rc); }
+.face.back { background: #2a2a33; }
+.face.front { transform: rotateY(180deg); background: #fff; }
+.face.front img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.face.front::after { /* 闪卡反光 */
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(115deg, transparent 30%, rgba(255,255,255,.7) 45%, transparent 60%);
+  background-size: 250% 100%; background-position: 150% 0;
+}
+.stage.flipped .face.front::after { animation: shine 1.2s .5s ease-out; }
+.stage.flipped.r-legend .face.front::after, .stage.flipped.r-epic .face.front::after {
+  background: linear-gradient(115deg, transparent 25%, rgba(255,0,128,.3) 38%, rgba(255,230,0,.45) 45%, rgba(0,255,200,.3) 52%, transparent 65%);
+  background-size: 250% 100%; animation: shine 2.4s .5s ease-in-out infinite;
+}
+@keyframes shine { from { background-position: 150% 0; } to { background-position: -50% 0; } }
+
+.result { margin-top: 26px; min-height: 110px; opacity: 0; transform: translateY(20px); transition: .5s cubic-bezier(.2, 1.2, .4, 1); }
+.stage.flipped .result { opacity: 1; transform: none; transition-delay: .6s; }
+.result h2 { margin: 10px 0 6px; font-size: clamp(22px, 3vw, 30px); }
+.result p { margin: 0; color: var(--muted); }
+.result .tag { font-size: 14px; padding: 4px 14px; }
+.stage.r-legend .result .tag { animation: legendTag 1s ease-in-out infinite alternate; }
+@keyframes legendTag { to { box-shadow: 0 0 20px var(--r-legend); } }
+
+.controls { position: relative; z-index: 2; display: flex; justify-content: center; gap: 22px; flex-wrap: wrap; margin-top: 18px; }
+.hint { color: var(--muted); margin-top: 18px; min-height: 1.5em; }
+.hint b { color: var(--hw-yellow); font-variant-numeric: tabular-nums; }
+
+/* ---------- 连抽结果 ---------- */
+.multi { max-width: 1100px; margin: 0 auto; }
+.multi-title { margin: 0 0 20px; }
+.multi-title b { color: var(--hw-yellow); }
+.multi-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; perspective: 1200px; }
+.mcard { position: relative; cursor: pointer; }
+.mcard .inner { position: relative; aspect-ratio: 1; transform-style: preserve-3d; transition: transform .7s cubic-bezier(.4, 1.6, .5, 1); transform: translateY(60px) scale(.5); opacity: 0; }
+.mcard.in .inner { transform: none; opacity: 1; transition: transform .5s cubic-bezier(.2, 1.3, .4, 1), opacity .3s; }
+.mcard.flipped .inner { transform: rotateY(180deg); }
+.mcard .face { border-radius: 12px; box-shadow: 0 0 0 3px var(--rc), 0 10px 24px rgba(0,0,0,.5); }
+.mcard.flipped.r-epic .face, .mcard.flipped.r-legend .face { box-shadow: 0 0 0 3px var(--rc), 0 0 30px var(--rc); }
+.mcard .cap { margin-top: 8px; font-size: 13px; opacity: 0; transition: opacity .4s .3s; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mcard.flipped .cap { opacity: 1; }
+.mcard .cap .tag { font-size: 11px; padding: 1px 6px; margin-right: 4px; }
+@media (max-width: 760px) { .multi-grid { grid-template-columns: repeat(2, 1fr); } }

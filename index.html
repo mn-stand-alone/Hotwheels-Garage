@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>犇犇的车库</title>
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/intro.css">
+</head>
+<body class="intro-page">
+<div class="intro" id="intro">
+  <div class="bg"></div>
+
+  <div class="garage">
+    <div class="garage-frame"></div>
+    <div class="garage-inside">
+      <div class="floaters" id="floaters"></div>
+      <div class="door"><span class="handle"></span></div>
+    </div>
+  </div>
+
+  <div class="track"></div>
+  <div class="lights"><i></i><i></i></div>
+
+  <div class="car" id="car">
+    <div class="speed"></div>
+    <svg viewBox="0 0 320 110" aria-hidden="true">
+      <defs>
+        <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#ff5a4f"/><stop offset=".5" stop-color="#e5202b"/><stop offset="1" stop-color="#7a0a05"/>
+        </linearGradient>
+        <linearGradient id="flame" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#ffc619"/><stop offset="1" stop-color="#ff6a00"/>
+        </linearGradient>
+        <radialGradient id="rim"><stop offset="0" stop-color="#eee"/><stop offset=".6" stop-color="#888"/><stop offset="1" stop-color="#222"/></radialGradient>
+      </defs>
+      <path d="M8 74 Q6 58 34 54 L96 48 Q126 22 172 20 L214 21 Q240 26 262 46 L300 53 Q316 57 314 72 L306 80 L14 80 Z" fill="url(#body)"/>
+      <path d="M112 47 Q134 28 170 26 L180 26 L184 47 Z" fill="#1a2a3a"/>
+      <path d="M192 26 L212 27 Q232 32 248 46 L196 47 Z" fill="#1a2a3a"/>
+      <path d="M30 66 Q70 58 120 60 Q100 64 150 62 Q120 70 170 66 Q130 76 60 74 Z" fill="url(#flame)"/>
+      <path d="M296 58 l14 3 l-2 6 l-14 -2 Z" fill="#fff6c0"/>
+      <rect x="6" y="60" width="10" height="6" rx="2" fill="#ff2a2a"/>
+      <circle cx="76" cy="80" r="22" fill="#111"/><circle cx="76" cy="80" r="12" fill="url(#rim)"/>
+      <circle cx="248" cy="80" r="22" fill="#111"/><circle cx="248" cy="80" r="12" fill="url(#rim)"/>
+    </svg>
+  </div>
+
+  <canvas id="fx"></canvas>
+  <div class="flash"></div>
+
+  <div class="title-block">
+    <h1 class="title" id="title"></h1>
+    <p class="sub" id="sub"></p>
+  </div>
+
+  <div class="enter">
+    <button class="btn" id="enterBtn"><span>🔥 启动引擎，进入车库</span></button>
+    <div class="stats">
+      <span>今日剩余抽卡<b id="stRemain">10</b>次</span>
+      <span>车库收藏<b id="stOwned">0</b>/ <span id="stTotal">0</span></span>
+    </div>
+  </div>
+
+  <div class="corner">
+    <button class="skip" id="skipBtn">跳过 ›</button>
+    <button class="replay" id="replayBtn">↻ 重播</button>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/store.js"></script>
+<script src="js/fx.js"></script>
+<script src="js/intro.js"></script>
+</body>
+</html>

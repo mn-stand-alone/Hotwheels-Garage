@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>犇犇的车库 · 首页</title>
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .hero { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; padding: 30px 0 40px; }
+  .hero h1 { font-family: var(--title-font); font-weight: 400; font-size: clamp(56px, 8vw, 110px); margin: 0; line-height: 1; transform: skewX(-8deg);
+    background: linear-gradient(180deg, #fff 0%, #fff3a6 22%, #ffc619 42%, #ff7a00 62%, #e5202b 85%); -webkit-background-clip: text; background-clip: text; color: transparent;
+    filter: drop-shadow(0 5px 0 #3a0603) drop-shadow(0 0 30px rgba(255,106,0,.35)); }
+  .hero p { color: var(--muted); font-size: 17px; line-height: 1.8; margin: 18px 0 28px; }
+  .hero .actions { display: flex; gap: 22px; flex-wrap: wrap; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 34px; }
+  .stat { background: var(--asphalt-2); border: 1px solid var(--line); border-radius: 16px; padding: 18px; }
+  .stat b { display: block; font-size: 34px; color: var(--hw-yellow); font-family: var(--title-font); font-weight: 400; }
+  .stat span { color: var(--muted); font-size: 13px; }
+  .showcase { position: relative; height: 420px; }
+  .showcase .c { position: absolute; left: 50%; top: 50%; width: 230px; aspect-ratio: 1; border-radius: 16px; overflow: hidden; background: #fff;
+    box-shadow: 0 20px 50px rgba(0,0,0,.6); border: 3px solid var(--rc, #333); transition: transform .5s cubic-bezier(.2,1.2,.4,1); }
+  .showcase .c img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .showcase:hover .c:nth-child(1) { transform: translate(-120%, -55%) rotate(-14deg); }
+  .showcase:hover .c:nth-child(3) { transform: translate(20%, -45%) rotate(14deg); }
+  .panel { background: var(--asphalt-2); border: 1px solid var(--line); border-radius: 20px; padding: 24px; margin-top: 24px; }
+  .panel h3 { margin: 0 0 14px; }
+  .rar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .rar div { padding: 14px; border-radius: 12px; background: var(--asphalt-3); border-top: 4px solid var(--rc); }
+  .rar b { color: var(--rc); }
+  .rar small { display: block; color: var(--muted); margin-top: 4px; }
+  .recent { display: flex; gap: 12px; overflow-x: auto; padding-bottom: 6px; }
+  .recent a { flex: 0 0 120px; border-radius: 10px; overflow: hidden; border: 2px solid var(--rc); background: #fff; }
+  .recent img { width: 100%; display: block; }
+  .tools { display: flex; gap: 10px; flex-wrap: wrap; }
+  .tools button { background: var(--asphalt-3); color: var(--text); border: 1px solid var(--line); padding: 10px 16px; border-radius: 10px; cursor: pointer; }
+  .tools button:hover { border-color: var(--hw-orange); }
+  @media (max-width: 860px) { .hero { grid-template-columns: 1fr; } .showcase { height: 300px; } .rar { grid-template-columns: repeat(2, 1fr); } }
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a class="logo" href="index.html">犇犇的车库</a>
+  <div class="nav-links"><a href="home.html" class="active">首页</a><a href="draw.html">抽卡</a><a href="garage.html">车库图鉴</a></div>
+  <div class="nav-stat">今日剩余 <b data-remain>0</b> 次</div>
+</nav>
+
+<main class="wrap">
+  <section class="hero">
+    <div>
+      <h1>犇犇的车库</h1>
+      <p>欢迎回来，车主！每天有 <b style="color:var(--hw-yellow)">10</b> 次抽卡机会，把风火轮小车一辆辆开进车库。<br>抽到过的车不会重复出现，集齐全部车型吧！</p>
+      <div class="actions">
+        <a class="btn" href="draw.html"><span>🔥 去抽卡</span></a>
+        <a class="btn yellow" href="garage.html"><span>🏁 逛逛车库</span></a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b data-remain>0</b><span>今日剩余次数</span></div>
+        <div class="stat"><b id="owned">0</b><span>已收藏小车</span></div>
+        <div class="stat"><b id="pct">0%</b><span>收集进度</span></div>
+      </div>
+      <div class="progress" style="margin-top:16px"><i id="bar"></i></div>
+    </div>
+    <div class="showcase" id="showcase"></div>
+  </section>
+
+  <section class="panel">
+    <h3>🏎️ 最近入库</h3>
+    <div class="recent" id="recent"></div>
+  </section>
+
+  <section class="panel">
+    <h3>✨ 稀有度与概率</h3>
+    <div class="rar" id="rar"></div>
+  </section>
+
+  <section class="panel">
+    <h3>💾 进度备份</h3>
+    <p style="color:var(--muted);margin-top:0">抽卡记录保存在这台电脑的浏览器里。换浏览器或清理数据前，记得先导出备份。</p>
+    <div class="tools">
+      <button id="exportBtn">导出进度</button>
+      <button id="importBtn">导入进度</button>
+      <input type="file" id="importFile" accept=".json" hidden>
+    </div>
+  </section>
+</main>
+
+<script src="js/data.js"></script>
+<script src="js/store.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>
