@@ -67,6 +67,7 @@
 
   // 小车冲刺：rAF 控制位置并在尾部喷火
   function runCar(duration) {
+    window.GameAudio?.sfx('intro');
     const start = performance.now();
     const vw = window.innerWidth;
     const carW = car.offsetWidth;

@@ -1,0 +1,18 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>加长赛道验收</title>
+<link rel="stylesheet" href="../css/battle.css"><style>body{margin:20px;background:#101b29;color:#eef5ff;font:16px system-ui}button,select{padding:9px;margin:6px}#view{height:580px;position:relative;overflow:hidden}input{width:35%}#status{white-space:pre-line}</style>
+<h1>加长赛道验收 · 不消耗比赛次数</h1>
+<label>赛道<select id="track"><option value="sprint">滨海天际线 · 2900m</option><option value="fork">恐龙丛林 · 2500m</option><option value="loop">海上巨环 · 2600m</option></select></label>
+<label>视角<select id="camera"><option value="chase">赛车追身</option><option value="overview">路线全景</option></select></label><button id="play">自动行驶</button><label>位置<input id="position" type="range" min="0" max="2900" value="0" step="1"></label><div id="view"></div><pre id="status"></pre>
+<script src="../js/data.js"></script><script src="../js/battle-data.js?v=ai9-20261026"></script><script src="../js/battle-tracks.js?v=tracks-20261026"></script>
+<script src="../js/battle-ai.js?v=ai9-20261026"></script><script src="../js/battle-engine.js?v=ai9-20261026"></script>
+<script type="module">
+import {BattleScene} from '../js/battle-scene.js?v=tracks-20261026';
+const $=id=>document.getElementById(id),scene=new BattleScene($('view'),()=>{},()=>{});scene.quality(true);
+let race,playing=false,last=0;
+function build(){const track=$('track').value;race={track,tick:0,cars:[BattleData.trial,...BattleData.opponents(track)].map((profile,i)=>({profile,s:i*7,prevS:i*7,lane:[-3.5,0,3.5][i],prevLane:[-3.5,0,3.5][i],boost:0,hitUntil:0,speed:50}))};scene.build(track,race.cars.map(c=>c.profile));$('position').max=BattleTracks.tracks[track].length;$('position').value=0;scene.lastCamera=null;}
+$('track').onchange=build;$('play').onclick=()=>{playing=!playing;$('play').textContent=playing?'暂停行驶':'自动行驶';};$('position').oninput=()=>scene.lastCamera=null;build();
+function render(now){const dt=Math.min(.1,(now-(last||now))/1000);last=now;let s=+$('position').value;if(playing){s=(s+dt*50)%BattleTracks.tracks[race.track].length;$('position').value=s;}race.tick++;race.cars.forEach((c,i)=>c.s=c.prevS=Math.min(BattleTracks.tracks[race.track].length,s+i*7));scene.render(race,1,false);
+if($('camera').value==='overview'){const length=BattleTracks.tracks[race.track].length,mid=BattleTracks.frame(race.track,length/2);scene.camera.position.set(mid.x+length*.42,length*.65,mid.z-length*.4);scene.camera.up.set(0,1,0);scene.camera.lookAt(mid.x,20,mid.z);scene.renderer.render(scene.scene,scene.camera);scene.lastCamera=null;}
+$('status').textContent=`${BattleTracks.tracks[race.track].name} · ${s.toFixed(0)} / ${BattleTracks.tracks[race.track].length} 米\n${BattleTracks.zone(race.track,s).name} · 路宽 12 米${race.track==='loop'?' · 双回环入口与出口错位超过 30 米':''}`;
+requestAnimationFrame(render);}requestAnimationFrame(render);
+</script></html>

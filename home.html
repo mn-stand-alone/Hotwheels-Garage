@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>犇犇的车库 · 首页</title>
 <link rel="stylesheet" href="fonts/fonts.css">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css?v=audio-20261023">
+<link rel="stylesheet" href="css/battle.css?v=audio-20261023">
 <style>
   .hero { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; padding: 30px 0 40px; }
   .hero h1 { font-family: var(--title-font); font-weight: 400; font-size: clamp(56px, 8vw, 110px); margin: 0; line-height: 1; transform: skewX(-8deg);
@@ -37,11 +38,13 @@
   .tools button:hover { border-color: var(--hw-orange); }
   @media (max-width: 860px) { .hero { grid-template-columns: 1fr; } .showcase { height: 300px; } .rar { grid-template-columns: repeat(2, 1fr); } }
 </style>
+<link rel="stylesheet" href="css/audio.css?v=audio-20261023">
+<script src="js/audio.js?v=playlist-20261026" defer></script>
 </head>
 <body>
 <nav class="nav">
   <a class="logo" href="index.html">犇犇的车库</a>
-  <div class="nav-links"><a href="home.html" class="active">首页</a><a href="draw.html">抽卡</a><a href="garage.html">车库图鉴</a></div>
+  <div class="nav-links"><a href="home.html" class="active">首页</a><a href="draw.html">抽卡</a><a href="garage.html">车库图鉴</a><a href="battle.html">对战赛场</a></div>
   <div class="nav-stat">今日剩余 <b data-remain>0</b> 次</div>
 </nav>
 
@@ -64,6 +67,8 @@
     <div class="showcase" id="showcase"></div>
   </section>
 
+  <section class="battle-summary"><div><h3>🏁 对战赛场 · 让收藏跑起来</h3><p id="battleSummary">三车自动竞速，只需把握氮气时机。</p></div><a href="battle.html">进入 3D 赛场 →</a></section>
+
   <section class="panel">
     <h3>🏎️ 最近入库</h3>
     <div class="recent" id="recent"></div>
@@ -85,8 +90,13 @@
   </section>
 </main>
 
-<script src="js/data.js"></script>
-<script src="js/store.js"></script>
-<script src="js/home.js"></script>
+<script src="js/data.js?v=audio-20261023"></script>
+<script src="js/store.js?v=audio-20261023"></script>
+<script src="js/battle-data.js?v=audio-20261023"></script>
+<script src="js/battle-tracks.js?v=audio-20261023"></script>
+<script src="js/battle-ai.js?v=audio-20261023"></script>
+<script src="js/battle-engine.js?v=audio-20261023"></script>
+<script src="js/battle-store.js?v=audio-20261023"></script>
+<script src="js/home.js?v=audio-20261023"></script>
 </body>
 </html>

@@ -1,0 +1,17 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>车库声音试听</title>
+<link rel="stylesheet" href="../css/audio.css"><script src="../js/audio.js?v=playlist-20261026" defer></script>
+<style>body{margin:40px;background:#111923;color:#ecf2fb;font:16px/1.7 system-ui}main{max-width:900px}h1{color:#ffd36a}button,select{padding:12px;margin:6px;border:1px solid #64718a;border-radius:9px;background:#263249;color:white;cursor:pointer}section{padding:18px;background:#192332;border-radius:16px;margin:20px 0}pre{white-space:pre-wrap;color:#a9d7df}label{display:inline-block;margin:10px}</style>
+<main><h1>犇犇的车库 · 场景歌单试听</h1><p>使用本地歌单切分的五段背景音乐。点击按钮启用声音；此页面不会消耗抽卡或比赛次数。</p>
+<section><h2>背景音乐</h2><button data-mode="home">大厅 · 律动启程</button><button data-mode="garage">车库 · 悠闲巡游</button><button data-mode="race">滨海天际线 · 海岸节拍</button><button data-mode="race-fork">恐龙丛林 · 强劲脉冲</button><button data-mode="race-loop">海上巨环 · 高空疾驰</button></section>
+<section id="effects"><h2>游戏音效</h2></section>
+<section><h2>引擎</h2><button id="engine">启动引擎</button><button id="stop">停止引擎</button><label>速度 <input id="speed" type="range" min="0" max="100" value="35"> m/s</label><pre id="diagnostics"></pre></section></main>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+const effects={intro:'开场驶过',click:'按钮',select:'切换选车',detail:'查看车卡',charge:'抽卡蓄能',reveal:'揭晓车卡',countdown:'倒计时',go:'发车',nitro:'氮气喷射',ready:'氮气恢复',collision:'碰撞',finish:'完赛',win:'冠军'};
+for(const [key,label] of Object.entries(effects)){const button=document.createElement('button');button.textContent=label;button.onclick=async()=>{await GameAudio.unlock();GameAudio.sfx(key,'legend');};document.getElementById('effects').append(button);}
+document.querySelectorAll('[data-mode]').forEach(button=>button.onclick=async()=>{await GameAudio.unlock();GameAudio.setMode(button.dataset.mode);});
+let active=false;document.getElementById('engine').onclick=async()=>{await GameAudio.unlock();active=true;};document.getElementById('stop').onclick=()=>{active=false;GameAudio.drive();};
+document.addEventListener('visibilitychange',()=>{if(document.hidden)active=false;});
+setInterval(()=>{GameAudio.drive(+document.getElementById('speed').value,false,active);document.getElementById('diagnostics').textContent=JSON.stringify(GameAudio.status(),null,2);},100);
+});
+</script></html>

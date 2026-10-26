@@ -27,9 +27,10 @@
   }
 
   let memory = null; // localStorage 不可用时的兜底
+  let persistent = true;
   function load() {
     let s = null;
-    try { s = JSON.parse(localStorage.getItem(KEY)); } catch (e) { s = memory; }
+    try { s = persistent ? JSON.parse(localStorage.getItem(KEY)) : memory; } catch (e) { persistent = false; s = memory; }
     s = s && typeof s === 'object' ? s : {};
     s.owned = s.owned || {};
     s.daily = s.daily || { date: today(), used: 0 };
@@ -38,7 +39,7 @@
   }
   function save(s) {
     memory = s;
-    try { localStorage.setItem(KEY, JSON.stringify(s)); } catch (e) { /* 忽略 */ }
+    try { localStorage.setItem(KEY, JSON.stringify(s)); } catch (e) { persistent = false; }
   }
 
   const cards = window.CARDS || [];
@@ -49,6 +50,9 @@
     RARITY,
     cards,
     byId,
+    today,
+    persistent: () => persistent,
+    update(fn) { const s = load(); const result = fn(s); save(s); return result; },
     state: () => load(),
     isOwned: (id) => !!load().owned[id],
     ownedCount: () => Object.keys(load().owned).filter((id) => byId[id]).length,
@@ -101,7 +105,12 @@
     exportJSON: () => JSON.stringify(load(), null, 2),
     importJSON(text) {
       const s = JSON.parse(text);
-      if (!s || typeof s.owned !== 'object') throw new Error('格式不正确');
+      const object = v => v && typeof v === 'object' && !Array.isArray(v);
+      if (!object(s) || !object(s.owned) || Object.values(s.owned).some(v => !Number.isFinite(v) || v <= 0)) throw new Error('收藏记录格式不正确');
+      if (s.daily && (!object(s.daily) || !/^\d{4}-\d{2}-\d{2}$/.test(s.daily.date) || !Number.isInteger(s.daily.used) || s.daily.used < 0 || s.daily.used > DAILY_LIMIT)) throw new Error('每日抽卡数据不正确');
+      if (s.cycle && (!object(s.cycle) || !Array.isArray(s.cycle.seq) || s.cycle.seq.length !== CYCLE || s.cycle.seq.some(r => !TIERS.includes(r)) || !Number.isInteger(s.cycle.pos) || s.cycle.pos < 0 || s.cycle.pos > CYCLE)) throw new Error('抽卡轮次格式不正确');
+      if (load().battle?.active && window.BattleStore && BattleStore.valid(load().battle)) throw new Error('请先完成或放弃当前比赛，再导入进度');
+      if (s.battle && (!window.BattleStore || !BattleStore.valid(s.battle))) throw new Error('对战存档格式不正确');
       save(s);
     },
   };

@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>犇犇的车库 · 车库图鉴</title>
 <link rel="stylesheet" href="fonts/fonts.css">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css?v=audio-20261023">
+<link rel="stylesheet" href="css/battle.css?v=audio-20261023">
 <style>
   .g-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 22px; }
   .g-head h1 { font-family: var(--title-font); font-weight: 400; font-size: clamp(38px, 5vw, 60px); margin: 0; line-height: 1; transform: skewX(-8deg); color: var(--hw-yellow); text-shadow: 0 4px 0 #6b0e0a; }
@@ -42,11 +43,13 @@
   .empty { text-align: center; color: var(--muted); padding: 60px 0; }
   @media (max-width: 640px) { .grid { grid-template-columns: repeat(3, 1fr); gap: 8px; } .filters { top: 96px; } }
 </style>
+<link rel="stylesheet" href="css/audio.css?v=audio-20261023">
+<script src="js/audio.js?v=playlist-20261026" defer></script>
 </head>
 <body>
 <nav class="nav">
   <a class="logo" href="index.html">犇犇的车库</a>
-  <div class="nav-links"><a href="home.html">首页</a><a href="draw.html">抽卡</a><a href="garage.html" class="active">车库图鉴</a></div>
+  <div class="nav-links"><a href="home.html">首页</a><a href="draw.html">抽卡</a><a href="garage.html" class="active">车库图鉴</a><a href="battle.html">对战赛场</a></div>
   <div class="nav-stat">今日剩余 <b data-remain>0</b> 次</div>
 </nav>
 
@@ -74,9 +77,14 @@
   <div id="list"></div>
 </main>
 
-<script src="js/data.js"></script>
-<script src="js/store.js"></script>
-<script src="js/ui.js"></script>
-<script src="js/garage.js"></script>
+<script src="js/data.js?v=audio-20261023"></script>
+<script src="js/store.js?v=audio-20261023"></script>
+<script src="js/battle-data.js?v=audio-20261023"></script>
+<script src="js/battle-tracks.js?v=audio-20261023"></script>
+<script src="js/battle-ai.js?v=audio-20261023"></script>
+<script src="js/battle-engine.js?v=audio-20261023"></script>
+<script src="js/battle-store.js?v=audio-20261023"></script>
+<script src="js/ui.js?v=audio-20261023"></script>
+<script src="js/garage.js?v=audio-20261023"></script>
 </body>
 </html>

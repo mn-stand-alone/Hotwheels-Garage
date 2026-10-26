@@ -1,0 +1,8732 @@
+{
+  "rulesVersion": 2,
+  "total": 694,
+  "reviewed": 72,
+  "byType": {
+    "speed": 90,
+    "launch": 42,
+    "handling": 45,
+    "balanced": 446,
+    "impact": 71
+  },
+  "byBody": {
+    "sedan": 88,
+    "convertible": 18,
+    "sport": 100,
+    "offroad": 28,
+    "pickup": 43,
+    "hatch": 21,
+    "muscle": 38,
+    "concept": 358
+  },
+  "pending": [
+    {
+      "id": "f1325114fd",
+      "name": "Vespa 90 SS Super Sprint (1966)",
+      "batch": "24D",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        71,
+        73,
+        68,
+        69
+      ]
+    },
+    {
+      "id": "d5ad9adbdc",
+      "name": "Ice Charger",
+      "batch": "24D",
+      "assigned": "launch",
+      "shape": "muscle",
+      "stats": [
+        91,
+        86,
+        46,
+        65,
+        62
+      ]
+    },
+    {
+      "id": "89ff04624f",
+      "name": "Piranha Terror",
+      "batch": "24D",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        71,
+        70,
+        67
+      ]
+    },
+    {
+      "id": "e5cbdbb236",
+      "name": "Grass Chomper",
+      "batch": "24D",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        82,
+        69,
+        68,
+        59
+      ]
+    },
+    {
+      "id": "69af06cb68",
+      "name": "Boom Car",
+      "batch": "24D",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        78,
+        70,
+        60
+      ]
+    },
+    {
+      "id": "2aac073ddd",
+      "name": "Brickin' Delivery",
+      "batch": "24D",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        62,
+        71,
+        70,
+        64
+      ]
+    },
+    {
+      "id": "cf19e381ea",
+      "name": "Surf Duty",
+      "batch": "24D",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        71,
+        80,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "a2bb7d5bea",
+      "name": "'15 Jaguar F-Type Project 7",
+      "batch": "24D",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        87,
+        78,
+        72,
+        58,
+        55
+      ]
+    },
+    {
+      "id": "91b2fc13d1",
+      "name": "Batmobile",
+      "batch": "24D",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        71,
+        70,
+        64
+      ]
+    },
+    {
+      "id": "7dda12b39b",
+      "name": "Custom Otto",
+      "batch": "24D",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        67,
+        70,
+        60
+      ]
+    },
+    {
+      "id": "bc3f8c0863",
+      "name": "Runway Res-Q",
+      "batch": "24D",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        71,
+        73,
+        68,
+        66
+      ]
+    },
+    {
+      "id": "1b0a791a2e",
+      "name": "'70 Plymouth Barracuda",
+      "batch": "24D",
+      "assigned": "launch",
+      "shape": "muscle",
+      "stats": [
+        88,
+        86,
+        46,
+        65,
+        65
+      ]
+    },
+    {
+      "id": "230f68fbdd",
+      "name": "Brick and Motor",
+      "batch": "24D",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        73,
+        71,
+        59,
+        64
+      ]
+    },
+    {
+      "id": "a202bbd264",
+      "name": "Punk Rod",
+      "batch": "24D",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        67,
+        70,
+        60
+      ]
+    },
+    {
+      "id": "d8da394c17",
+      "name": "Lolux",
+      "batch": "24D",
+      "assigned": "impact",
+      "shape": "pickup",
+      "stats": [
+        66,
+        51,
+        54,
+        94,
+        85
+      ]
+    },
+    {
+      "id": "f82e6ab1a4",
+      "name": "Drift'n Break",
+      "batch": "24D",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        80,
+        73,
+        70,
+        77,
+        50
+      ]
+    },
+    {
+      "id": "b441f2f27a",
+      "name": "Terra-Tracktyl",
+      "batch": "24D",
+      "assigned": "impact",
+      "shape": "pickup",
+      "stats": [
+        69,
+        42,
+        70,
+        85,
+        84
+      ]
+    },
+    {
+      "id": "9b9844b25c",
+      "name": "'71 El Camino",
+      "batch": "24D",
+      "assigned": "impact",
+      "shape": "pickup",
+      "stats": [
+        66,
+        53,
+        59,
+        85,
+        87
+      ]
+    },
+    {
+      "id": "f1ac748390",
+      "name": "'87 Audi quattro",
+      "batch": "25A",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        66,
+        73,
+        70,
+        77,
+        64
+      ]
+    },
+    {
+      "id": "d845fa95dc",
+      "name": "Morgan Super 3",
+      "batch": "25A",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        69,
+        68,
+        59
+      ]
+    },
+    {
+      "id": "45408652c0",
+      "name": "Custom Cadillac Fleetwood",
+      "batch": "25A",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        69,
+        73,
+        66,
+        77,
+        65
+      ]
+    },
+    {
+      "id": "e9a2e0ef43",
+      "name": "Purple Passion",
+      "batch": "25A",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        71,
+        70,
+        56
+      ]
+    },
+    {
+      "id": "1f2a2ddc7a",
+      "name": "Nerve Hammer",
+      "batch": "25A",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        98,
+        78,
+        72,
+        58,
+        44
+      ]
+    },
+    {
+      "id": "583b7e5630",
+      "name": "Kowloon'd Hypervan",
+      "batch": "25A",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        71,
+        70,
+        56
+      ]
+    },
+    {
+      "id": "7dea3445e1",
+      "name": "Monster High Ghoul Mobile",
+      "batch": "25A",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        62,
+        78,
+        70,
+        57
+      ]
+    },
+    {
+      "id": "57d4ce8fc1",
+      "name": "Custom '53 Chevy",
+      "batch": "25A",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        69,
+        73,
+        77,
+        66,
+        65
+      ]
+    },
+    {
+      "id": "67f1b949fb",
+      "name": "Mazda Autozam",
+      "batch": "25A",
+      "assigned": "impact",
+      "shape": "offroad",
+      "stats": [
+        55,
+        65,
+        58,
+        81,
+        91
+      ]
+    },
+    {
+      "id": "43dc2b375c",
+      "name": "Draftnator",
+      "batch": "25A",
+      "assigned": "impact",
+      "shape": "pickup",
+      "stats": [
+        58,
+        53,
+        63,
+        85,
+        91
+      ]
+    },
+    {
+      "id": "7b3532faa2",
+      "name": "Fiat 500e",
+      "batch": "25B",
+      "assigned": "handling",
+      "shape": "hatch",
+      "stats": [
+        58,
+        78,
+        91,
+        71,
+        52
+      ]
+    },
+    {
+      "id": "0ca9f84f4d",
+      "name": "'22 Ford Maverick Custom",
+      "batch": "25B",
+      "assigned": "impact",
+      "shape": "pickup",
+      "stats": [
+        55,
+        53,
+        70,
+        85,
+        87
+      ]
+    },
+    {
+      "id": "93646aa3e9",
+      "name": "'55 Chevy",
+      "batch": "25B",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        69,
+        71,
+        68,
+        75,
+        67
+      ]
+    },
+    {
+      "id": "1cc3823739",
+      "name": "Mazda REPU",
+      "batch": "25B",
+      "assigned": "impact",
+      "shape": "pickup",
+      "stats": [
+        62,
+        53,
+        63,
+        85,
+        87
+      ]
+    },
+    {
+      "id": "97122826af",
+      "name": "'80 El Camino",
+      "batch": "25B",
+      "assigned": "impact",
+      "shape": "pickup",
+      "stats": [
+        55,
+        53,
+        70,
+        74,
+        98
+      ]
+    },
+    {
+      "id": "d8d942f60c",
+      "name": "DMC DeLorean",
+      "batch": "25B",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        73,
+        68,
+        58
+      ]
+    },
+    {
+      "id": "2b7f16a197",
+      "name": "X-34 Landspeeder",
+      "batch": "25B",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        71,
+        70,
+        64
+      ]
+    },
+    {
+      "id": "48662068f6",
+      "name": "'66 Buick Riviera",
+      "batch": "25B",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        66,
+        73,
+        70,
+        77,
+        64
+      ]
+    },
+    {
+      "id": "dd7055f00b",
+      "name": "The Vanster",
+      "batch": "25B",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        71,
+        73,
+        68,
+        66
+      ]
+    },
+    {
+      "id": "0ba889acb6",
+      "name": "Lamborghini Huracán Sterrato",
+      "batch": "25B",
+      "assigned": "impact",
+      "shape": "offroad",
+      "stats": [
+        66,
+        54,
+        58,
+        92,
+        80
+      ]
+    },
+    {
+      "id": "3337cbd363",
+      "name": "'94 Audi Avant RS2",
+      "batch": "25B",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        66,
+        71,
+        68,
+        75,
+        70
+      ]
+    },
+    {
+      "id": "79448d1d23",
+      "name": "Crescendo",
+      "batch": "25B",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        95,
+        78,
+        72,
+        58,
+        47
+      ]
+    },
+    {
+      "id": "baeeca8368",
+      "name": "Twin Mill Gen-E",
+      "batch": "25B",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        69,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "1b1964b4a6",
+      "name": "Hirohata Merc",
+      "batch": "25B",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        69,
+        73,
+        70,
+        77,
+        61
+      ]
+    },
+    {
+      "id": "6fcb519ddd",
+      "name": "El Viento",
+      "batch": "25C",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        69,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "d7aff894ef",
+      "name": "2020 Ford Mustang Shelby GT500",
+      "batch": "25C",
+      "assigned": "launch",
+      "shape": "muscle",
+      "stats": [
+        88,
+        75,
+        57,
+        65,
+        65
+      ]
+    },
+    {
+      "id": "b48b8e660e",
+      "name": "Street Shrieker",
+      "batch": "25C",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        69,
+        68,
+        59
+      ]
+    },
+    {
+      "id": "43414adb00",
+      "name": "Punk Rod",
+      "batch": "25C",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        67,
+        70,
+        60
+      ]
+    },
+    {
+      "id": "bf69e72332",
+      "name": "Maserati Shamal",
+      "batch": "25C",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        84,
+        89,
+        72,
+        58,
+        47
+      ]
+    },
+    {
+      "id": "6e75d4ba0e",
+      "name": "Mercedes-Benz 500 E",
+      "batch": "25C",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        80,
+        71,
+        72,
+        75,
+        52
+      ]
+    },
+    {
+      "id": "55c91823ba",
+      "name": "Cupra e-Racer",
+      "batch": "25C",
+      "assigned": "handling",
+      "shape": "hatch",
+      "stats": [
+        58,
+        89,
+        80,
+        71,
+        52
+      ]
+    },
+    {
+      "id": "a36cd77e05",
+      "name": "Batman: Arkham Asylum Batmobile",
+      "batch": "25C",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        71,
+        70,
+        64
+      ]
+    },
+    {
+      "id": "f2be6f513f",
+      "name": "Monteracer",
+      "batch": "25C",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        91,
+        78,
+        72,
+        58,
+        51
+      ]
+    },
+    {
+      "id": "e2164f8ae7",
+      "name": "Jaguar Mk1",
+      "batch": "25C",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        66,
+        73,
+        77,
+        77,
+        57
+      ]
+    },
+    {
+      "id": "e7f34596db",
+      "name": "'69 Corvette Racer",
+      "batch": "25C",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        98,
+        80,
+        70,
+        60,
+        42
+      ]
+    },
+    {
+      "id": "bbee0f49b0",
+      "name": "Hi-Roller II",
+      "batch": "25C",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        73,
+        68,
+        58
+      ]
+    },
+    {
+      "id": "51e97dac19",
+      "name": "Mailed It!",
+      "batch": "25C",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        71,
+        80,
+        68,
+        59
+      ]
+    },
+    {
+      "id": "fd19dd6885",
+      "name": "'70 Chevy Camaro RS",
+      "batch": "25C",
+      "assigned": "launch",
+      "shape": "muscle",
+      "stats": [
+        77,
+        86,
+        57,
+        65,
+        65
+      ]
+    },
+    {
+      "id": "add97b2823",
+      "name": "HW50 Concept",
+      "batch": "25C",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        71,
+        73,
+        68,
+        66
+      ]
+    },
+    {
+      "id": "df2d1a6eb7",
+      "name": "'70 Plymouth Superbird",
+      "batch": "25D",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        71,
+        73,
+        68,
+        69
+      ]
+    },
+    {
+      "id": "029da42aaf",
+      "name": "'76 Chevy Chevette",
+      "batch": "25D",
+      "assigned": "handling",
+      "shape": "hatch",
+      "stats": [
+        66,
+        69,
+        89,
+        73,
+        53
+      ]
+    },
+    {
+      "id": "a0a57335af",
+      "name": "Hako Type D",
+      "batch": "25D",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        77,
+        73,
+        66,
+        77,
+        57
+      ]
+    },
+    {
+      "id": "7abe8c07ff",
+      "name": "Cruise Bruiser",
+      "batch": "25D",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        66,
+        73,
+        70,
+        77,
+        64
+      ]
+    },
+    {
+      "id": "109a7f4322",
+      "name": "Tesla Cyberquad",
+      "batch": "25D",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        71,
+        70,
+        56
+      ]
+    },
+    {
+      "id": "bfd9b87194",
+      "name": "Later Crater",
+      "batch": "25D",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        67,
+        70,
+        60
+      ]
+    },
+    {
+      "id": "504bbe734d",
+      "name": "Porsche 904 Carrera GTS",
+      "batch": "25D",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        87,
+        80,
+        74,
+        60,
+        49
+      ]
+    },
+    {
+      "id": "82116fd1cb",
+      "name": "Cadillac Project GTP Hypercar",
+      "batch": "25D",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        87,
+        80,
+        74,
+        60,
+        49
+      ]
+    },
+    {
+      "id": "fd59e1fba2",
+      "name": "'71 Lamborghini Miura SV",
+      "batch": "25D",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        87,
+        78,
+        72,
+        58,
+        55
+      ]
+    },
+    {
+      "id": "e273b3788f",
+      "name": "Dune It Up",
+      "batch": "25D",
+      "assigned": "impact",
+      "shape": "offroad",
+      "stats": [
+        55,
+        54,
+        69,
+        81,
+        91
+      ]
+    },
+    {
+      "id": "44736aadd1",
+      "name": "Mid Mill",
+      "batch": "25D",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        73,
+        68,
+        58
+      ]
+    },
+    {
+      "id": "2e25eec9cb",
+      "name": "Silverado EV RST",
+      "batch": "25D",
+      "assigned": "impact",
+      "shape": "pickup",
+      "stats": [
+        58,
+        53,
+        59,
+        85,
+        95
+      ]
+    },
+    {
+      "id": "60e94a00c4",
+      "name": "'99 Ford F-150 SVT Lightning",
+      "batch": "25D",
+      "assigned": "impact",
+      "shape": "pickup",
+      "stats": [
+        55,
+        62,
+        54,
+        83,
+        96
+      ]
+    },
+    {
+      "id": "a2f93b18dd",
+      "name": "'74 Brazilian Dodge Charger",
+      "batch": "25D",
+      "assigned": "launch",
+      "shape": "muscle",
+      "stats": [
+        77,
+        86,
+        57,
+        65,
+        65
+      ]
+    },
+    {
+      "id": "764b9295da",
+      "name": "Gordon Murray Automotive T.33",
+      "batch": "25D",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        95,
+        78,
+        72,
+        58,
+        47
+      ]
+    },
+    {
+      "id": "58d209a43b",
+      "name": "Chevy Blazer 4×4",
+      "batch": "25D",
+      "assigned": "impact",
+      "shape": "offroad",
+      "stats": [
+        63,
+        54,
+        58,
+        92,
+        83
+      ]
+    },
+    {
+      "id": "b4efdb0faf",
+      "name": "K.I.T.T.",
+      "batch": "25D",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        69,
+        68,
+        59
+      ]
+    },
+    {
+      "id": "5362914457",
+      "name": "Ain't Fare",
+      "batch": "25D",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        67,
+        70,
+        68
+      ]
+    },
+    {
+      "id": "a5e4552836",
+      "name": "1975 Datsun Sunny Truck (B120)",
+      "batch": "25D",
+      "assigned": "impact",
+      "shape": "pickup",
+      "stats": [
+        66,
+        53,
+        63,
+        85,
+        83
+      ]
+    },
+    {
+      "id": "cd0ba82496",
+      "name": "Power Rocket",
+      "batch": "25E",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        76,
+        73,
+        71,
+        66,
+        64
+      ]
+    },
+    {
+      "id": "ccdcf371bb",
+      "name": "Ford Escort",
+      "batch": "25E",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        69,
+        73,
+        66,
+        77,
+        65
+      ]
+    },
+    {
+      "id": "4bdc9bc54b",
+      "name": "TV Series Batmobile",
+      "batch": "25E",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        73,
+        68,
+        58
+      ]
+    },
+    {
+      "id": "4480b7978b",
+      "name": "Mazda Autozam",
+      "batch": "25E",
+      "assigned": "impact",
+      "shape": "offroad",
+      "stats": [
+        55,
+        65,
+        58,
+        81,
+        91
+      ]
+    },
+    {
+      "id": "963e9d1023",
+      "name": "Slide-Burn",
+      "batch": "25E",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        69,
+        73,
+        66,
+        77,
+        65
+      ]
+    },
+    {
+      "id": "deba1c8f52",
+      "name": "Range Rover Velar",
+      "batch": "25E",
+      "assigned": "impact",
+      "shape": "offroad",
+      "stats": [
+        55,
+        56,
+        67,
+        83,
+        89
+      ]
+    },
+    {
+      "id": "1eb0d2aa0f",
+      "name": "'67 Ford Mustang Coupe",
+      "batch": "25E",
+      "assigned": "launch",
+      "shape": "muscle",
+      "stats": [
+        80,
+        84,
+        55,
+        74,
+        57
+      ]
+    },
+    {
+      "id": "03d67642e9",
+      "name": "Slide Kick",
+      "batch": "25E",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        73,
+        67,
+        70,
+        57
+      ]
+    },
+    {
+      "id": "221000306f",
+      "name": "RD-06",
+      "batch": "25E",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        67,
+        70,
+        71
+      ]
+    },
+    {
+      "id": "e3c8cf845d",
+      "name": "Long Bloc",
+      "batch": "25E",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        62,
+        68,
+        66
+      ]
+    },
+    {
+      "id": "e4ee5c2399",
+      "name": "Chevy Super Volt",
+      "batch": "25E",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        69,
+        73,
+        70,
+        77,
+        61
+      ]
+    },
+    {
+      "id": "5931fbca38",
+      "name": "Aston Martin DB4GT High-Speed Edition",
+      "batch": "25E",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        87,
+        80,
+        70,
+        60,
+        53
+      ]
+    },
+    {
+      "id": "54b2ed9fb1",
+      "name": "Drift-Ender",
+      "batch": "25E",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        69,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "2ff5945722",
+      "name": "Flippin Fast",
+      "batch": "25E",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        62,
+        79,
+        55
+      ]
+    },
+    {
+      "id": "defe725c8d",
+      "name": "Williams Racing",
+      "batch": "25E",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        71,
+        69,
+        79,
+        59
+      ]
+    },
+    {
+      "id": "967d927490",
+      "name": "'21 Ford Bronco",
+      "batch": "25E",
+      "assigned": "impact",
+      "shape": "offroad",
+      "stats": [
+        55,
+        54,
+        65,
+        81,
+        95
+      ]
+    },
+    {
+      "id": "daf129e1a2",
+      "name": "2018 Honda Civic Type R",
+      "batch": "25E",
+      "assigned": "handling",
+      "shape": "hatch",
+      "stats": [
+        58,
+        80,
+        85,
+        73,
+        54
+      ]
+    },
+    {
+      "id": "924581aa4e",
+      "name": "'91 GMC Syclone",
+      "batch": "25E",
+      "assigned": "impact",
+      "shape": "pickup",
+      "stats": [
+        58,
+        53,
+        70,
+        74,
+        95
+      ]
+    },
+    {
+      "id": "1ccf0712ec",
+      "name": "'58 Chevy Impala",
+      "batch": "25E",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        77,
+        62,
+        70,
+        77,
+        64
+      ]
+    },
+    {
+      "id": "7b98d37c58",
+      "name": "Futurismo",
+      "batch": "25E",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        82,
+        69,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "fa3a31f284",
+      "name": "Max Steel",
+      "batch": "25E",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        71,
+        70,
+        64
+      ]
+    },
+    {
+      "id": "9feceb7d66",
+      "name": "Salt Shaker",
+      "batch": "25F",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        69,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "62728925b6",
+      "name": "Alpha Pursuit",
+      "batch": "25F",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        71,
+        73,
+        68,
+        66
+      ]
+    },
+    {
+      "id": "8d23a446ba",
+      "name": "'92 Ford Mustang",
+      "batch": "25F",
+      "assigned": "launch",
+      "shape": "muscle",
+      "stats": [
+        88,
+        84,
+        59,
+        63,
+        56
+      ]
+    },
+    {
+      "id": "cce3e7c902",
+      "name": "Rodger Dodger 2.0",
+      "batch": "25F",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        71,
+        69,
+        68,
+        70
+      ]
+    },
+    {
+      "id": "59b46a6c4d",
+      "name": "'71 Dodge Challenger",
+      "batch": "25F",
+      "assigned": "launch",
+      "shape": "muscle",
+      "stats": [
+        88,
+        86,
+        57,
+        54,
+        65
+      ]
+    },
+    {
+      "id": "e51b5737f2",
+      "name": "Custom '53 Cadillac",
+      "batch": "25F",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        77,
+        73,
+        70,
+        66,
+        64
+      ]
+    },
+    {
+      "id": "4bfc9ca589",
+      "name": "'68 Dodge Dart",
+      "batch": "25F",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        76,
+        73,
+        67,
+        70,
+        64
+      ]
+    },
+    {
+      "id": "deccf792dd",
+      "name": "Optimus Prime",
+      "batch": "25F",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        69,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "21a87124ba",
+      "name": "Hoto Roto",
+      "batch": "25F",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        73,
+        68,
+        58
+      ]
+    },
+    {
+      "id": "241d984d41",
+      "name": "Custom Kia EV6",
+      "batch": "25F",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        73,
+        71,
+        59,
+        64
+      ]
+    },
+    {
+      "id": "3a990bbf42",
+      "name": "'68 Corvette - Gas Monkey Garage",
+      "batch": "25F",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        95,
+        80,
+        70,
+        60,
+        45
+      ]
+    },
+    {
+      "id": "88585f820f",
+      "name": "'85 Honda City Turbo II",
+      "batch": "25F",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        67,
+        70,
+        68
+      ]
+    },
+    {
+      "id": "0572170503",
+      "name": "Morgan Super 3",
+      "batch": "25F",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        69,
+        68,
+        59
+      ]
+    },
+    {
+      "id": "d08e62756a",
+      "name": "Rapid Pulse",
+      "batch": "25F",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        67,
+        70,
+        68
+      ]
+    },
+    {
+      "id": "fe6f633c01",
+      "name": "'94 Audi Avant RS2",
+      "batch": "25F",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        66,
+        71,
+        68,
+        75,
+        70
+      ]
+    },
+    {
+      "id": "52d5dcd78c",
+      "name": "Monster Dairy Delivery",
+      "batch": "25F",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        62,
+        71,
+        70,
+        67
+      ]
+    },
+    {
+      "id": "68971f46d3",
+      "name": "Bogzilla",
+      "batch": "25F",
+      "assigned": "impact",
+      "shape": "offroad",
+      "stats": [
+        52,
+        54,
+        69,
+        81,
+        94
+      ]
+    },
+    {
+      "id": "0acc2abf7e",
+      "name": "Deora III",
+      "batch": "25F",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        69,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "3ca6f0a033",
+      "name": "Purple Passion",
+      "batch": "25G",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        71,
+        70,
+        56
+      ]
+    },
+    {
+      "id": "e78a713976",
+      "name": "'67 Shelby GT500",
+      "batch": "25G",
+      "assigned": "launch",
+      "shape": "muscle",
+      "stats": [
+        88,
+        75,
+        57,
+        65,
+        65
+      ]
+    },
+    {
+      "id": "2e73af86f9",
+      "name": "Amaru GTC",
+      "batch": "25G",
+      "assigned": "impact",
+      "shape": "offroad",
+      "stats": [
+        55,
+        54,
+        65,
+        81,
+        95
+      ]
+    },
+    {
+      "id": "c56530d9ae",
+      "name": "Batmobile",
+      "batch": "25G",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        71,
+        70,
+        64
+      ]
+    },
+    {
+      "id": "dffd068a9d",
+      "name": "Ford Model A Custom '31",
+      "batch": "25G",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        67,
+        70,
+        68
+      ]
+    },
+    {
+      "id": "ec9cb2f55c",
+      "name": "'69 Mercury Cyclone",
+      "batch": "25G",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        82,
+        69,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "2b6dc11aa3",
+      "name": "DMC DeLorean",
+      "batch": "25G",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        73,
+        68,
+        58
+      ]
+    },
+    {
+      "id": "5869414833",
+      "name": "Big-Air Bel-Air",
+      "batch": "25G",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        71,
+        70,
+        64
+      ]
+    },
+    {
+      "id": "c2fab49c9e",
+      "name": "'83 Chevy Silverado",
+      "batch": "25G",
+      "assigned": "impact",
+      "shape": "pickup",
+      "stats": [
+        58,
+        51,
+        65,
+        83,
+        93
+      ]
+    },
+    {
+      "id": "10c438f0ef",
+      "name": "2018 Bentley Continental GT3",
+      "batch": "25G",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        69,
+        73,
+        77,
+        66,
+        65
+      ]
+    },
+    {
+      "id": "334bce0847",
+      "name": "Porsche 911 Rallye",
+      "batch": "25G",
+      "assigned": "impact",
+      "shape": "offroad",
+      "stats": [
+        66,
+        54,
+        69,
+        81,
+        80
+      ]
+    },
+    {
+      "id": "8eef43b1d2",
+      "name": "Chevy El Camino",
+      "batch": "25G",
+      "assigned": "impact",
+      "shape": "pickup",
+      "stats": [
+        58,
+        53,
+        63,
+        85,
+        91
+      ]
+    },
+    {
+      "id": "26a6beffdc",
+      "name": "Nissan Skyline GT-R (BCNR33)",
+      "batch": "25G",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        80,
+        62,
+        70,
+        77,
+        61
+      ]
+    },
+    {
+      "id": "8bfa271017",
+      "name": "Birthday Burner",
+      "batch": "25G",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        71,
+        70,
+        64
+      ]
+    },
+    {
+      "id": "67f23c7bb6",
+      "name": "El Viento",
+      "batch": "25H",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        69,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "853c6c4129",
+      "name": "Nerve Hammer",
+      "batch": "25H",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        98,
+        78,
+        72,
+        58,
+        44
+      ]
+    },
+    {
+      "id": "cf90b122aa",
+      "name": "'67 Austin Mini Van",
+      "batch": "25H",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        73,
+        68,
+        58
+      ]
+    },
+    {
+      "id": "ab2b55584e",
+      "name": "Draftnator",
+      "batch": "25H",
+      "assigned": "impact",
+      "shape": "pickup",
+      "stats": [
+        58,
+        53,
+        63,
+        85,
+        91
+      ]
+    },
+    {
+      "id": "f6879c3264",
+      "name": "'70 Dodge Hemi Challenger",
+      "batch": "25H",
+      "assigned": "launch",
+      "shape": "muscle",
+      "stats": [
+        77,
+        86,
+        53,
+        65,
+        69
+      ]
+    },
+    {
+      "id": "d1f3f4a518",
+      "name": "Haulerback",
+      "batch": "25H",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        69,
+        68,
+        59
+      ]
+    },
+    {
+      "id": "e087330247",
+      "name": "Batman and Robin Batmobile",
+      "batch": "25H",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        67,
+        70,
+        60
+      ]
+    },
+    {
+      "id": "7d847c6cb3",
+      "name": "Mattel Dream Mobile",
+      "batch": "25H",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        71,
+        73,
+        68,
+        69
+      ]
+    },
+    {
+      "id": "fade40efb7",
+      "name": "Decidedly Go",
+      "batch": "25H",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        71,
+        70,
+        67
+      ]
+    },
+    {
+      "id": "dee9ec452c",
+      "name": "'96 Dodge Viper GTS",
+      "batch": "25H",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        73,
+        60,
+        70,
+        64
+      ]
+    },
+    {
+      "id": "de3545939a",
+      "name": "Chill Mill",
+      "batch": "25H",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        62,
+        79,
+        58
+      ]
+    },
+    {
+      "id": "de62b1b4cb",
+      "name": "1978 Dodge Li'l Red Express Truck",
+      "batch": "25H",
+      "assigned": "impact",
+      "shape": "pickup",
+      "stats": [
+        55,
+        51,
+        65,
+        83,
+        96
+      ]
+    },
+    {
+      "id": "735f618fb2",
+      "name": "Supercharged",
+      "batch": "25H",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        67,
+        70,
+        68
+      ]
+    },
+    {
+      "id": "e3664ccf7c",
+      "name": "'71 Mustang Funny Car",
+      "batch": "25H",
+      "assigned": "launch",
+      "shape": "muscle",
+      "stats": [
+        80,
+        95,
+        55,
+        63,
+        57
+      ]
+    },
+    {
+      "id": "eff21560e5",
+      "name": "HW50 Concept",
+      "batch": "25H",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        71,
+        73,
+        68,
+        66
+      ]
+    },
+    {
+      "id": "65d5ba5401",
+      "name": "'95 Mazda RX-7 Drift",
+      "batch": "25H",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        95,
+        80,
+        70,
+        60,
+        45
+      ]
+    },
+    {
+      "id": "9d7103963a",
+      "name": "Punk Rod",
+      "batch": "25H",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        67,
+        70,
+        60
+      ]
+    },
+    {
+      "id": "ebba85af2a",
+      "name": "'19 Chevy Silverado Trail Boss LT",
+      "batch": "25H",
+      "assigned": "impact",
+      "shape": "pickup",
+      "stats": [
+        55,
+        51,
+        65,
+        83,
+        96
+      ]
+    },
+    {
+      "id": "02bbcb006a",
+      "name": "Cupra e-Racer",
+      "batch": "25H",
+      "assigned": "handling",
+      "shape": "hatch",
+      "stats": [
+        58,
+        89,
+        80,
+        71,
+        52
+      ]
+    },
+    {
+      "id": "6b84c7c05e",
+      "name": "The Vanster",
+      "batch": "25H",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        71,
+        73,
+        68,
+        66
+      ]
+    },
+    {
+      "id": "3735808d3d",
+      "name": "Kowloon'd Hypervan",
+      "batch": "25J",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        71,
+        70,
+        56
+      ]
+    },
+    {
+      "id": "6656a46753",
+      "name": "Maserati Shamal",
+      "batch": "25J",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        84,
+        89,
+        72,
+        58,
+        47
+      ]
+    },
+    {
+      "id": "08bea06c5e",
+      "name": "Vespa 90 SS Super Sprint (1966)",
+      "batch": "25J",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        71,
+        73,
+        68,
+        69
+      ]
+    },
+    {
+      "id": "377eab0b8c",
+      "name": "'89 Mercedes-Benz 560 SEC AMG",
+      "batch": "25J",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        69,
+        73,
+        66,
+        77,
+        65
+      ]
+    },
+    {
+      "id": "703216ab98",
+      "name": "Drift'n Break",
+      "batch": "25J",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        80,
+        73,
+        70,
+        77,
+        50
+      ]
+    },
+    {
+      "id": "106b7d08f5",
+      "name": "Ferrari SF90 Stradale",
+      "batch": "25J",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        95,
+        80,
+        70,
+        60,
+        45
+      ]
+    },
+    {
+      "id": "dfa1a9ea86",
+      "name": "Hi-Roller",
+      "batch": "25J",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        69,
+        71,
+        72,
+        75,
+        63
+      ]
+    },
+    {
+      "id": "2bbd9255b4",
+      "name": "Renault Espace F1",
+      "batch": "25J",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        67,
+        70,
+        60
+      ]
+    },
+    {
+      "id": "19eaa4e993",
+      "name": "Track Dwagon",
+      "batch": "25J",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        62,
+        78,
+        70,
+        57
+      ]
+    },
+    {
+      "id": "fff8c7661a",
+      "name": "'67 Mustang",
+      "batch": "25J",
+      "assigned": "launch",
+      "shape": "muscle",
+      "stats": [
+        91,
+        75,
+        57,
+        65,
+        62
+      ]
+    },
+    {
+      "id": "74fdcd0467",
+      "name": "Honda Motocompo",
+      "batch": "25J",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        71,
+        70,
+        64
+      ]
+    },
+    {
+      "id": "f9fbadd3e4",
+      "name": "Nissan Leaf NISMO RC_02",
+      "batch": "25J",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        69,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "6e1303b78f",
+      "name": "Czinger 21C",
+      "batch": "25J",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        62,
+        68,
+        69
+      ]
+    },
+    {
+      "id": "741c947941",
+      "name": "Cruise Bruiser",
+      "batch": "25J",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        66,
+        73,
+        70,
+        77,
+        64
+      ]
+    },
+    {
+      "id": "96600d67ad",
+      "name": "Hako Type D",
+      "batch": "25J",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        77,
+        73,
+        66,
+        77,
+        57
+      ]
+    },
+    {
+      "id": "eec71ea1f6",
+      "name": "'62 Corvette Gasser",
+      "batch": "25J",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        87,
+        78,
+        72,
+        58,
+        55
+      ]
+    },
+    {
+      "id": "a5c2adcc90",
+      "name": "'68 Lotus Type 49",
+      "batch": "25J",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        95,
+        80,
+        70,
+        60,
+        45
+      ]
+    },
+    {
+      "id": "c9ed9a322d",
+      "name": "'71 Lamborghini Miura SV",
+      "batch": "25J",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        87,
+        78,
+        72,
+        58,
+        55
+      ]
+    },
+    {
+      "id": "a3009bd69b",
+      "name": "Gordon Murray Automotive T.50s",
+      "batch": "25J",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        84,
+        78,
+        76,
+        58,
+        54
+      ]
+    },
+    {
+      "id": "4cf0d5da38",
+      "name": "Hot Wheengs",
+      "batch": "25J",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        69,
+        68,
+        59
+      ]
+    },
+    {
+      "id": "98ec121bfc",
+      "name": "'15 Land Rover Defender Double Cab",
+      "batch": "25J",
+      "assigned": "impact",
+      "shape": "pickup",
+      "stats": [
+        66,
+        51,
+        61,
+        83,
+        89
+      ]
+    },
+    {
+      "id": "cdd548e543",
+      "name": "Mercedes-AMG Petronas Formula One Team",
+      "batch": "25J",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        77,
+        73,
+        66,
+        77,
+        57
+      ]
+    },
+    {
+      "id": "a933f5f474",
+      "name": "Mid Mill",
+      "batch": "25J",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        73,
+        68,
+        58
+      ]
+    },
+    {
+      "id": "fb34ce72e4",
+      "name": "Dune It Up",
+      "batch": "25K",
+      "assigned": "impact",
+      "shape": "offroad",
+      "stats": [
+        55,
+        54,
+        69,
+        81,
+        91
+      ]
+    },
+    {
+      "id": "a22d7ce763",
+      "name": "Futurismo",
+      "batch": "25K",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        82,
+        69,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "cfc2c46ba5",
+      "name": "Lil' Roar",
+      "batch": "25K",
+      "assigned": "impact",
+      "shape": "offroad",
+      "stats": [
+        66,
+        54,
+        69,
+        81,
+        80
+      ]
+    },
+    {
+      "id": "a1ad9124ed",
+      "name": "Chevroletor",
+      "batch": "25K",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        71,
+        70,
+        56
+      ]
+    },
+    {
+      "id": "75cec5d9af",
+      "name": "'69 Dodge Coronet Superbee",
+      "batch": "25K",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        73,
+        68,
+        55
+      ]
+    },
+    {
+      "id": "ed37da07ac",
+      "name": "Honda Civic Custom",
+      "batch": "25K",
+      "assigned": "handling",
+      "shape": "hatch",
+      "stats": [
+        64,
+        80,
+        89,
+        73,
+        44
+      ]
+    },
+    {
+      "id": "fa0f59e426",
+      "name": "Custom '18 Ford Mustang GT",
+      "batch": "25K",
+      "assigned": "launch",
+      "shape": "muscle",
+      "stats": [
+        80,
+        84,
+        55,
+        63,
+        68
+      ]
+    },
+    {
+      "id": "f2f56c7b26",
+      "name": "VW T3 Custom",
+      "batch": "25K",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        71,
+        70,
+        56
+      ]
+    },
+    {
+      "id": "517e7649a7",
+      "name": "Batman: Arkham Asylum Batmobile",
+      "batch": "25K",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        71,
+        70,
+        64
+      ]
+    },
+    {
+      "id": "7933c3c78a",
+      "name": "'90 Honda Civic EF",
+      "batch": "25K",
+      "assigned": "handling",
+      "shape": "hatch",
+      "stats": [
+        55,
+        80,
+        89,
+        73,
+        53
+      ]
+    },
+    {
+      "id": "611d364b92",
+      "name": "Ravenger S/T",
+      "batch": "25K",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        82,
+        69,
+        68,
+        59
+      ]
+    },
+    {
+      "id": "5467ea40b1",
+      "name": "Flippin Fast",
+      "batch": "25K",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        62,
+        79,
+        55
+      ]
+    },
+    {
+      "id": "63ee4d75e5",
+      "name": "RD-06",
+      "batch": "25K",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        67,
+        70,
+        71
+      ]
+    },
+    {
+      "id": "53fae8b193",
+      "name": "Slide-Burn",
+      "batch": "25K",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        69,
+        73,
+        66,
+        77,
+        65
+      ]
+    },
+    {
+      "id": "da10e9b7b3",
+      "name": "Monteracer",
+      "batch": "25K",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        91,
+        78,
+        72,
+        58,
+        51
+      ]
+    },
+    {
+      "id": "dcc50951ff",
+      "name": "Terra-Tracktyl",
+      "batch": "25K",
+      "assigned": "impact",
+      "shape": "pickup",
+      "stats": [
+        69,
+        42,
+        70,
+        85,
+        84
+      ]
+    },
+    {
+      "id": "b409493239",
+      "name": "Pontiac Aztek Custom",
+      "batch": "25K",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        82,
+        69,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "0d80816d69",
+      "name": "Crescendo",
+      "batch": "25K",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        95,
+        78,
+        72,
+        58,
+        47
+      ]
+    },
+    {
+      "id": "f535129109",
+      "name": "Audi 90 quattro",
+      "batch": "25K",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        77,
+        71,
+        68,
+        75,
+        59
+      ]
+    },
+    {
+      "id": "b3df933cd1",
+      "name": "Alfa Romeo Giulia TI Super",
+      "batch": "25K",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        71,
+        70,
+        64
+      ]
+    },
+    {
+      "id": "7eec1a170c",
+      "name": "'70 Plymouth Superbird",
+      "batch": "25K",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        71,
+        73,
+        68,
+        69
+      ]
+    },
+    {
+      "id": "a8b153d49e",
+      "name": "King Kuda",
+      "batch": "25L",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        71,
+        73,
+        68,
+        66
+      ]
+    },
+    {
+      "id": "e9b9cd8600",
+      "name": "Drift-Ender",
+      "batch": "25L",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        69,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "45258683b4",
+      "name": "'66 Buick Riviera",
+      "batch": "25L",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        66,
+        73,
+        70,
+        77,
+        64
+      ]
+    },
+    {
+      "id": "06fa217a9e",
+      "name": "Custom Kia EV6",
+      "batch": "25L",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        73,
+        71,
+        59,
+        64
+      ]
+    },
+    {
+      "id": "a882b2222c",
+      "name": "Quick Chat",
+      "batch": "25L",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        73,
+        60,
+        70,
+        64
+      ]
+    },
+    {
+      "id": "ab5338517f",
+      "name": "Tesla Cyberquad",
+      "batch": "25L",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        71,
+        70,
+        56
+      ]
+    },
+    {
+      "id": "d970958bd9",
+      "name": "Lotus Cortina",
+      "batch": "25L",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        87,
+        80,
+        74,
+        60,
+        49
+      ]
+    },
+    {
+      "id": "9a61697c71",
+      "name": "Porsche 904 Carrera GTS",
+      "batch": "25L",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        87,
+        80,
+        74,
+        60,
+        49
+      ]
+    },
+    {
+      "id": "b0a7a62836",
+      "name": "Mod Mill",
+      "batch": "25L",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        71,
+        69,
+        79,
+        62
+      ]
+    },
+    {
+      "id": "b5872aba28",
+      "name": "Slide Kick",
+      "batch": "25L",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        73,
+        67,
+        70,
+        57
+      ]
+    },
+    {
+      "id": "d1c1b29a89",
+      "name": "Arrow Dynamic",
+      "batch": "25L",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        69,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "29fb47db53",
+      "name": "Monster Dairy Delivery",
+      "batch": "25L",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        62,
+        71,
+        70,
+        67
+      ]
+    },
+    {
+      "id": "31c99d1d8d",
+      "name": "Ford Mustang Dark Horse",
+      "batch": "25L",
+      "assigned": "launch",
+      "shape": "muscle",
+      "stats": [
+        91,
+        86,
+        53,
+        65,
+        55
+      ]
+    },
+    {
+      "id": "cf97de0e95",
+      "name": "Ford Escort",
+      "batch": "25L",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        69,
+        73,
+        66,
+        77,
+        65
+      ]
+    },
+    {
+      "id": "910b827d5d",
+      "name": "'94 Bugatti EB110 SS",
+      "batch": "25L",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        95,
+        80,
+        74,
+        49,
+        52
+      ]
+    },
+    {
+      "id": "66449a3e43",
+      "name": "Ferrari 365 GTB4 Competizione",
+      "batch": "25L",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        84,
+        78,
+        76,
+        58,
+        54
+      ]
+    },
+    {
+      "id": "ce5a71458b",
+      "name": "Blitzspeeder",
+      "batch": "25L",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        73,
+        67,
+        70,
+        57
+      ]
+    },
+    {
+      "id": "582b223c35",
+      "name": "2013 SRT Viper",
+      "batch": "25L",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        67,
+        70,
+        60
+      ]
+    },
+    {
+      "id": "71044bcf46",
+      "name": "Long Bloc",
+      "batch": "25L",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        62,
+        68,
+        66
+      ]
+    },
+    {
+      "id": "0786b9e6c6",
+      "name": "Stockar",
+      "batch": "25L",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        91,
+        80,
+        81,
+        49,
+        49
+      ]
+    },
+    {
+      "id": "22616fa943",
+      "name": "'99 Ford F-150 SVT Lightning",
+      "batch": "25M",
+      "assigned": "impact",
+      "shape": "pickup",
+      "stats": [
+        55,
+        62,
+        54,
+        83,
+        96
+      ]
+    },
+    {
+      "id": "984a921edc",
+      "name": "Draggin' Wagon",
+      "batch": "25M",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        78,
+        70,
+        60
+      ]
+    },
+    {
+      "id": "16b48b9c46",
+      "name": "Madfast",
+      "batch": "25M",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        69,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "4dda2add89",
+      "name": "Rapid Pulse",
+      "batch": "25M",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        67,
+        70,
+        68
+      ]
+    },
+    {
+      "id": "3b097b9884",
+      "name": "Pixel Shaker",
+      "batch": "25M",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        62,
+        68,
+        69
+      ]
+    },
+    {
+      "id": "7c03cb382d",
+      "name": "Layin' Lowrider",
+      "batch": "25M",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        69,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "b216f235a7",
+      "name": "Ford Model A Custom '31",
+      "batch": "25M",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        67,
+        70,
+        68
+      ]
+    },
+    {
+      "id": "e84b2ad2f0",
+      "name": "Mercedes-Benz 500 E",
+      "batch": "25M",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        80,
+        71,
+        72,
+        75,
+        52
+      ]
+    },
+    {
+      "id": "29fdd3a7e6",
+      "name": "Honda VFR750R (RC30)",
+      "batch": "25M",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        67,
+        70,
+        68
+      ]
+    },
+    {
+      "id": "1c6d010baf",
+      "name": "Big-Air Bel-Air",
+      "batch": "25M",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        71,
+        70,
+        64
+      ]
+    },
+    {
+      "id": "dca88b766b",
+      "name": "Amaru GTC",
+      "batch": "25M",
+      "assigned": "impact",
+      "shape": "offroad",
+      "stats": [
+        55,
+        54,
+        65,
+        81,
+        95
+      ]
+    },
+    {
+      "id": "e7e1b4c719",
+      "name": "Cadillac Project GTP Hypercar",
+      "batch": "25M",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        87,
+        80,
+        74,
+        60,
+        49
+      ]
+    },
+    {
+      "id": "c3ded58c4e",
+      "name": "Kei Swap",
+      "batch": "25M",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        71,
+        80,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "f44fa14bd5",
+      "name": "Jaguar Mk1",
+      "batch": "25M",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        66,
+        73,
+        77,
+        77,
+        57
+      ]
+    },
+    {
+      "id": "b6edf42ae5",
+      "name": "1966 Bat Boat",
+      "batch": "25M",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        71,
+        70,
+        67
+      ]
+    },
+    {
+      "id": "4aae000419",
+      "name": "Crate Racer",
+      "batch": "25M",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        62,
+        79,
+        58
+      ]
+    },
+    {
+      "id": "704b317f5e",
+      "name": "'73 Pontiac Firebird",
+      "batch": "25M",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        71,
+        73,
+        68,
+        66
+      ]
+    },
+    {
+      "id": "8976f5de06",
+      "name": "Nissan Skyline GT-R (BCNR33)",
+      "batch": "25M",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        80,
+        62,
+        70,
+        77,
+        61
+      ]
+    },
+    {
+      "id": "d699a39c03",
+      "name": "Shark Bite",
+      "batch": "25M",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        67,
+        70,
+        68
+      ]
+    },
+    {
+      "id": "7f4ffa3404",
+      "name": "'73 Honda Civic Custom",
+      "batch": "25M",
+      "assigned": "handling",
+      "shape": "hatch",
+      "stats": [
+        55,
+        78,
+        87,
+        71,
+        59
+      ]
+    },
+    {
+      "id": "c758f3c5dc",
+      "name": "Jaguar XJC V12 Coupe",
+      "batch": "25N",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        69,
+        68,
+        59
+      ]
+    },
+    {
+      "id": "bba0ab8517",
+      "name": "Custom '56 Ford Truck",
+      "batch": "25N",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        62,
+        71,
+        70,
+        67
+      ]
+    },
+    {
+      "id": "da9e5a1822",
+      "name": "1966 Triumph Tiger 100",
+      "batch": "25N",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        67,
+        70,
+        71
+      ]
+    },
+    {
+      "id": "5ac011c392",
+      "name": "Super Twin Mill",
+      "batch": "25N",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        87,
+        80,
+        70,
+        60,
+        53
+      ]
+    },
+    {
+      "id": "ff7a403ca3",
+      "name": "2018 Honda Civic Type R",
+      "batch": "25N",
+      "assigned": "handling",
+      "shape": "hatch",
+      "stats": [
+        58,
+        80,
+        85,
+        73,
+        54
+      ]
+    },
+    {
+      "id": "2a715828be",
+      "name": "Power Rocket",
+      "batch": "25N",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        76,
+        73,
+        71,
+        66,
+        64
+      ]
+    },
+    {
+      "id": "14a9894753",
+      "name": "Later Crater",
+      "batch": "25N",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        67,
+        70,
+        60
+      ]
+    },
+    {
+      "id": "3b3b163467",
+      "name": "Feline Lucky",
+      "batch": "25N",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        71,
+        70,
+        67
+      ]
+    },
+    {
+      "id": "96c2ef088e",
+      "name": "Formula E Gen3",
+      "batch": "25N",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        71,
+        73,
+        68,
+        66
+      ]
+    },
+    {
+      "id": "7cdd141a29",
+      "name": "Cone Shaker",
+      "batch": "25N",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        62,
+        71,
+        70,
+        67
+      ]
+    },
+    {
+      "id": "0e42737930",
+      "name": "Skull Shaker",
+      "batch": "25N",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        71,
+        59,
+        67
+      ]
+    },
+    {
+      "id": "0c8d353b34",
+      "name": "Gone Mad",
+      "batch": "25N",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        67,
+        70,
+        71
+      ]
+    },
+    {
+      "id": "a9841d01dd",
+      "name": "Ain't Fare",
+      "batch": "25N",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        67,
+        70,
+        68
+      ]
+    },
+    {
+      "id": "eea0f60261",
+      "name": "Gordon Murray Automotive T.33",
+      "batch": "25N",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        95,
+        78,
+        72,
+        58,
+        47
+      ]
+    },
+    {
+      "id": "8c40ddb079",
+      "name": "Porsche 911 Turbo Cabriolet",
+      "batch": "25N",
+      "assigned": "handling",
+      "shape": "convertible",
+      "stats": [
+        70,
+        77,
+        80,
+        64,
+        59
+      ]
+    },
+    {
+      "id": "9094743e41",
+      "name": "'67 Austin Mini Van",
+      "batch": "25N",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        73,
+        68,
+        58
+      ]
+    },
+    {
+      "id": "f4bb999420",
+      "name": "Rodger Dodger 2.0",
+      "batch": "25N",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        71,
+        69,
+        68,
+        70
+      ]
+    },
+    {
+      "id": "cad2fb9d85",
+      "name": "Hoto Roto",
+      "batch": "25N",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        73,
+        68,
+        58
+      ]
+    },
+    {
+      "id": "b0ed418018",
+      "name": "Limited Grip",
+      "batch": "25N",
+      "assigned": "impact",
+      "shape": "pickup",
+      "stats": [
+        66,
+        51,
+        61,
+        83,
+        89
+      ]
+    },
+    {
+      "id": "b43a102054",
+      "name": "Silverado EV RST",
+      "batch": "25N",
+      "assigned": "impact",
+      "shape": "pickup",
+      "stats": [
+        58,
+        53,
+        59,
+        85,
+        95
+      ]
+    },
+    {
+      "id": "0407aa9713",
+      "name": "Quick Bite",
+      "batch": "25N",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        71,
+        70,
+        67
+      ]
+    },
+    {
+      "id": "562e91ddf3",
+      "name": "'95 Mazda RX-7 Drift",
+      "batch": "25N",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        95,
+        80,
+        70,
+        60,
+        45
+      ]
+    },
+    {
+      "id": "3d2337350f",
+      "name": "Volvo 240 Drift Wagon",
+      "batch": "25N",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        77,
+        73,
+        66,
+        77,
+        57
+      ]
+    },
+    {
+      "id": "5fe0227c96",
+      "name": "Kick Kart",
+      "batch": "25P",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        71,
+        69,
+        68,
+        73
+      ]
+    },
+    {
+      "id": "109c9e9aed",
+      "name": "El Segundo Rallye",
+      "batch": "25P",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        71,
+        70,
+        56
+      ]
+    },
+    {
+      "id": "79aff00404",
+      "name": "Track Dwagon",
+      "batch": "25P",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        62,
+        78,
+        70,
+        57
+      ]
+    },
+    {
+      "id": "8e9712e432",
+      "name": "Blitzspeeder",
+      "batch": "25P",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        73,
+        67,
+        70,
+        57
+      ]
+    },
+    {
+      "id": "c163a9e93c",
+      "name": "'67 Shelby GT500",
+      "batch": "25P",
+      "assigned": "launch",
+      "shape": "muscle",
+      "stats": [
+        88,
+        75,
+        57,
+        65,
+        65
+      ]
+    },
+    {
+      "id": "78212f02e3",
+      "name": "'89 Mercedes-Benz 560 SEC AMG",
+      "batch": "25P",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        69,
+        73,
+        66,
+        77,
+        65
+      ]
+    },
+    {
+      "id": "4490b8743f",
+      "name": "'91 GMC Syclone",
+      "batch": "25P",
+      "assigned": "impact",
+      "shape": "pickup",
+      "stats": [
+        58,
+        53,
+        70,
+        74,
+        95
+      ]
+    },
+    {
+      "id": "85fadc70b2",
+      "name": "Terra-Tracktyl",
+      "batch": "25P",
+      "assigned": "impact",
+      "shape": "pickup",
+      "stats": [
+        69,
+        42,
+        70,
+        85,
+        84
+      ]
+    },
+    {
+      "id": "cb6636c88d",
+      "name": "Salt Shaker",
+      "batch": "25P",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        69,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "3c7fd4db44",
+      "name": "Chevy Blazer 4×4",
+      "batch": "25P",
+      "assigned": "impact",
+      "shape": "offroad",
+      "stats": [
+        63,
+        54,
+        58,
+        92,
+        83
+      ]
+    },
+    {
+      "id": "a171061aec",
+      "name": "'96 Dodge Viper GTS",
+      "batch": "25P",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        73,
+        60,
+        70,
+        64
+      ]
+    },
+    {
+      "id": "8b24f6de59",
+      "name": "BMW 635 CSi",
+      "batch": "25P",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        77,
+        73,
+        70,
+        77,
+        53
+      ]
+    },
+    {
+      "id": "a5b4872a56",
+      "name": "1983 Porsche 928S",
+      "batch": "25P",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        84,
+        80,
+        81,
+        49,
+        56
+      ]
+    },
+    {
+      "id": "8bf4b8d798",
+      "name": "Honda CB750 Café",
+      "batch": "25P",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        69,
+        68,
+        59
+      ]
+    },
+    {
+      "id": "cab88522df",
+      "name": "TV Series Batmobile",
+      "batch": "25P",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        73,
+        68,
+        58
+      ]
+    },
+    {
+      "id": "f5e0fff1e8",
+      "name": "Czinger 21C",
+      "batch": "25P",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        62,
+        68,
+        69
+      ]
+    },
+    {
+      "id": "e9d538adf3",
+      "name": "Renault Espace F1",
+      "batch": "25P",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        67,
+        70,
+        60
+      ]
+    },
+    {
+      "id": "15db6dbca4",
+      "name": "BMW M3 Wagon",
+      "batch": "25P",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        77,
+        71,
+        68,
+        75,
+        59
+      ]
+    },
+    {
+      "id": "a8da1b6078",
+      "name": "Mazda RX-3",
+      "batch": "25P",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        71,
+        70,
+        56
+      ]
+    },
+    {
+      "id": "8da50135ed",
+      "name": "Mo-Stash",
+      "batch": "25P",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        71,
+        73,
+        68,
+        66
+      ]
+    },
+    {
+      "id": "f80ff0c438",
+      "name": "Lamborghini Huracán Sterrato",
+      "batch": "25P",
+      "assigned": "impact",
+      "shape": "offroad",
+      "stats": [
+        66,
+        54,
+        58,
+        92,
+        80
+      ]
+    },
+    {
+      "id": "16c3e577a2",
+      "name": "Audi 90 quattro",
+      "batch": "25Q",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        77,
+        71,
+        68,
+        75,
+        59
+      ]
+    },
+    {
+      "id": "59f8a6d97a",
+      "name": "Ferrari 365 GTB4 Competizione",
+      "batch": "25Q",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        84,
+        78,
+        76,
+        58,
+        54
+      ]
+    },
+    {
+      "id": "f4c306d9f8",
+      "name": "Ravenger S/T",
+      "batch": "25Q",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        82,
+        69,
+        68,
+        59
+      ]
+    },
+    {
+      "id": "c15187939d",
+      "name": "Honda Motocompo",
+      "batch": "25Q",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        71,
+        70,
+        64
+      ]
+    },
+    {
+      "id": "d0041e7cac",
+      "name": "Triumph TR6",
+      "batch": "25Q",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        78,
+        70,
+        60
+      ]
+    },
+    {
+      "id": "04e001091a",
+      "name": "2018 Bentley Continental GT3",
+      "batch": "25Q",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        69,
+        73,
+        77,
+        66,
+        65
+      ]
+    },
+    {
+      "id": "4411e3d61e",
+      "name": "McMurtry Spéirling",
+      "batch": "25Q",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        87,
+        78,
+        76,
+        58,
+        51
+      ]
+    },
+    {
+      "id": "abcfcaa05c",
+      "name": "Hot Wheengs",
+      "batch": "25Q",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        69,
+        68,
+        59
+      ]
+    },
+    {
+      "id": "82f13ca76a",
+      "name": "Polestar TRX",
+      "batch": "25Q",
+      "assigned": "impact",
+      "shape": "offroad",
+      "stats": [
+        55,
+        54,
+        69,
+        81,
+        91
+      ]
+    },
+    {
+      "id": "6905a9c9b0",
+      "name": "Drift'n Break",
+      "batch": "25Q",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        80,
+        73,
+        70,
+        77,
+        50
+      ]
+    },
+    {
+      "id": "0982a8c9fe",
+      "name": "Sushi Tuner",
+      "batch": "25Q",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        82,
+        62,
+        68,
+        66
+      ]
+    },
+    {
+      "id": "64d91ab96e",
+      "name": "Street Shrieker",
+      "batch": "25Q",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        69,
+        68,
+        59
+      ]
+    },
+    {
+      "id": "248b179449",
+      "name": "Alfa Romeo Giulia TI Super",
+      "batch": "25Q",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        71,
+        70,
+        64
+      ]
+    },
+    {
+      "id": "835df4c81b",
+      "name": "Decidedly Go",
+      "batch": "25Q",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        71,
+        70,
+        67
+      ]
+    },
+    {
+      "id": "ee759e6cce",
+      "name": "Pontiac Aztek Custom",
+      "batch": "25Q",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        82,
+        69,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "993c9e266a",
+      "name": "VW T3 Custom",
+      "batch": "25Q",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        71,
+        70,
+        56
+      ]
+    },
+    {
+      "id": "4b8b089154",
+      "name": "HW Ultimate T-Rex Transporter",
+      "batch": "25Q",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        71,
+        69,
+        68,
+        70
+      ]
+    },
+    {
+      "id": "20c15d931c",
+      "name": "Mod Mill",
+      "batch": "25Q",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        71,
+        69,
+        79,
+        62
+      ]
+    },
+    {
+      "id": "21b4f0870b",
+      "name": "Quick Chat",
+      "batch": "25Q",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        73,
+        60,
+        70,
+        64
+      ]
+    },
+    {
+      "id": "92cdfae219",
+      "name": "'15 Land Rover Defender Double Cab",
+      "batch": "25Q",
+      "assigned": "impact",
+      "shape": "pickup",
+      "stats": [
+        66,
+        51,
+        61,
+        83,
+        89
+      ]
+    },
+    {
+      "id": "4f2b19c89a",
+      "name": "Porsche 911 Carrera Clip",
+      "batch": "25Q",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        93,
+        80,
+        74,
+        60,
+        43
+      ]
+    },
+    {
+      "id": "e4d5e49613",
+      "name": "'83 Chevy Silverado",
+      "batch": "25Q",
+      "assigned": "impact",
+      "shape": "pickup",
+      "stats": [
+        58,
+        51,
+        65,
+        83,
+        93
+      ]
+    },
+    {
+      "id": "d08d48114e",
+      "name": "Batmobile",
+      "batch": "26A",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        71,
+        70,
+        64
+      ]
+    },
+    {
+      "id": "102f0efec4",
+      "name": "Gordon Murray Automotive T.33",
+      "batch": "26A",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        95,
+        78,
+        72,
+        58,
+        47
+      ]
+    },
+    {
+      "id": "a79a6c3e14",
+      "name": "Pass 'n Go",
+      "batch": "26A",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        62,
+        79,
+        55
+      ]
+    },
+    {
+      "id": "c543372678",
+      "name": "RD-06",
+      "batch": "26A",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        67,
+        70,
+        71
+      ]
+    },
+    {
+      "id": "7b8f01321c",
+      "name": "Solar Reflex",
+      "batch": "26A",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        67,
+        70,
+        60
+      ]
+    },
+    {
+      "id": "1524543fed",
+      "name": "Ford Mustang Mach-E 1400",
+      "batch": "26A",
+      "assigned": "launch",
+      "shape": "muscle",
+      "stats": [
+        80,
+        84,
+        66,
+        63,
+        57
+      ]
+    },
+    {
+      "id": "5f6ff9dc6b",
+      "name": "'87 Buick Regal GNX",
+      "batch": "26A",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        66,
+        82,
+        61,
+        75,
+        66
+      ]
+    },
+    {
+      "id": "b5fff06a8f",
+      "name": "2020 Ford Mustang Shelby GT500",
+      "batch": "26A",
+      "assigned": "launch",
+      "shape": "muscle",
+      "stats": [
+        88,
+        75,
+        57,
+        65,
+        65
+      ]
+    },
+    {
+      "id": "a4cb7d4ffa",
+      "name": "2018 Honda Civic Type R",
+      "batch": "26A",
+      "assigned": "handling",
+      "shape": "hatch",
+      "stats": [
+        58,
+        80,
+        85,
+        73,
+        54
+      ]
+    },
+    {
+      "id": "d54640ce83",
+      "name": "Carbonator",
+      "batch": "26A",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        67,
+        70,
+        60
+      ]
+    },
+    {
+      "id": "a70b9358d3",
+      "name": "Drift-Ender",
+      "batch": "26A",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        69,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "0ae17b6b9b",
+      "name": "Porsche 911 Carrera T",
+      "batch": "26A",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        95,
+        80,
+        70,
+        60,
+        45
+      ]
+    },
+    {
+      "id": "f06b835bf7",
+      "name": "Maserati Shamal",
+      "batch": "26A",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        84,
+        89,
+        72,
+        58,
+        47
+      ]
+    },
+    {
+      "id": "badf1a695b",
+      "name": "Bounce'n Bass",
+      "batch": "26A",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        69,
+        68,
+        59
+      ]
+    },
+    {
+      "id": "ea4614c43c",
+      "name": "Deora II",
+      "batch": "26A",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        62,
+        78,
+        70,
+        57
+      ]
+    },
+    {
+      "id": "cf5c25828a",
+      "name": "Barbie Dream Camper",
+      "batch": "26A",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        71,
+        73,
+        68,
+        66
+      ]
+    },
+    {
+      "id": "c03a39f8d5",
+      "name": "Instant Boost",
+      "batch": "26A",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        73,
+        68,
+        58
+      ]
+    },
+    {
+      "id": "861f57e29f",
+      "name": "'69 Dodge Charger Daytona",
+      "batch": "26A",
+      "assigned": "launch",
+      "shape": "muscle",
+      "stats": [
+        80,
+        86,
+        53,
+        65,
+        66
+      ]
+    },
+    {
+      "id": "48b9088f72",
+      "name": "Track Ripper",
+      "batch": "26A",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        71,
+        70,
+        64
+      ]
+    },
+    {
+      "id": "8055825878",
+      "name": "'59 Chevy Impala",
+      "batch": "26A",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        77,
+        71,
+        68,
+        75,
+        59
+      ]
+    },
+    {
+      "id": "619bd68ca7",
+      "name": "'47 Chevy Fleetline",
+      "batch": "26B",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        66,
+        73,
+        70,
+        77,
+        64
+      ]
+    },
+    {
+      "id": "5fbd5531cb",
+      "name": "Pagani Zonda Cinque",
+      "batch": "26B",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        87,
+        80,
+        74,
+        60,
+        49
+      ]
+    },
+    {
+      "id": "1b940d0f89",
+      "name": "HW K.I.T.T. Concept",
+      "batch": "26B",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        71,
+        70,
+        64
+      ]
+    },
+    {
+      "id": "5b82b60c60",
+      "name": "X-Steam",
+      "batch": "26B",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        71,
+        70,
+        67
+      ]
+    },
+    {
+      "id": "f356da01e1",
+      "name": "5 Alarm",
+      "batch": "26B",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        82,
+        62,
+        68,
+        69
+      ]
+    },
+    {
+      "id": "6ed6e183cb",
+      "name": "Haulerback",
+      "batch": "26B",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        69,
+        68,
+        59
+      ]
+    },
+    {
+      "id": "f58acfb2bf",
+      "name": "Wattzup",
+      "batch": "26B",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        67,
+        70,
+        71
+      ]
+    },
+    {
+      "id": "2aaa9890ff",
+      "name": "'70 Dodge Hemi Challenger",
+      "batch": "26B",
+      "assigned": "launch",
+      "shape": "muscle",
+      "stats": [
+        77,
+        86,
+        53,
+        65,
+        69
+      ]
+    },
+    {
+      "id": "4ab9fb1b4c",
+      "name": "Cupra e-Racer",
+      "batch": "26B",
+      "assigned": "handling",
+      "shape": "hatch",
+      "stats": [
+        58,
+        89,
+        80,
+        71,
+        52
+      ]
+    },
+    {
+      "id": "0fc8562184",
+      "name": "24/Seven",
+      "batch": "26B",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        73,
+        68,
+        55
+      ]
+    },
+    {
+      "id": "9aedcf2d3e",
+      "name": "Roller Toaster",
+      "batch": "26B",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        71,
+        73,
+        68,
+        69
+      ]
+    },
+    {
+      "id": "dac4a95ec7",
+      "name": "Braille Racer - Twin Mill",
+      "batch": "26B",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        78,
+        59,
+        71
+      ]
+    },
+    {
+      "id": "54054ee050",
+      "name": "'83 Chevy Silverado",
+      "batch": "26B",
+      "assigned": "impact",
+      "shape": "pickup",
+      "stats": [
+        58,
+        51,
+        65,
+        83,
+        93
+      ]
+    },
+    {
+      "id": "58490338a6",
+      "name": "Purple Passion",
+      "batch": "26B",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        71,
+        70,
+        56
+      ]
+    },
+    {
+      "id": "d728e0a443",
+      "name": "High-Tail Chaser",
+      "batch": "26B",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        71,
+        70,
+        67
+      ]
+    },
+    {
+      "id": "261a6caa0b",
+      "name": "Monster High Ghoul Mobile",
+      "batch": "26B",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        62,
+        78,
+        70,
+        57
+      ]
+    },
+    {
+      "id": "12f398620b",
+      "name": "Raijin Express",
+      "batch": "26B",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        67,
+        70,
+        60
+      ]
+    },
+    {
+      "id": "86bf0a4bf1",
+      "name": "Drift Box",
+      "batch": "26B",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        62,
+        68,
+        69
+      ]
+    },
+    {
+      "id": "a4f7494557",
+      "name": "McMurtry Spéirling",
+      "batch": "26B",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        87,
+        78,
+        76,
+        58,
+        51
+      ]
+    },
+    {
+      "id": "7d700a6c8c",
+      "name": "La Liebre",
+      "batch": "26C",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        69,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "9688948afb",
+      "name": "Quick Chat",
+      "batch": "26C",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        73,
+        60,
+        70,
+        64
+      ]
+    },
+    {
+      "id": "cf532b3a7e",
+      "name": "The Dark Knight Batmobile",
+      "batch": "26C",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        67,
+        70,
+        68
+      ]
+    },
+    {
+      "id": "6d0cba1b48",
+      "name": "Porsche 911 Turbo Cabriolet",
+      "batch": "26C",
+      "assigned": "handling",
+      "shape": "convertible",
+      "stats": [
+        70,
+        77,
+        80,
+        64,
+        59
+      ]
+    },
+    {
+      "id": "a5aab91a12",
+      "name": "'69 Chevelle",
+      "batch": "26C",
+      "assigned": "launch",
+      "shape": "muscle",
+      "stats": [
+        91,
+        84,
+        55,
+        63,
+        57
+      ]
+    },
+    {
+      "id": "14eb9ec76a",
+      "name": "Donut Drifter",
+      "batch": "26C",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        69,
+        68,
+        59
+      ]
+    },
+    {
+      "id": "a7f681f522",
+      "name": "Dessert Drifter",
+      "batch": "26C",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        71,
+        73,
+        68,
+        66
+      ]
+    },
+    {
+      "id": "967f9ef288",
+      "name": "Electro Silhouette",
+      "batch": "26C",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        71,
+        69,
+        79,
+        59
+      ]
+    },
+    {
+      "id": "ae4593458f",
+      "name": "Lucid Air",
+      "batch": "26C",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        71,
+        70,
+        56
+      ]
+    },
+    {
+      "id": "436cd5bf55",
+      "name": "Mazda RX-7",
+      "batch": "26C",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        98,
+        80,
+        74,
+        49,
+        49
+      ]
+    },
+    {
+      "id": "56146306fe",
+      "name": "Ferrari 365 GTB4 Competizione",
+      "batch": "26C",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        84,
+        78,
+        76,
+        58,
+        54
+      ]
+    },
+    {
+      "id": "f9eb9ac9f2",
+      "name": "Lotus Cortina",
+      "batch": "26C",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        87,
+        80,
+        74,
+        60,
+        49
+      ]
+    },
+    {
+      "id": "70108f7600",
+      "name": "Volvo 240 Drift Wagon",
+      "batch": "26C",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        77,
+        73,
+        66,
+        77,
+        57
+      ]
+    },
+    {
+      "id": "d60f0177c9",
+      "name": "Decidedly Go",
+      "batch": "26C",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        71,
+        70,
+        67
+      ]
+    },
+    {
+      "id": "ecfbc06f38",
+      "name": "Austin Mini Cooper S",
+      "batch": "26C",
+      "assigned": "handling",
+      "shape": "hatch",
+      "stats": [
+        58,
+        89,
+        80,
+        71,
+        52
+      ]
+    },
+    {
+      "id": "1508a5ba2c",
+      "name": "'76 Chevy Chevette",
+      "batch": "26C",
+      "assigned": "handling",
+      "shape": "hatch",
+      "stats": [
+        66,
+        69,
+        89,
+        73,
+        53
+      ]
+    },
+    {
+      "id": "96d03b03e9",
+      "name": "Corvette Grand Sport",
+      "batch": "26C",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        95,
+        78,
+        76,
+        58,
+        43
+      ]
+    },
+    {
+      "id": "d8d1221938",
+      "name": "Toyota Prius Custom",
+      "batch": "26D",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        71,
+        73,
+        68,
+        69
+      ]
+    },
+    {
+      "id": "b6ba657958",
+      "name": "Visa Cash App Racing Bulls Formula One Team",
+      "batch": "26D",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        69,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "8de1ccf71d",
+      "name": "X-cceleron",
+      "batch": "26D",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        82,
+        69,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "ce0a02f6da",
+      "name": "Supercharged",
+      "batch": "26D",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        67,
+        70,
+        68
+      ]
+    },
+    {
+      "id": "503b7b4ae8",
+      "name": "Hako Type D",
+      "batch": "26D",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        77,
+        73,
+        66,
+        77,
+        57
+      ]
+    },
+    {
+      "id": "208932f8f3",
+      "name": "Hoto Roto",
+      "batch": "26D",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        73,
+        68,
+        58
+      ]
+    },
+    {
+      "id": "a1dad58869",
+      "name": "Hot Wheengs",
+      "batch": "26D",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        69,
+        68,
+        59
+      ]
+    },
+    {
+      "id": "f81defb443",
+      "name": "Birthday Burner",
+      "batch": "26D",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        71,
+        70,
+        64
+      ]
+    },
+    {
+      "id": "73043ade0b",
+      "name": "Rapid Pulse",
+      "batch": "26D",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        67,
+        70,
+        68
+      ]
+    },
+    {
+      "id": "33c239ce17",
+      "name": "Polestar TRX",
+      "batch": "26D",
+      "assigned": "impact",
+      "shape": "offroad",
+      "stats": [
+        55,
+        54,
+        69,
+        81,
+        91
+      ]
+    },
+    {
+      "id": "56a8610126",
+      "name": "Voltage Spike",
+      "batch": "26D",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        69,
+        68,
+        59
+      ]
+    },
+    {
+      "id": "67f5a1a087",
+      "name": "VW ID. Buzz Bomb",
+      "batch": "26D",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        67,
+        70,
+        68
+      ]
+    },
+    {
+      "id": "715e81f834",
+      "name": "Cruise Bruiser",
+      "batch": "26D",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        66,
+        73,
+        70,
+        77,
+        64
+      ]
+    },
+    {
+      "id": "cc11d92ad2",
+      "name": "Nissan Skyline 2000 GT-R",
+      "batch": "26D",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        69,
+        73,
+        66,
+        77,
+        65
+      ]
+    },
+    {
+      "id": "6f835a6a88",
+      "name": "1985 Honda CR-X",
+      "batch": "26D",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        73,
+        71,
+        59,
+        64
+      ]
+    },
+    {
+      "id": "3e76c5d1b7",
+      "name": "'16 Cadillac ATS-V R",
+      "batch": "26D",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        77,
+        71,
+        68,
+        75,
+        59
+      ]
+    },
+    {
+      "id": "6897d736b1",
+      "name": "El Segundo Coupe",
+      "batch": "26D",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        77,
+        71,
+        61,
+        75,
+        66
+      ]
+    },
+    {
+      "id": "3749170d52",
+      "name": "Renault Espace F1",
+      "batch": "26D",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        67,
+        70,
+        60
+      ]
+    },
+    {
+      "id": "fa96759a0e",
+      "name": "Twin Dorado",
+      "batch": "26D",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        73,
+        67,
+        70,
+        57
+      ]
+    },
+    {
+      "id": "e5340f940b",
+      "name": "Pass'n Gasser",
+      "batch": "26D",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        66,
+        73,
+        70,
+        77,
+        64
+      ]
+    },
+    {
+      "id": "60617389b1",
+      "name": "2023 Nissan Z",
+      "batch": "26D",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        71,
+        70,
+        67
+      ]
+    },
+    {
+      "id": "350616582b",
+      "name": "Kei Swap",
+      "batch": "26E",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        71,
+        80,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "13326d5711",
+      "name": "'17 Pagani Huayra Roadster",
+      "batch": "26E",
+      "assigned": "handling",
+      "shape": "convertible",
+      "stats": [
+        70,
+        79,
+        82,
+        66,
+        53
+      ]
+    },
+    {
+      "id": "e2361c6169",
+      "name": "Eggshelleracer",
+      "batch": "26E",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        67,
+        70,
+        71
+      ]
+    },
+    {
+      "id": "8a59d34547",
+      "name": "'68 Dodge Dart",
+      "batch": "26E",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        76,
+        73,
+        67,
+        70,
+        64
+      ]
+    },
+    {
+      "id": "7e1e76b23d",
+      "name": "'85 Honda City Turbo II",
+      "batch": "26E",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        67,
+        70,
+        68
+      ]
+    },
+    {
+      "id": "321d6f1249",
+      "name": "Mazda RX-3",
+      "batch": "26E",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        71,
+        70,
+        56
+      ]
+    },
+    {
+      "id": "744f101747",
+      "name": "1966 Bat Boat",
+      "batch": "26E",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        71,
+        70,
+        67
+      ]
+    },
+    {
+      "id": "d17dcce9dd",
+      "name": "The Simpsons Family Car",
+      "batch": "26E",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        71,
+        70,
+        64
+      ]
+    },
+    {
+      "id": "9a578656a3",
+      "name": "Time Shifter",
+      "batch": "26E",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        71,
+        69,
+        79,
+        62
+      ]
+    },
+    {
+      "id": "376efec649",
+      "name": "'70 Chevelle SS Wagon",
+      "batch": "26E",
+      "assigned": "launch",
+      "shape": "muscle",
+      "stats": [
+        88,
+        84,
+        59,
+        63,
+        56
+      ]
+    },
+    {
+      "id": "e0027d050e",
+      "name": "Long Bloc",
+      "batch": "26E",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        62,
+        68,
+        66
+      ]
+    },
+    {
+      "id": "8309e2f788",
+      "name": "'89 Mazda Savanna RX-7 FC3S",
+      "batch": "26E",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        95,
+        78,
+        65,
+        58,
+        54
+      ]
+    },
+    {
+      "id": "50f2960b92",
+      "name": "Corvette C7 Z06",
+      "batch": "26E",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        84,
+        78,
+        76,
+        58,
+        54
+      ]
+    },
+    {
+      "id": "59bb6a70be",
+      "name": "Custom '66 Toronado",
+      "batch": "26E",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        69,
+        68,
+        59
+      ]
+    },
+    {
+      "id": "b49ccd76d0",
+      "name": "Custom 2020 Honda e",
+      "batch": "26E",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        71,
+        69,
+        68,
+        70
+      ]
+    },
+    {
+      "id": "0d45237cd5",
+      "name": "'87 Ford Sierra Cosworth",
+      "batch": "26E",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        69,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "f550194217",
+      "name": "Erikenstein Rod",
+      "batch": "26E",
+      "assigned": "impact",
+      "shape": "pickup",
+      "stats": [
+        66,
+        51,
+        61,
+        83,
+        89
+      ]
+    },
+    {
+      "id": "8a14b622ff",
+      "name": "Pedal Driver",
+      "batch": "26E",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        82,
+        69,
+        68,
+        59
+      ]
+    },
+    {
+      "id": "6e20d4aa55",
+      "name": "Cone Shaker",
+      "batch": "26E",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        62,
+        71,
+        70,
+        67
+      ]
+    },
+    {
+      "id": "908360e398",
+      "name": "Maserati Tipo 61",
+      "batch": "26E",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        87,
+        80,
+        74,
+        60,
+        49
+      ]
+    },
+    {
+      "id": "1379f8263c",
+      "name": "'64 Dodge 330",
+      "batch": "26E",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        62,
+        68,
+        69
+      ]
+    },
+    {
+      "id": "60874883f7",
+      "name": "Mazda RX-3",
+      "batch": "26E",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        71,
+        70,
+        56
+      ]
+    },
+    {
+      "id": "0e804382c2",
+      "name": "2019 Audi R8 Spyder",
+      "batch": "26E",
+      "assigned": "handling",
+      "shape": "convertible",
+      "stats": [
+        67,
+        77,
+        84,
+        64,
+        58
+      ]
+    },
+    {
+      "id": "c6e70c48f9",
+      "name": "'16 Lamborghini Centenario Roadster",
+      "batch": "26F",
+      "assigned": "handling",
+      "shape": "convertible",
+      "stats": [
+        70,
+        88,
+        73,
+        64,
+        55
+      ]
+    },
+    {
+      "id": "28b048c292",
+      "name": "Gordon Murray Automotive T.33",
+      "batch": "26F",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        95,
+        78,
+        72,
+        58,
+        47
+      ]
+    },
+    {
+      "id": "74bfb2f12f",
+      "name": "RD-06",
+      "batch": "26F",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        67,
+        70,
+        71
+      ]
+    },
+    {
+      "id": "14dc644a68",
+      "name": "Solar Reflex",
+      "batch": "26F",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        67,
+        70,
+        60
+      ]
+    },
+    {
+      "id": "dda6041898",
+      "name": "2020 Ford Mustang Shelby GT500",
+      "batch": "26F",
+      "assigned": "launch",
+      "shape": "muscle",
+      "stats": [
+        88,
+        75,
+        57,
+        65,
+        65
+      ]
+    },
+    {
+      "id": "6a4f3ce242",
+      "name": "2018 Honda Civic Type R",
+      "batch": "26F",
+      "assigned": "handling",
+      "shape": "hatch",
+      "stats": [
+        58,
+        80,
+        85,
+        73,
+        54
+      ]
+    },
+    {
+      "id": "8493f23aea",
+      "name": "Bounce'n Bass",
+      "batch": "26F",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        69,
+        68,
+        59
+      ]
+    },
+    {
+      "id": "f2febac707",
+      "name": "Deora II",
+      "batch": "26F",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        62,
+        78,
+        70,
+        57
+      ]
+    },
+    {
+      "id": "4f2b665d77",
+      "name": "Barbie Dream Camper",
+      "batch": "26F",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        71,
+        73,
+        68,
+        66
+      ]
+    },
+    {
+      "id": "6f6182d50b",
+      "name": "Instant Boost",
+      "batch": "26F",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        73,
+        68,
+        58
+      ]
+    },
+    {
+      "id": "6f9a5fc8a4",
+      "name": "Flippin Fast",
+      "batch": "26F",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        62,
+        79,
+        55
+      ]
+    },
+    {
+      "id": "5006e47abc",
+      "name": "'98 Honda Prelude",
+      "batch": "26F",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        67,
+        70,
+        68
+      ]
+    },
+    {
+      "id": "c9d3742b09",
+      "name": "La Troca",
+      "batch": "26F",
+      "assigned": "impact",
+      "shape": "pickup",
+      "stats": [
+        58,
+        51,
+        65,
+        83,
+        93
+      ]
+    },
+    {
+      "id": "021e8298a1",
+      "name": "Morgan Super 3",
+      "batch": "26F",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        69,
+        68,
+        59
+      ]
+    },
+    {
+      "id": "8d1907b6f1",
+      "name": "8 Crate",
+      "batch": "26F",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        67,
+        70,
+        71
+      ]
+    },
+    {
+      "id": "458658b466",
+      "name": "'33 Ford Lo Boy",
+      "batch": "26F",
+      "assigned": "handling",
+      "shape": "convertible",
+      "stats": [
+        78,
+        79,
+        78,
+        66,
+        49
+      ]
+    },
+    {
+      "id": "d4ac905354",
+      "name": "Scuderia Ferrari HP",
+      "batch": "26F",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        87,
+        80,
+        74,
+        60,
+        49
+      ]
+    },
+    {
+      "id": "be725a1719",
+      "name": "2024 Aston Martin Vantage GT3",
+      "batch": "26F",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        95,
+        78,
+        76,
+        58,
+        43
+      ]
+    },
+    {
+      "id": "a120771f33",
+      "name": "Custom '72 Chevy LUV",
+      "batch": "26F",
+      "assigned": "impact",
+      "shape": "pickup",
+      "stats": [
+        66,
+        53,
+        63,
+        85,
+        83
+      ]
+    },
+    {
+      "id": "7ad1397ca2",
+      "name": "Bullet Proof",
+      "batch": "26F",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        71,
+        69,
+        68,
+        70
+      ]
+    },
+    {
+      "id": "8230add77d",
+      "name": "Bone Shaker",
+      "batch": "26F",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        62,
+        68,
+        69
+      ]
+    },
+    {
+      "id": "c384154961",
+      "name": "Mid Mill",
+      "batch": "26F",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        73,
+        68,
+        58
+      ]
+    },
+    {
+      "id": "cd26c25ae1",
+      "name": "Screamliner",
+      "batch": "26F",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        67,
+        70,
+        68
+      ]
+    },
+    {
+      "id": "4c7bb0db2f",
+      "name": "Deora Too'nd",
+      "batch": "26F",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        71,
+        69,
+        79,
+        59
+      ]
+    },
+    {
+      "id": "f061d244a3",
+      "name": "Vairstrike",
+      "batch": "26F",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        71,
+        73,
+        68,
+        66
+      ]
+    },
+    {
+      "id": "060490672c",
+      "name": "Honda Civic Custom",
+      "batch": "26F",
+      "assigned": "handling",
+      "shape": "hatch",
+      "stats": [
+        64,
+        80,
+        89,
+        73,
+        44
+      ]
+    },
+    {
+      "id": "eef3e1db1a",
+      "name": "Porsche 911 Carrera T",
+      "batch": "26G",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        95,
+        80,
+        70,
+        60,
+        45
+      ]
+    },
+    {
+      "id": "8c2d151942",
+      "name": "Ford Mustang Mach-E 1400",
+      "batch": "26G",
+      "assigned": "launch",
+      "shape": "muscle",
+      "stats": [
+        80,
+        84,
+        66,
+        63,
+        57
+      ]
+    },
+    {
+      "id": "f80e45c319",
+      "name": "Pagani Zonda Cinque",
+      "batch": "26G",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        87,
+        80,
+        74,
+        60,
+        49
+      ]
+    },
+    {
+      "id": "64e6c4b319",
+      "name": "X-Steam",
+      "batch": "26G",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        71,
+        70,
+        67
+      ]
+    },
+    {
+      "id": "21211e8290",
+      "name": "'70 Dodge Hemi Challenger",
+      "batch": "26G",
+      "assigned": "launch",
+      "shape": "muscle",
+      "stats": [
+        77,
+        86,
+        53,
+        65,
+        69
+      ]
+    },
+    {
+      "id": "0225733848",
+      "name": "'59 Chevy Impala",
+      "batch": "26G",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        77,
+        71,
+        68,
+        75,
+        59
+      ]
+    },
+    {
+      "id": "5b0cc8c7e7",
+      "name": "High-Tail Chaser",
+      "batch": "26G",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        71,
+        70,
+        67
+      ]
+    },
+    {
+      "id": "8b8e30e8af",
+      "name": "Quick Chat",
+      "batch": "26G",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        73,
+        60,
+        70,
+        64
+      ]
+    },
+    {
+      "id": "dee3e44327",
+      "name": "Standard Kart",
+      "batch": "26G",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        71,
+        70,
+        56
+      ]
+    },
+    {
+      "id": "f6f481b9d3",
+      "name": "Fiat Beast of Turin",
+      "batch": "26G",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        69,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "2c21b55a30",
+      "name": "Classic TV Series Batmobile",
+      "batch": "26G",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        82,
+        62,
+        68,
+        66
+      ]
+    },
+    {
+      "id": "a90a83a03f",
+      "name": "Mazda Autozam",
+      "batch": "26G",
+      "assigned": "impact",
+      "shape": "offroad",
+      "stats": [
+        55,
+        65,
+        58,
+        81,
+        91
+      ]
+    },
+    {
+      "id": "767def2fbf",
+      "name": "2 Jet Z",
+      "batch": "26G",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        62,
+        78,
+        70,
+        60
+      ]
+    },
+    {
+      "id": "f16f850f80",
+      "name": "Tooned Purple Passion",
+      "batch": "26G",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        69,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "3f7e9656c9",
+      "name": "Honda Odyssey",
+      "batch": "26G",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        69,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "c667a37dbf",
+      "name": "Dino 206 GT",
+      "batch": "26G",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        95,
+        80,
+        70,
+        60,
+        45
+      ]
+    },
+    {
+      "id": "cbd0729878",
+      "name": "Ford F-150 Lightning SuperTruck",
+      "batch": "26G",
+      "assigned": "impact",
+      "shape": "pickup",
+      "stats": [
+        69,
+        51,
+        61,
+        83,
+        86
+      ]
+    },
+    {
+      "id": "a89f681ccf",
+      "name": "BMW 635 CSi",
+      "batch": "26G",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        77,
+        73,
+        70,
+        77,
+        53
+      ]
+    },
+    {
+      "id": "cbe5743d45",
+      "name": "'41 Willys",
+      "batch": "26G",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        69,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "76e9a0851b",
+      "name": "Custom Otto",
+      "batch": "26G",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        67,
+        70,
+        60
+      ]
+    },
+    {
+      "id": "94154e6db6",
+      "name": "'20 Toyota GR Supra",
+      "batch": "26G",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        95,
+        80,
+        74,
+        60,
+        41
+      ]
+    },
+    {
+      "id": "9edcd99681",
+      "name": "Classic '55 Nomad",
+      "batch": "26G",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        71,
+        80,
+        68,
+        59
+      ]
+    },
+    {
+      "id": "874c4600f2",
+      "name": "El Segundo Rallye",
+      "batch": "26G",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        71,
+        70,
+        56
+      ]
+    },
+    {
+      "id": "2224f0ac92",
+      "name": "Track Ripper",
+      "batch": "26H",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        71,
+        70,
+        64
+      ]
+    },
+    {
+      "id": "ec1beceec8",
+      "name": "La Liebre",
+      "batch": "26H",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        69,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "a2eff0c585",
+      "name": "Wattzup",
+      "batch": "26H",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        67,
+        70,
+        71
+      ]
+    },
+    {
+      "id": "afc9ab370a",
+      "name": "Roller Toaster",
+      "batch": "26H",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        71,
+        73,
+        68,
+        69
+      ]
+    },
+    {
+      "id": "43ee0c55cf",
+      "name": "Ferrari SF90 Stradale",
+      "batch": "26H",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        95,
+        80,
+        70,
+        60,
+        45
+      ]
+    },
+    {
+      "id": "ea5f96e5c8",
+      "name": "Purple Passion",
+      "batch": "26H",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        71,
+        70,
+        56
+      ]
+    },
+    {
+      "id": "91cb5d6230",
+      "name": "Monster High Ghoul Mobile",
+      "batch": "26H",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        62,
+        78,
+        70,
+        57
+      ]
+    },
+    {
+      "id": "862c22e19f",
+      "name": "'69 Chevelle",
+      "batch": "26H",
+      "assigned": "launch",
+      "shape": "muscle",
+      "stats": [
+        91,
+        84,
+        55,
+        63,
+        57
+      ]
+    },
+    {
+      "id": "85b8bbcdd8",
+      "name": "Dessert Drifter",
+      "batch": "26H",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        71,
+        73,
+        68,
+        66
+      ]
+    },
+    {
+      "id": "a735b48597",
+      "name": "Raijin Express",
+      "batch": "26H",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        67,
+        70,
+        60
+      ]
+    },
+    {
+      "id": "9b9b28a623",
+      "name": "'17 Audi RS 6 Avant",
+      "batch": "26H",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        69,
+        73,
+        66,
+        77,
+        65
+      ]
+    },
+    {
+      "id": "bcb6b7f112",
+      "name": "Austin Mini Cooper S",
+      "batch": "26H",
+      "assigned": "handling",
+      "shape": "hatch",
+      "stats": [
+        58,
+        89,
+        80,
+        71,
+        52
+      ]
+    },
+    {
+      "id": "cea66e93a5",
+      "name": "VW ID. Buzz Bomb",
+      "batch": "26H",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        67,
+        70,
+        68
+      ]
+    },
+    {
+      "id": "bb8ddf3510",
+      "name": "Datsun 620",
+      "batch": "26H",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        77,
+        73,
+        66,
+        77,
+        57
+      ]
+    },
+    {
+      "id": "1948edc038",
+      "name": "Kick Sauber F1 Team",
+      "batch": "26H",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        69,
+        68,
+        59
+      ]
+    },
+    {
+      "id": "4b12e47587",
+      "name": "Mach Speeder",
+      "batch": "26H",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        67,
+        70,
+        60
+      ]
+    },
+    {
+      "id": "251f39c5d4",
+      "name": "'70 Ford Escort RS1600",
+      "batch": "26H",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        66,
+        73,
+        70,
+        77,
+        64
+      ]
+    },
+    {
+      "id": "a315746ad9",
+      "name": "Total Disposal",
+      "batch": "26H",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        67,
+        70,
+        60
+      ]
+    },
+    {
+      "id": "698a87c778",
+      "name": "Cadillac Celestiq",
+      "batch": "26H",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        77,
+        62,
+        77,
+        77,
+        57
+      ]
+    },
+    {
+      "id": "5381d5f0dd",
+      "name": "Gone Mad",
+      "batch": "26H",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        67,
+        70,
+        71
+      ]
+    },
+    {
+      "id": "5d49da95d7",
+      "name": "Twin Tags",
+      "batch": "26H",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        67,
+        70,
+        68
+      ]
+    },
+    {
+      "id": "2e8d5cfb66",
+      "name": "Head Gasket",
+      "batch": "26H",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        71,
+        70,
+        67
+      ]
+    },
+    {
+      "id": "25a9b4d66d",
+      "name": "Mailed It!",
+      "batch": "26H",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        71,
+        80,
+        68,
+        59
+      ]
+    },
+    {
+      "id": "ab01892609",
+      "name": "Super Twin Mill",
+      "batch": "26H",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        87,
+        80,
+        70,
+        60,
+        53
+      ]
+    },
+    {
+      "id": "ed2ed63772",
+      "name": "'64 Lincoln Continental",
+      "batch": "26H",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        73,
+        60,
+        70,
+        64
+      ]
+    },
+    {
+      "id": "d7b3d71799",
+      "name": "1983 Porsche 928S",
+      "batch": "26H",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        84,
+        80,
+        81,
+        49,
+        56
+      ]
+    },
+    {
+      "id": "40f7f43c85",
+      "name": "Tooned Volkswagen Golf Mk1",
+      "batch": "26H",
+      "assigned": "handling",
+      "shape": "hatch",
+      "stats": [
+        69,
+        80,
+        89,
+        62,
+        50
+      ]
+    },
+    {
+      "id": "8742f1587b",
+      "name": "Mercedes-Benz CLA HW",
+      "batch": "26H",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        66,
+        73,
+        77,
+        77,
+        57
+      ]
+    },
+    {
+      "id": "4c2851dabe",
+      "name": "'65 Mercury Comet Cyclone",
+      "batch": "26H",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        69,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "b6b02ba92b",
+      "name": "Batmobile",
+      "batch": "26J",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        71,
+        70,
+        64
+      ]
+    },
+    {
+      "id": "4cf975a060",
+      "name": "Pass 'n Go",
+      "batch": "26J",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        62,
+        79,
+        55
+      ]
+    },
+    {
+      "id": "bc8b5e602b",
+      "name": "5 Alarm",
+      "batch": "26J",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        82,
+        62,
+        68,
+        69
+      ]
+    },
+    {
+      "id": "bd99c2529f",
+      "name": "Haulerback",
+      "batch": "26J",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        69,
+        68,
+        59
+      ]
+    },
+    {
+      "id": "905dec17a4",
+      "name": "Duck N' Roll",
+      "batch": "26J",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        71,
+        70,
+        56
+      ]
+    },
+    {
+      "id": "c8c155388c",
+      "name": "'94 Audi Avant RS2",
+      "batch": "26J",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        66,
+        71,
+        68,
+        75,
+        70
+      ]
+    },
+    {
+      "id": "8eb13f5f29",
+      "name": "'88 Mitsubishi Starion",
+      "batch": "26J",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        71,
+        69,
+        68,
+        70
+      ]
+    },
+    {
+      "id": "20842b2b93",
+      "name": "Mountain Mauler",
+      "batch": "26J",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        71,
+        70,
+        64
+      ]
+    },
+    {
+      "id": "9fec31b161",
+      "name": "'55 Chevy",
+      "batch": "26J",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        69,
+        71,
+        68,
+        75,
+        67
+      ]
+    },
+    {
+      "id": "dac76f0350",
+      "name": "Chop 'n Bloc",
+      "batch": "26J",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        71,
+        70,
+        67
+      ]
+    },
+    {
+      "id": "904d2b9ba0",
+      "name": "'70 Buick GSX",
+      "batch": "26J",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        77,
+        71,
+        61,
+        86,
+        55
+      ]
+    },
+    {
+      "id": "2ca8913f35",
+      "name": "'68 Shelby GT500",
+      "batch": "26J",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        73,
+        68,
+        58
+      ]
+    },
+    {
+      "id": "e8ee347468",
+      "name": "Amaru GTC",
+      "batch": "26J",
+      "assigned": "impact",
+      "shape": "offroad",
+      "stats": [
+        55,
+        54,
+        65,
+        81,
+        95
+      ]
+    },
+    {
+      "id": "e00515a1c7",
+      "name": "PT Fast",
+      "batch": "26J",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        71,
+        73,
+        68,
+        69
+      ]
+    },
+    {
+      "id": "847a7ca977",
+      "name": "'70 Dodge Charger",
+      "batch": "26J",
+      "assigned": "launch",
+      "shape": "muscle",
+      "stats": [
+        80,
+        86,
+        64,
+        65,
+        55
+      ]
+    },
+    {
+      "id": "22fc68daf1",
+      "name": "'11 Corvette Grand Sport",
+      "batch": "26J",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        91,
+        80,
+        81,
+        49,
+        49
+      ]
+    },
+    {
+      "id": "f18369ce5b",
+      "name": "'82 Toyota Supra",
+      "batch": "26J",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        84,
+        89,
+        72,
+        58,
+        47
+      ]
+    },
+    {
+      "id": "e60792e80f",
+      "name": "'63 Chevy II",
+      "batch": "26J",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        77,
+        73,
+        66,
+        77,
+        57
+      ]
+    },
+    {
+      "id": "7953576a8d",
+      "name": "Mad Drip",
+      "batch": "26J",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        78,
+        70,
+        60
+      ]
+    },
+    {
+      "id": "1a970fee36",
+      "name": "Jaguar XJC V12 Coupe",
+      "batch": "26J",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        69,
+        68,
+        59
+      ]
+    },
+    {
+      "id": "71269b7561",
+      "name": "Maserati Shamal",
+      "batch": "26K",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        84,
+        89,
+        72,
+        58,
+        47
+      ]
+    },
+    {
+      "id": "814b843e99",
+      "name": "'83 Chevy Silverado",
+      "batch": "26K",
+      "assigned": "impact",
+      "shape": "pickup",
+      "stats": [
+        58,
+        51,
+        65,
+        83,
+        93
+      ]
+    },
+    {
+      "id": "7c248649df",
+      "name": "Ferrari 365 GTB4 Competizione",
+      "batch": "26K",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        84,
+        78,
+        76,
+        58,
+        54
+      ]
+    },
+    {
+      "id": "ab1d36f168",
+      "name": "Drift Box",
+      "batch": "26K",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        62,
+        68,
+        69
+      ]
+    },
+    {
+      "id": "c1a226dc22",
+      "name": "Decidedly Go",
+      "batch": "26K",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        71,
+        70,
+        67
+      ]
+    },
+    {
+      "id": "5380c536fe",
+      "name": "BMW M4 GT3",
+      "batch": "26K",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        66,
+        73,
+        70,
+        77,
+        64
+      ]
+    },
+    {
+      "id": "7303714715",
+      "name": "Supercharged",
+      "batch": "26K",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        67,
+        70,
+        68
+      ]
+    },
+    {
+      "id": "037091f052",
+      "name": "Rapid Pulse",
+      "batch": "26K",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        67,
+        70,
+        68
+      ]
+    },
+    {
+      "id": "e3883ec8bf",
+      "name": "El Segundo Coupe",
+      "batch": "26K",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        77,
+        71,
+        61,
+        75,
+        66
+      ]
+    },
+    {
+      "id": "3eaf35989b",
+      "name": "Renault Espace F1",
+      "batch": "26K",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        67,
+        70,
+        60
+      ]
+    },
+    {
+      "id": "9b6a49f5d7",
+      "name": "Erikenstein Rod",
+      "batch": "26K",
+      "assigned": "impact",
+      "shape": "pickup",
+      "stats": [
+        66,
+        51,
+        61,
+        83,
+        89
+      ]
+    },
+    {
+      "id": "089dbf2c7d",
+      "name": "Pedal Driver",
+      "batch": "26K",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        82,
+        69,
+        68,
+        59
+      ]
+    },
+    {
+      "id": "919d2a1460",
+      "name": "Click Shift",
+      "batch": "26K",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        69,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "9c1a45bf45",
+      "name": "Aston Martin Aramco Formula One Team",
+      "batch": "26K",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        95,
+        78,
+        72,
+        58,
+        47
+      ]
+    },
+    {
+      "id": "782b9c8286",
+      "name": "Fiat 500C",
+      "batch": "26K",
+      "assigned": "handling",
+      "shape": "hatch",
+      "stats": [
+        66,
+        78,
+        87,
+        71,
+        48
+      ]
+    },
+    {
+      "id": "6d1d290844",
+      "name": "Lil' Roar",
+      "batch": "26K",
+      "assigned": "impact",
+      "shape": "offroad",
+      "stats": [
+        66,
+        54,
+        69,
+        81,
+        80
+      ]
+    },
+    {
+      "id": "5579f15744",
+      "name": "Spider-Mobile",
+      "batch": "26K",
+      "assigned": "handling",
+      "shape": "convertible",
+      "stats": [
+        70,
+        77,
+        84,
+        64,
+        55
+      ]
+    },
+    {
+      "id": "6398c85c9c",
+      "name": "Sweet Driver",
+      "batch": "26K",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        69,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "9c330b8956",
+      "name": "Nissan Skyline GT-R (BNR34)",
+      "batch": "26K",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        77,
+        73,
+        70,
+        66,
+        64
+      ]
+    },
+    {
+      "id": "82dfefb59e",
+      "name": "Punk Rod",
+      "batch": "26K",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        67,
+        70,
+        60
+      ]
+    },
+    {
+      "id": "eef618e997",
+      "name": "1970 Pontiac Firebird",
+      "batch": "26K",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        71,
+        73,
+        68,
+        66
+      ]
+    },
+    {
+      "id": "e1030de7d3",
+      "name": "Street Shaker",
+      "batch": "26K",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        71,
+        70,
+        64
+      ]
+    },
+    {
+      "id": "8b804c3fd9",
+      "name": "Street Shrieker",
+      "batch": "26K",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        69,
+        68,
+        59
+      ]
+    },
+    {
+      "id": "5a703712d3",
+      "name": "Mod Mill",
+      "batch": "26K",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        71,
+        69,
+        79,
+        62
+      ]
+    },
+    {
+      "id": "dd9d18b1d1",
+      "name": "Bully Goat",
+      "batch": "26K",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        73,
+        71,
+        59,
+        64
+      ]
+    },
+    {
+      "id": "450d444d2f",
+      "name": "'18 Camaro SS",
+      "batch": "26K",
+      "assigned": "launch",
+      "shape": "muscle",
+      "stats": [
+        88,
+        86,
+        57,
+        65,
+        54
+      ]
+    },
+    {
+      "id": "234dc4a33e",
+      "name": "Lil' Mad",
+      "batch": "26K",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        71,
+        73,
+        68,
+        66
+      ]
+    },
+    {
+      "id": "98b0c8fe45",
+      "name": "'94 Toyota Supra",
+      "batch": "26K",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        84,
+        80,
+        74,
+        60,
+        52
+      ]
+    },
+    {
+      "id": "3ffd27bef0",
+      "name": "The Dark Knight Batmobile",
+      "batch": "26L",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        67,
+        70,
+        68
+      ]
+    },
+    {
+      "id": "16e868afa9",
+      "name": "Lucid Air",
+      "batch": "26L",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        71,
+        70,
+        56
+      ]
+    },
+    {
+      "id": "35bda5adbf",
+      "name": "Lotus Cortina",
+      "batch": "26L",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        87,
+        80,
+        74,
+        60,
+        49
+      ]
+    },
+    {
+      "id": "7b20940b26",
+      "name": "Volvo 240 Drift Wagon",
+      "batch": "26L",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        77,
+        73,
+        66,
+        77,
+        57
+      ]
+    },
+    {
+      "id": "a449f6932f",
+      "name": "El Segundo Coupe",
+      "batch": "26L",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        77,
+        71,
+        61,
+        75,
+        66
+      ]
+    },
+    {
+      "id": "cd05727b97",
+      "name": "'33 Ford Lo Boy",
+      "batch": "26L",
+      "assigned": "handling",
+      "shape": "convertible",
+      "stats": [
+        78,
+        79,
+        78,
+        66,
+        49
+      ]
+    },
+    {
+      "id": "f8c7a171bd",
+      "name": "2024 Aston Martin Vantage GT3",
+      "batch": "26L",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        95,
+        78,
+        76,
+        58,
+        43
+      ]
+    },
+    {
+      "id": "4875085955",
+      "name": "'98 Honda Prelude",
+      "batch": "26L",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        67,
+        70,
+        68
+      ]
+    },
+    {
+      "id": "dc1074c0b4",
+      "name": "Screamliner",
+      "batch": "26L",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        67,
+        70,
+        68
+      ]
+    },
+    {
+      "id": "6f5d14394b",
+      "name": "Deora Too'nd",
+      "batch": "26L",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        71,
+        69,
+        79,
+        59
+      ]
+    },
+    {
+      "id": "0137eccca4",
+      "name": "1972 Datsun Sunny Coupe",
+      "batch": "26L",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        80,
+        73,
+        70,
+        77,
+        50
+      ]
+    },
+    {
+      "id": "78153df75e",
+      "name": "Hyper Rocker",
+      "batch": "26L",
+      "assigned": "impact",
+      "shape": "offroad",
+      "stats": [
+        52,
+        65,
+        58,
+        81,
+        94
+      ]
+    },
+    {
+      "id": "d70ab67d57",
+      "name": "'21 Ford Bronco",
+      "batch": "26L",
+      "assigned": "impact",
+      "shape": "offroad",
+      "stats": [
+        55,
+        54,
+        65,
+        81,
+        95
+      ]
+    },
+    {
+      "id": "3eb50de2d6",
+      "name": "'68 Corvette - Gas Monkey Garage",
+      "batch": "26L",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        95,
+        80,
+        70,
+        60,
+        45
+      ]
+    },
+    {
+      "id": "6017d11281",
+      "name": "HW Test Ride",
+      "batch": "26L",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        71,
+        70,
+        67
+      ]
+    },
+    {
+      "id": "f02fee5610",
+      "name": "Mad Manga",
+      "batch": "26L",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        71,
+        73,
+        68,
+        66
+      ]
+    },
+    {
+      "id": "2093865b86",
+      "name": "Alfa Romeo Giulia TI Super",
+      "batch": "26L",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        71,
+        70,
+        64
+      ]
+    },
+    {
+      "id": "f07890ceba",
+      "name": "Project Twin Mill",
+      "batch": "26L",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        62,
+        71,
+        70,
+        67
+      ]
+    },
+    {
+      "id": "7005485422",
+      "name": "Custom '62 Chevy Pickup",
+      "batch": "26L",
+      "assigned": "impact",
+      "shape": "pickup",
+      "stats": [
+        58,
+        53,
+        59,
+        85,
+        95
+      ]
+    },
+    {
+      "id": "8cad5bcf33",
+      "name": "'96 Dodge Viper GTS",
+      "batch": "26L",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        73,
+        60,
+        70,
+        64
+      ]
+    },
+    {
+      "id": "13442ceb95",
+      "name": "Nissan Maxima Drift Car",
+      "batch": "26L",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        73,
+        68,
+        58
+      ]
+    },
+    {
+      "id": "7ab007957c",
+      "name": "Uncertain-T",
+      "batch": "26L",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        73,
+        68,
+        58
+      ]
+    },
+    {
+      "id": "73b432e29f",
+      "name": "Donut Drifter",
+      "batch": "26M",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        69,
+        68,
+        59
+      ]
+    },
+    {
+      "id": "e82f68d0c1",
+      "name": "Toyota Prius Custom",
+      "batch": "26M",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        71,
+        73,
+        68,
+        69
+      ]
+    },
+    {
+      "id": "8acee36837",
+      "name": "Mazda RX-7",
+      "batch": "26M",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        98,
+        80,
+        74,
+        49,
+        49
+      ]
+    },
+    {
+      "id": "4c5c92bd12",
+      "name": "X-cceleron",
+      "batch": "26M",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        82,
+        69,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "8b316c8aa7",
+      "name": "Hoto Roto",
+      "batch": "26M",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        73,
+        68,
+        58
+      ]
+    },
+    {
+      "id": "236bae6d89",
+      "name": "Kei Swap",
+      "batch": "26M",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        71,
+        80,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "7e00c9bc21",
+      "name": "Voltage Spike",
+      "batch": "26M",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        69,
+        68,
+        59
+      ]
+    },
+    {
+      "id": "391b6f893a",
+      "name": "Cruise Bruiser",
+      "batch": "26M",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        66,
+        73,
+        70,
+        77,
+        64
+      ]
+    },
+    {
+      "id": "78bf54bbf7",
+      "name": "'16 Cadillac ATS-V R",
+      "batch": "26M",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        77,
+        71,
+        68,
+        75,
+        59
+      ]
+    },
+    {
+      "id": "0928e1eff8",
+      "name": "Ferrari 12Cilindri",
+      "batch": "26M",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        87,
+        78,
+        76,
+        58,
+        51
+      ]
+    },
+    {
+      "id": "44e2eb745f",
+      "name": "'96 Porsche Carrera",
+      "batch": "26M",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        95,
+        78,
+        72,
+        58,
+        47
+      ]
+    },
+    {
+      "id": "fac05b46cf",
+      "name": "Eggshelleracer",
+      "batch": "26M",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        67,
+        70,
+        71
+      ]
+    },
+    {
+      "id": "8cda025621",
+      "name": "Bullet Proof",
+      "batch": "26M",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        71,
+        69,
+        68,
+        70
+      ]
+    },
+    {
+      "id": "2cd03ace32",
+      "name": "Bone Shaker",
+      "batch": "26M",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        62,
+        68,
+        69
+      ]
+    },
+    {
+      "id": "5d8d3afd58",
+      "name": "El Segundo Rallye",
+      "batch": "26M",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        71,
+        70,
+        56
+      ]
+    },
+    {
+      "id": "aa310bdc65",
+      "name": "Ferrari F2004",
+      "batch": "26M",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        87,
+        80,
+        74,
+        60,
+        49
+      ]
+    },
+    {
+      "id": "cfff6f8101",
+      "name": "Porsche 911 Carrera RS 2.7",
+      "batch": "26M",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        84,
+        80,
+        74,
+        60,
+        52
+      ]
+    },
+    {
+      "id": "8fed991289",
+      "name": "'19 Mercedes-Benz A-Class",
+      "batch": "26M",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        77,
+        73,
+        66,
+        77,
+        57
+      ]
+    },
+    {
+      "id": "3085163f5d",
+      "name": "2019 Audi TT Safari",
+      "batch": "26M",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        77,
+        73,
+        59,
+        77,
+        64
+      ]
+    },
+    {
+      "id": "f5718d5861",
+      "name": "1970 Custom Plymouth Roadrunner",
+      "batch": "26M",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        73,
+        68,
+        55
+      ]
+    },
+    {
+      "id": "681b1d69d9",
+      "name": "Salt Streaker",
+      "batch": "26M",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        71,
+        70,
+        67
+      ]
+    },
+    {
+      "id": "99d3407ea2",
+      "name": "'71 Lamborghini Miura SV",
+      "batch": "26M",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        87,
+        78,
+        72,
+        58,
+        55
+      ]
+    },
+    {
+      "id": "ff513abb6a",
+      "name": "'66 Buick Riviera",
+      "batch": "26M",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        66,
+        73,
+        70,
+        77,
+        64
+      ]
+    },
+    {
+      "id": "9d7dcd9328",
+      "name": "Ford Model A Custom '31",
+      "batch": "26M",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        67,
+        70,
+        68
+      ]
+    },
+    {
+      "id": "291dd07f62",
+      "name": "'68 Mercury Cougar",
+      "batch": "26M",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        71,
+        70,
+        67
+      ]
+    },
+    {
+      "id": "28cf2c30bf",
+      "name": "Slide-Burn",
+      "batch": "26M",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        69,
+        73,
+        66,
+        77,
+        65
+      ]
+    },
+    {
+      "id": "fa6a483de5",
+      "name": "1963 Ford Galaxie",
+      "batch": "26M",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        62,
+        71,
+        70,
+        64
+      ]
+    },
+    {
+      "id": "7620010163",
+      "name": "McMurtry Spéirling",
+      "batch": "26N",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        87,
+        78,
+        76,
+        58,
+        51
+      ]
+    },
+    {
+      "id": "7575406728",
+      "name": "Cupra e-Racer",
+      "batch": "26N",
+      "assigned": "handling",
+      "shape": "hatch",
+      "stats": [
+        58,
+        89,
+        80,
+        71,
+        52
+      ]
+    },
+    {
+      "id": "f30a8904aa",
+      "name": "24/Seven",
+      "batch": "26N",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        73,
+        68,
+        55
+      ]
+    },
+    {
+      "id": "389b1334e1",
+      "name": "'76 Chevy Chevette",
+      "batch": "26N",
+      "assigned": "handling",
+      "shape": "hatch",
+      "stats": [
+        66,
+        69,
+        89,
+        73,
+        53
+      ]
+    },
+    {
+      "id": "38621830ea",
+      "name": "Polestar",
+      "batch": "26N",
+      "assigned": "impact",
+      "shape": "offroad",
+      "stats": [
+        63,
+        54,
+        65,
+        81,
+        87
+      ]
+    },
+    {
+      "id": "921c99d613",
+      "name": "Twin Dorado",
+      "batch": "26N",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        73,
+        67,
+        70,
+        57
+      ]
+    },
+    {
+      "id": "67a7de856e",
+      "name": "'85 Honda City Turbo II",
+      "batch": "26N",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        67,
+        70,
+        68
+      ]
+    },
+    {
+      "id": "e0cc5ff1c2",
+      "name": "Datsun 620",
+      "batch": "26N",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        77,
+        73,
+        66,
+        77,
+        57
+      ]
+    },
+    {
+      "id": "b6ad48008c",
+      "name": "Morgan Super 3",
+      "batch": "26N",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        69,
+        68,
+        59
+      ]
+    },
+    {
+      "id": "f5bfce7ec2",
+      "name": "Tooned Purple Passion",
+      "batch": "26N",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        69,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "d8b0e5debe",
+      "name": "Tooned Volkswagen Golf Mk1",
+      "batch": "26N",
+      "assigned": "handling",
+      "shape": "hatch",
+      "stats": [
+        69,
+        80,
+        89,
+        62,
+        50
+      ]
+    },
+    {
+      "id": "481258bdc3",
+      "name": "'65 Mercury Comet Cyclone",
+      "batch": "26N",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        69,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "1f82dcbc29",
+      "name": "Mini JCW Electric",
+      "batch": "26N",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        73,
+        68,
+        58
+      ]
+    },
+    {
+      "id": "70f20e79fb",
+      "name": "Armored Batmobile",
+      "batch": "26N",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        67,
+        70,
+        68
+      ]
+    },
+    {
+      "id": "5f0adcc0c9",
+      "name": "Party Wagon",
+      "batch": "26N",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        69,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "2ce5b7610a",
+      "name": "Mickey Mouse Car",
+      "batch": "26N",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        71,
+        70,
+        64
+      ]
+    },
+    {
+      "id": "d749c021a2",
+      "name": "Circle Tracker",
+      "batch": "26N",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        71,
+        73,
+        68,
+        69
+      ]
+    },
+    {
+      "id": "250089a52c",
+      "name": "Fast Fish",
+      "batch": "26N",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        71,
+        69,
+        68,
+        70
+      ]
+    },
+    {
+      "id": "5c88c9b567",
+      "name": "Go-Realla-Fast",
+      "batch": "26N",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        87,
+        80,
+        74,
+        60,
+        49
+      ]
+    },
+    {
+      "id": "db692aceac",
+      "name": "Surf 'N Turf",
+      "batch": "26N",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        82,
+        62,
+        68,
+        66
+      ]
+    },
+    {
+      "id": "8aeb71d903",
+      "name": "'96 Chevrolet Impala SS",
+      "batch": "26N",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        73,
+        68,
+        58
+      ]
+    },
+    {
+      "id": "111cf576c8",
+      "name": "Hako Type D",
+      "batch": "26P",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        77,
+        73,
+        66,
+        77,
+        57
+      ]
+    },
+    {
+      "id": "f7281dee27",
+      "name": "Birthday Burner",
+      "batch": "26P",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        71,
+        70,
+        64
+      ]
+    },
+    {
+      "id": "491e7dd37c",
+      "name": "Nissan Skyline 2000 GT-R",
+      "batch": "26P",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        69,
+        73,
+        66,
+        77,
+        65
+      ]
+    },
+    {
+      "id": "4bf05ae612",
+      "name": "Feline Lucky",
+      "batch": "26P",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        71,
+        70,
+        67
+      ]
+    },
+    {
+      "id": "420cbd738e",
+      "name": "Time Shifter",
+      "batch": "26P",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        71,
+        69,
+        79,
+        62
+      ]
+    },
+    {
+      "id": "89dfad3aa0",
+      "name": "Long Bloc",
+      "batch": "26P",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        71,
+        62,
+        68,
+        66
+      ]
+    },
+    {
+      "id": "b11933cee7",
+      "name": "'89 Mazda Savanna RX-7 FC3S",
+      "batch": "26P",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        95,
+        78,
+        65,
+        58,
+        54
+      ]
+    },
+    {
+      "id": "0a8d1ec041",
+      "name": "Custom 2020 Honda e",
+      "batch": "26P",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        71,
+        69,
+        68,
+        70
+      ]
+    },
+    {
+      "id": "ee59d718fd",
+      "name": "'64 Dodge 330",
+      "batch": "26P",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        62,
+        68,
+        69
+      ]
+    },
+    {
+      "id": "d1fb0b9fdd",
+      "name": "Custom '72 Chevy LUV",
+      "batch": "26P",
+      "assigned": "impact",
+      "shape": "pickup",
+      "stats": [
+        66,
+        53,
+        63,
+        85,
+        83
+      ]
+    },
+    {
+      "id": "147fa8d336",
+      "name": "2019 Audi R8 Spyder",
+      "batch": "26P",
+      "assigned": "handling",
+      "shape": "convertible",
+      "stats": [
+        67,
+        77,
+        84,
+        64,
+        58
+      ]
+    },
+    {
+      "id": "6941f9a152",
+      "name": "Fiat Beast of Turin",
+      "batch": "26P",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        69,
+        68,
+        62
+      ]
+    },
+    {
+      "id": "58c7b5c94b",
+      "name": "Mid Mill",
+      "batch": "26P",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        71,
+        73,
+        68,
+        58
+      ]
+    },
+    {
+      "id": "dfece15e86",
+      "name": "Dino 206 GT",
+      "batch": "26P",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        95,
+        80,
+        70,
+        60,
+        45
+      ]
+    },
+    {
+      "id": "f5df1999a4",
+      "name": "Vairstrike",
+      "batch": "26P",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        71,
+        73,
+        68,
+        66
+      ]
+    },
+    {
+      "id": "ec9dab483f",
+      "name": "Mach Speeder",
+      "batch": "26P",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        67,
+        70,
+        60
+      ]
+    },
+    {
+      "id": "37507cf22f",
+      "name": "'70 Ford Escort RS1600",
+      "batch": "26P",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        66,
+        73,
+        70,
+        77,
+        64
+      ]
+    },
+    {
+      "id": "12975a59a1",
+      "name": "Gone Mad",
+      "batch": "26P",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        67,
+        70,
+        71
+      ]
+    },
+    {
+      "id": "87a06004e1",
+      "name": "Twin Tags",
+      "batch": "26P",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        73,
+        67,
+        70,
+        68
+      ]
+    },
+    {
+      "id": "2b0652d671",
+      "name": "Mailed It!",
+      "batch": "26P",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        71,
+        80,
+        68,
+        59
+      ]
+    },
+    {
+      "id": "151c18c425",
+      "name": "Duck N' Roll",
+      "batch": "26P",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        71,
+        70,
+        56
+      ]
+    },
+    {
+      "id": "7d2fcd6fc9",
+      "name": "'88 Mitsubishi Starion",
+      "batch": "26P",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        72,
+        71,
+        69,
+        68,
+        70
+      ]
+    },
+    {
+      "id": "7299936489",
+      "name": "Chop 'n Bloc",
+      "batch": "26P",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        69,
+        73,
+        71,
+        70,
+        67
+      ]
+    },
+    {
+      "id": "c20ad7c275",
+      "name": "Aston Martin DB5 Safari Edition",
+      "batch": "26P",
+      "assigned": "speed",
+      "shape": "sport",
+      "stats": [
+        95,
+        80,
+        74,
+        60,
+        41
+      ]
+    },
+    {
+      "id": "2b3376b7b3",
+      "name": "Nissan Skyline HT 2000GT-X",
+      "batch": "26P",
+      "assigned": "balanced",
+      "shape": "sedan",
+      "stats": [
+        69,
+        73,
+        70,
+        77,
+        61
+      ]
+    },
+    {
+      "id": "493aa51e28",
+      "name": "'70 Plymouth AAR Cuda",
+      "batch": "26P",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        80,
+        73,
+        67,
+        70,
+        60
+      ]
+    },
+    {
+      "id": "60f3b02474",
+      "name": "Ridge Crest GT",
+      "batch": "26P",
+      "assigned": "balanced",
+      "shape": "concept",
+      "stats": [
+        83,
+        73,
+        71,
+        70,
+        53
+      ]
+    }
+  ]
+}

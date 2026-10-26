@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>犇犇的车库 · 对战赛场</title>
+<link rel="stylesheet" href="fonts/fonts.css"><link rel="stylesheet" href="css/style.css?v=audio-20261023"><link rel="stylesheet" href="css/battle.css?v=audio-20261023">
+<link rel="stylesheet" href="css/audio.css?v=audio-20261023">
+<script src="js/audio.js?v=playlist-20261026" defer></script>
+</head>
+<body class="battle-page">
+<nav class="nav"><a class="logo" href="index.html">犇犇的车库</a><div class="nav-links"><a href="home.html">首页</a><a href="draw.html">抽卡</a><a href="garage.html">车库图鉴</a><a href="battle.html" class="active">对战赛场</a></div><div class="nav-stat">今日对战 <b id="remaining">5</b> / 5</div></nav>
+<main class="battle-wrap">
+  <header class="battle-heading"><div><span class="eyebrow">BENBEN MOTOR CLUB / ISLAND STUNT TOUR</span><h1>驶上橙色轨道，<em>冲向海岛。</em></h1><p>滨海高架、恐龙丛林、海上巨环。三车自动竞速，氮气由你掌控。</p></div><div class="season-stamp"><span>GARAGE</span><b>ISLAND TOUR</b><small>03 SCENES / 海岛特技巡回</small></div></header>
+  <div id="notice" class="notice" role="status" hidden></div>
+  <div class="battle-layout">
+    <section class="race-column" aria-label="比赛场景">
+      <div class="scene-toolbar"><span><i class="live-dot"></i> <b id="sceneTitle">直线竞速道</b> <small>实时 3D · <span id="fps">— FPS</span></small></span><div><label>画质 <select id="quality"><option value="high">标准</option><option value="low">流畅</option></select></label><label><input type="checkbox" id="effects" checked> 动态效果</label></div></div>
+      <div class="scene" id="scene">
+        <div class="hud" id="hud"><div><small>当前名次</small><strong id="position">—<span> / 3</span></strong></div><div><small>比赛用时</small><strong id="clock">00.000</strong></div><div><small>速度 KM/H</small><strong id="speed">0</strong></div></div>
+        <div class="scene-caption" id="sceneCaption"><b>赛道待命</b><span>选择座驾，准备发车</span></div>
+        <div class="race-overlay" id="overlay"><span class="eyebrow">准备赛道</span><strong id="overlayTitle">加载 3D 场景…</strong><p id="overlayText">加载完成前不会扣除对战次数。</p><button id="resume" class="race-button" hidden>继续比赛</button></div>
+        <div class="race-progress" aria-label="比赛进度"><i id="raceProgress"></i></div>
+      </div>
+      <div class="control-deck"><div><span class="eyebrow" id="zone">AUTOPILOT / 自动驾驶</span><p id="raceHint">起步、转向与冲线交给赛车，氮气时机交给你。</p><small id="gap">玩家无限氮气 · AI 每场 9 次</small></div><button id="nitro" class="nitro" disabled><span>⚡ 氮气加速</span><small id="nitroText">无限次 · 恢复 1.25 秒</small></button></div>
+      <div class="event-line" id="eventLine" aria-live="polite">准备好你的第一场比赛。</div>
+      <section class="result panel" id="result" hidden tabindex="-1"><span class="eyebrow">RACE CLASSIFICATION</span><h2 id="resultTitle"></h2><div id="resultRows"></div><p id="resultAnalysis"></p><details><summary>查看关键事件</summary><ol id="resultEvents"></ol></details><button class="race-button" id="again">返回选车 / 再次挑战</button></section>
+    </section>
+    <aside class="setup" id="setup"><div class="section-label"><span>01</span><h2>选择赛道</h2></div><div class="track-list" id="tracks"></div>
+      <div class="section-label"><span>02</span><h2>你的座驾</h2><a href="garage.html">车库 ↗</a></div>
+      <label class="sr-only" for="carSelect">选择已收藏的车辆</label><select id="carSelect" class="car-select"></select><div id="carProfile"></div>
+      <details class="opponents"><summary>查看两位 AI 对手与性能</summary><div id="opponents"></div></details>
+      <button id="start" class="race-button start" disabled>准备 3D 场景…</button><button id="abandon" class="abandon" hidden>放弃本场比赛</button><p class="smallprint">正式发车扣除 1 次对战，抽卡次数不受影响。<br>性能为游戏设定，不代表真实车辆参数。</p>
+    </aside>
+  </div>
+  <section class="record-panel"><div><span class="eyebrow">YOUR RACING JOURNAL</span><h2>车库战报</h2></div><div class="record-stats" id="stats"></div><div class="history" id="history"></div></section>
+  <footer class="battle-footer">AUTOPILOT ON. NITRO IS YOUR CALL. <span>场景参考 FH3: Hot Wheels · 程序化重建 · 本地单机战绩</span></footer>
+</main>
+<script src="js/data.js?v=audio-20261023"></script><script src="js/store.js?v=audio-20261023"></script><script src="js/battle-data.js?v=ai9-20261026"></script><script src="js/battle-tracks.js?v=tracks-20261026"></script><script src="js/battle-ai.js?v=ai9-20261026"></script><script src="js/battle-engine.js?v=ai9-20261026"></script><script src="js/battle-store.js?v=tracks-20261026"></script>
+<script src="js/battle-entry.js?v=ai9-20261026"></script>
+</body></html>

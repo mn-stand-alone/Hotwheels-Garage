@@ -1,0 +1,18 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>车型与氮气验收</title>
+<link rel="stylesheet" href="../css/battle.css?v=vehicles2-20261023">
+<link rel="stylesheet" href="../css/audio.css"><script src="../js/audio.js?v=playlist-20261026" defer></script>
+<style>body{background:#111923;color:#eaf1fa;font:16px sans-serif;margin:24px}button,select{padding:10px;margin:8px}#view{position:relative;height:520px;max-width:1100px;overflow:hidden}#status{white-space:pre-line}</style>
+<h1>车型与氮气验收 · 不消耗游戏次数</h1><label>车型<select id="body"></select></label><button id="boost">释放氮气</button><label><input id="effects" type="checkbox" checked>动态效果</label><div id="view"></div><pre id="status"></pre>
+<script src="../js/data.js?v=vehicles2-20261023"></script><script src="../js/battle-data.js?v=ai9-20261026"></script><script src="../js/battle-tracks.js?v=tracks-20261026"></script><script src="../js/battle-ai.js?v=ai9-20261026"></script><script src="../js/battle-engine.js?v=ai9-20261026"></script>
+<script type="module">
+import {BattleScene} from '../js/battle-scene.js?v=tracks-20261026';
+const scene=new BattleScene(document.getElementById('view'),()=>{},()=>{}),select=document.getElementById('body'),status=document.getElementById('status'),button=document.getElementById('boost');
+for(const [shape,info] of Object.entries(BattleData.bodies)){const option=document.createElement('option');option.value=shape;option.textContent=info.name;select.append(option);}
+let race,last=0,acc=0;
+function show(){const p=Object.values(BattleData.profiles).find(p=>p.shape===select.value);race=BattleEngine.create('sprint',[p,...BattleData.opponents('sprint')],12,'visual-test');scene.build('sprint',race.cars.map(c=>c.profile));race.cars.forEach((c,i)=>{c.s=c.prevS=200+i*5;});last=0;acc=0;}
+select.onchange=show;button.onclick=()=>{if(BattleEngine.boost(race))window.GameAudio?.sfx('nitro');};document.getElementById('effects').onchange=e=>scene.effects=e.target.checked;show();
+function frame(now){if(last){acc+=Math.min(.1,(now-last)/1000);while(acc>=BattleEngine.DT){if(race.status==='running')BattleEngine.step(race);acc-=BattleEngine.DT;}}last=now;scene.render(race,acc/BattleEngine.DT,false);
+ const player=scene.cars[0].root.position;scene.camera.position.copy(player).add({x:6,y:4,z:-8});scene.camera.up.set(0,1,0);scene.camera.lookAt(player.x,player.y+1,player.z);scene.renderer.render(scene.scene,scene.camera);
+ const c=race.cars[0];window.GameAudio?.drive(c.speed,c.boost>0,race.status==='running'&&c.finish===null);button.disabled=c.boost>0||c.cooldown>0||c.finish!==null;status.textContent=`${c.profile.name} · ${BattleData.bodies[c.profile.shape].name}\n性能：${c.profile.stats.join(' / ')}\n已释放 ${race.inputs.filter(e=>e.car===0).length} 次；生效 ${(c.boost/60).toFixed(2)} 秒；恢复 ${(c.cooldown/60).toFixed(2)} 秒\nAI 剩余次数：${race.cars.slice(1).map(c=>c.nitro).join(' / ')}`;requestAnimationFrame(frame);}
+requestAnimationFrame(frame);
+</script></html>

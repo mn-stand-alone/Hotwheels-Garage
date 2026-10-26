@@ -1,4 +1,8 @@
 (function () {
+  try {
+    const battle = BattleStore.read();
+    document.getElementById('battleSummary').textContent = `今日剩余 ${BattleStore.remaining()} 次 · ${battle.total} 场比赛 · ${battle.wins} 次冠军${battle.active ? ' · 有未完成比赛' : ''}`;
+  } catch (e) { document.getElementById('battleSummary').textContent = e.message; }
   const total = Store.cards.length;
   const owned = Store.ownedCount();
   document.querySelectorAll('[data-remain]').forEach((el) => (el.textContent = Store.remaining()));

@@ -9,6 +9,7 @@ function toast(msg) {
 }
 
 function openDetail(c) {
+  window.GameAudio?.sfx("detail");
   const r = Store.RARITY[c.rarity];
   const got = Store.state().owned[c.id];
   const rows = [
@@ -42,6 +43,7 @@ function openDetail(c) {
         <dl>${rows.map(([k, v]) => `<dt>${k}</dt><dd>${escapeHTML(v)}</dd>`).join('')}</dl>
         <h3 class="profile-title">🏎️ 车型档案</h3>
         <dl class="profile">${profile.map(([k, v]) => `<dt>${k}</dt><dd>${v ? escapeHTML(v) : '<span class="na">—</span>'}</dd>`).join('')}</dl>
+        ${window.BattleData ? `<div class="battle-performance"><h3>竞速性能 · ${BattleData.templates[BattleData.get(c.id).type].name}</h3>${BattleData.statsHTML(BattleData.get(c.id))}<small>游戏设定 · ${BattleData.get(c.id).reviewed ? '已配置车型定位' : '按名称与车型估算'} · 3D 展示模板</small><a href="battle.html?car=${encodeURIComponent(c.id)}">使用此车对战 →</a></div>` : ''}
         <div class="desc">${escapeHTML(c.desc || '这辆小车的故事还在整理中。')}</div>
       </div>
     </div>`;

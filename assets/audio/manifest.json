@@ -1,0 +1,47 @@
+{
+  "source": "【𝑷𝒍𝒂𝒚𝒍𝒊𝒔𝒕】超强节奏感纯音乐歌单｜运动爆发 x 工作专注 x 刷题高效.m4a",
+  "sourceSHA256": "2f99657929e5c74a1ea48e9e55f98ced9eb8d5e97f82c5ec0e46bf5282213043",
+  "selection": "Silence boundaries and measured energy; scene labels are not original song titles.",
+  "tracks": [
+    {
+      "id": "home",
+      "title": "大厅 · 律动启程",
+      "file": "home.m4a",
+      "start": 214,
+      "duration": 150,
+      "bytes": 3087049
+    },
+    {
+      "id": "garage",
+      "title": "车库 · 悠闲巡游",
+      "file": "garage.m4a",
+      "start": 561,
+      "duration": 180,
+      "bytes": 3740307
+    },
+    {
+      "id": "sprint",
+      "title": "滨海天际线 · 海岸节拍",
+      "file": "sprint.m4a",
+      "start": 834,
+      "duration": 120,
+      "bytes": 2530949
+    },
+    {
+      "id": "fork",
+      "title": "恐龙丛林 · 强劲脉冲",
+      "file": "fork.m4a",
+      "start": 1169,
+      "duration": 120,
+      "bytes": 2540387
+    },
+    {
+      "id": "loop",
+      "title": "海上巨环 · 高空疾驰",
+      "file": "loop.m4a",
+      "start": 1712,
+      "duration": 120,
+      "bytes": 2463822
+    }
+  ]
+}

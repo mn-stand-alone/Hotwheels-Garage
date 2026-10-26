@@ -1,0 +1,15 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>对战浏览器验收</title><style>body{background:#151821;color:#eee;font:16px sans-serif;margin:24px}#scene{height:480px;width:min(100%,1000px)}button{padding:12px;margin:8px}li{margin:8px}#results{white-space:pre-line}</style>
+<h1>对战浏览器验收（不读写游戏存档）</h1><button id="sprint">倾斜高速弯</button><button id="loop">回环顶部</button><button id="fork">岔路交汇</button><button id="finish">嘉年华终点</button><button id="context">测试 3D 中断及恢复</button><div id="scene"></div><pre id="results"></pre>
+<script src="../js/data.js?v=vehicles2-20261023"></script><script src="../js/store.js?v=vehicles2-20261023"></script><script src="../js/battle-data.js?v=vehicles2-20261023"></script><script src="../js/battle-tracks.js?v=vehicles2-20261023"></script><script src="../js/battle-ai.js?v=vehicles2-20261023"></script><script src="../js/battle-engine.js?v=vehicles2-20261023"></script><script src="../js/battle-store.js?v=vehicles2-20261023"></script>
+<script type="module">
+import {BattleScene} from '../js/battle-scene.js?v=vehicles2-20261023';
+const out=document.getElementById('results'),log=t=>out.textContent+=t+'\n';let lost=false,restored=false;
+const scene=new BattleScene(document.getElementById('scene'),()=>{lost=true;log('PASS WebGL context lost callback');},()=>{restored=true;log('PASS WebGL context restored callback');});
+let race;
+function show(track,position){race=BattleEngine.create(track,[BattleData.trial,...BattleData.opponents(track)],42,'preview-only');scene.build(track,race.cars.map(c=>c.profile));race.tick=900;race.cars.forEach((c,i)=>{c.s=c.prevS=position!==undefined?position+i*2:track==='loop'?BattleTracks.loopStart+BattleTracks.loopLength*.47+i*8:410+i*2;c.lane=c.prevLane=[-3,0,3][i];});scene.render(race,1,false);log('SCENE '+track+' ready');}
+show('loop');document.getElementById('sprint').onclick=()=>show('sprint');document.getElementById('loop').onclick=()=>show('loop');document.getElementById('fork').onclick=()=>show('fork');
+document.getElementById('finish').onclick=()=>show('sprint',1400);
+document.getElementById('context').onclick=()=>{const ext=scene.renderer.getContext().getExtension('WEBGL_lose_context');if(!ext){log('SKIP context loss extension not available');return;}ext.loseContext();setTimeout(()=>ext.restoreContext(),300);};
+let frames=0,start=performance.now();function frame(){if(!lost||restored)scene.render(race,1,false);frames++;const now=performance.now();if(frames===180)log(`Measured ${Math.round(frames*1000/(now-start))} FPS / ${innerWidth} × ${innerHeight}`);requestAnimationFrame(frame);}requestAnimationFrame(frame);
+try{if(!await BattleStore.acquire())throw Error('another race owns lock');let rejected=false;await navigator.locks.request('benben-battle',{ifAvailable:true},lock=>rejected=lock===null);if(!rejected)throw Error('exclusive lock failed');log('PASS concurrent lock request rejected');BattleStore.release();await new Promise(resolve=>setTimeout(resolve,0));if(!await BattleStore.acquire())throw Error('lock did not release');log('PASS lock released and reacquired');BattleStore.release();}catch(e){log('FAIL '+e.message);}
+</script></html>

@@ -72,6 +72,7 @@
   }
 
   async function openBay(rarity) {
+    window.GameAudio?.sfx('charge');
     resetStage();
     setRarity(stage, rarity);
     await wait(30);
@@ -87,6 +88,7 @@
   }
 
   function burst(rarity, x, y) {
+    window.GameAudio?.sfx('reveal',rarity);
     fx.sparks(x, y, rarity === 'legend' ? 140 : rarity === 'epic' ? 90 : 40, RCOLORS[rarity], rarity === 'common' ? 8 : 15);
     fx.ring(x, y, 'rgba(255,255,255,', 300, 6);
     if (rarity === 'legend') {
