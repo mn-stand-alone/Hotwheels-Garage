@@ -67,6 +67,7 @@
 
   function resetStage() {
     stage.className = 'stage';
+    document.getElementById('drawFavorite').innerHTML='';
     multi.hidden = true;
     document.getElementById('multiGrid').innerHTML = '';
   }
@@ -113,6 +114,7 @@
     btnOne.hidden = btnAll.hidden = true;
 
     await openBay(c.rarity);
+    document.getElementById('drawFavorite').innerHTML=favoriteButtonHTML(c.id);
     stage.classList.add('flipped');
     await wait(350);
     const [x, y] = center(stage.querySelector('.bay'));
@@ -151,6 +153,7 @@
           <div class="face front"><img src="${c.thumb}" alt=""></div>
         </div>
         <div class="cap"><span class="tag">${Store.RARITY[c.rarity].name}</span>${escapeHTML(cardTitle(c))}</div>
+        ${favoriteButtonHTML(c.id)}
       </div>`).join('');
     const els = [...grid.children];
     for (const el of els) { el.classList.add('in'); await wait(70); }
@@ -162,10 +165,11 @@
       setTimeout(() => burst(c.rarity, x, y), 250);
       await wait(c.rarity === 'legend' ? 900 : c.rarity === 'epic' ? 650 : 280);
     }
-    grid.addEventListener('click', (e) => {
+    grid.onclick = (e) => {
+      if(e.target.closest('[data-favorite]'))return;
       const el = e.target.closest('.mcard');
       if (el) openDetail(got[+el.dataset.i]);
-    });
+    };
     busy = false;
     showButtons('done');
     refresh();

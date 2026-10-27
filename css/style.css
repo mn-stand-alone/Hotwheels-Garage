@@ -180,3 +180,11 @@ button { font-family: inherit; }
   .nav-stat { display: none; }
   .nav-links a { padding: 6px 10px; font-size: 14px; }
 }
+
+/* Explicit favorites are separate from obtained cards. */
+.favorite-button{display:inline-flex;align-items:center;justify-content:center;padding:8px 12px;margin:8px 0;border:1px solid #716449;border-radius:8px;background:#222630;color:#ffe098;font:600 13px/1.4 system-ui;cursor:pointer;position:relative;z-index:2}
+.favorite-button[aria-pressed="true"]{background:#51401b;border-color:#ffca45;color:#fff0ba}
+.favorite-button:focus-visible{outline:2px solid #ffca45;outline-offset:3px}
+.slot.own .favorite-button{position:absolute;left:7px;top:7px;margin:0;padding:6px 8px;font-size:11px}
+.favorite-note{font-size:13px;line-height:1.7;color:#bfc4ce;margin:12px 0}.favorite-note a{color:#ffd166}
+[hidden]{display:none!important}

@@ -1,7 +1,7 @@
 (function () {
   const cards = Store.cards;
   const $ = (id) => document.getElementById(id);
-  const owned = Store.state().owned;
+  let owned = Store.state().owned;
 
   // 批次排序：年份 → 批次字母
   const batches = [...new Map(cards.map((c) => [c.batch, c])).values()]
@@ -23,6 +23,7 @@
     if (f.rarity && c.rarity !== f.rarity) return false;
     const own = !!owned[c.id];
     if (f.own === 'own' && !own) return false;
+    if (f.own === 'favorite' && !Store.isFavorite(c.id)) return false;
     if (f.own === 'lock' && own) return false;
     if (f.q) {
       // 未入库的卡只允许按批次/编号搜索，避免剧透车名
@@ -39,7 +40,7 @@
       return `<div class="slot own r-${c.rarity}" data-id="${c.id}" id="c-${c.id}">
         <img src="${c.thumb}" alt="${escapeHTML(cardTitle(c))}" loading="lazy">
         ${c.rarity !== 'common' ? `<span class="tag rt">${Store.RARITY[c.rarity].name}</span>` : ''}
-        <span class="nm">${escapeHTML(cardTitle(c))}</span>
+        <span class="nm">${escapeHTML(cardTitle(c))}</span>${favoriteButtonHTML(c.id)}
       </div>`;
     }
     return `<div class="slot lock" data-id="${c.id}" id="c-${c.id}">
@@ -49,6 +50,7 @@
   }
 
   function render() {
+    owned=Store.state().owned;refreshFavorites();
     const f = { q: $('q').value.trim().toLowerCase(), batch: $('fBatch').value, series: $('fSeries').value, rarity: $('fRarity').value, own: $('fOwn').value };
     const html = batches.map((b) => {
       const all = cards.filter((c) => c.batch === b);
@@ -73,6 +75,7 @@
   ['fBatch', 'fSeries', 'fRarity', 'fOwn'].forEach((id) => $(id).addEventListener('change', render));
 
   $('list').addEventListener('click', (e) => {
+    if(e.target.closest('[data-favorite]'))return;
     const el = e.target.closest('.slot');
     if (!el) return;
     const c = Store.byId[el.dataset.id];
@@ -80,6 +83,8 @@
     else toast(`🔒 这辆 ${c.batch} 的小车还没开进车库，去抽卡吧！`);
   });
 
+  document.addEventListener('favoriteschange',()=>{if($('fOwn').value==='favorite')render();else refreshFavorites();});
+  window.addEventListener('storage',e=>{if(e.key==='benben-garage-v1')render();});
   render();
 
   // 从首页“最近入库”跳转过来时定位并高亮

@@ -1,7 +1,7 @@
 (function () {
   try {
     const battle = BattleStore.read();
-    document.getElementById('battleSummary').textContent = `今日剩余 ${BattleStore.remaining()} 次 · ${battle.total} 场比赛 · ${battle.wins} 次冠军${battle.active ? ' · 有未完成比赛' : ''}`;
+    document.getElementById('battleSummary').textContent = `今日剩余 ${BattleStore.remaining()} / 3 次 · 每个场景限 1 次 · ${battle.total} 场比赛 · ${battle.wins} 次冠军${battle.active ? ' · 有未完成比赛' : ''}`;
   } catch (e) { document.getElementById('battleSummary').textContent = e.message; }
   const total = Store.cards.length;
   const owned = Store.ownedCount();

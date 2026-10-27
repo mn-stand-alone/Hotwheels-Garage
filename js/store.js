@@ -33,6 +33,7 @@
     try { s = persistent ? JSON.parse(localStorage.getItem(KEY)) : memory; } catch (e) { persistent = false; s = memory; }
     s = s && typeof s === 'object' ? s : {};
     s.owned = s.owned || {};
+    if(s.favorites===undefined)s.favorites=[];
     s.daily = s.daily || { date: today(), used: 0 };
     if (s.daily.date !== today()) s.daily = { date: today(), used: 0 };
     return s;
@@ -55,6 +56,13 @@
     update(fn) { const s = load(); const result = fn(s); save(s); return result; },
     state: () => load(),
     isOwned: (id) => !!load().owned[id],
+    isFavorite: id => {const s=load();return Boolean(byId[id]&&s.owned[id]&&Array.isArray(s.favorites)&&s.favorites.includes(id));},
+    favoriteCards: () => {const s=load(),ids=new Set(Array.isArray(s.favorites)?s.favorites:[]);return cards.filter(c=>s.owned[c.id]&&ids.has(c.id));},
+    setFavorite(id,value) {
+      const s=load();if(!byId[id]||!s.owned[id])throw new Error('请先抽到这辆车，再加入收藏');
+      const ids=new Set(Array.isArray(s.favorites)?s.favorites:[]);if(value)ids.add(id);else ids.delete(id);
+      s.favorites=[...ids];save(s);return Boolean(value);
+    },
     ownedCount: () => Object.keys(load().owned).filter((id) => byId[id]).length,
     remaining: () => Math.max(0, DAILY_LIMIT - load().daily.used),
     pool: () => {
@@ -107,6 +115,7 @@
       const s = JSON.parse(text);
       const object = v => v && typeof v === 'object' && !Array.isArray(v);
       if (!object(s) || !object(s.owned) || Object.values(s.owned).some(v => !Number.isFinite(v) || v <= 0)) throw new Error('收藏记录格式不正确');
+      if(s.favorites!==undefined&&(!Array.isArray(s.favorites)||new Set(s.favorites).size!==s.favorites.length||s.favorites.some(id=>typeof id!=='string'||!byId[id]||!s.owned[id])))throw new Error('收藏车辆数据不正确');
       if (s.daily && (!object(s.daily) || !/^\d{4}-\d{2}-\d{2}$/.test(s.daily.date) || !Number.isInteger(s.daily.used) || s.daily.used < 0 || s.daily.used > DAILY_LIMIT)) throw new Error('每日抽卡数据不正确');
       if (s.cycle && (!object(s.cycle) || !Array.isArray(s.cycle.seq) || s.cycle.seq.length !== CYCLE || s.cycle.seq.some(r => !TIERS.includes(r)) || !Number.isInteger(s.cycle.pos) || s.cycle.pos < 0 || s.cycle.pos > CYCLE)) throw new Error('抽卡轮次格式不正确');
       if (load().battle?.active && window.BattleStore && BattleStore.valid(load().battle)) throw new Error('请先完成或放弃当前比赛，再导入进度');

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>犇犇的车库 · 车库图鉴</title>
 <link rel="stylesheet" href="fonts/fonts.css">
-<link rel="stylesheet" href="css/style.css?v=audio-20261023">
+<link rel="stylesheet" href="css/style.css?v=favorites-20261027">
 <link rel="stylesheet" href="css/battle.css?v=audio-20261023">
 <style>
   .g-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 22px; }
@@ -50,7 +50,7 @@
 <nav class="nav">
   <a class="logo" href="index.html">犇犇的车库</a>
   <div class="nav-links"><a href="home.html">首页</a><a href="draw.html">抽卡</a><a href="garage.html" class="active">车库图鉴</a><a href="battle.html">对战赛场</a></div>
-  <div class="nav-stat">今日剩余 <b data-remain>0</b> 次</div>
+  <div class="nav-stat">今日剩余抽卡 <b data-remain>0</b> 次</div>
 </nav>
 
 <main class="wrap">
@@ -62,6 +62,7 @@
     </div>
   </div>
 
+  <p class="favorite-note">已收藏 <b data-favorite-count>0</b> 辆 · 点击车辆上的星标加入收藏，对战选车只显示收藏车辆。</p>
   <div class="filters">
     <input id="q" type="search" placeholder="搜索车名 / 编号 / 系列 / 厂商…">
     <select id="fBatch"><option value="">全部批次</option></select>
@@ -69,7 +70,7 @@
     <select id="fRarity"><option value="">全部稀有度</option></select>
     <select id="fOwn">
       <option value="">全部</option>
-      <option value="own">已入库</option>
+      <option value="own">已入库</option><option value="favorite">★ 已收藏</option>
       <option value="lock">未入库</option>
     </select>
   </div>
@@ -78,13 +79,13 @@
 </main>
 
 <script src="js/data.js?v=audio-20261023"></script>
-<script src="js/store.js?v=audio-20261023"></script>
-<script src="js/battle-data.js?v=audio-20261023"></script>
+<script src="js/store.js?v=favorites-20261027"></script>
+<script src="js/battle-data.js?v=daily3-20261027"></script>
 <script src="js/battle-tracks.js?v=audio-20261023"></script>
-<script src="js/battle-ai.js?v=audio-20261023"></script>
-<script src="js/battle-engine.js?v=audio-20261023"></script>
-<script src="js/battle-store.js?v=audio-20261023"></script>
-<script src="js/ui.js?v=audio-20261023"></script>
-<script src="js/garage.js?v=audio-20261023"></script>
+<script src="js/battle-ai.js?v=lookahead1-20261027"></script>
+<script src="js/battle-engine.js?v=daily3-20261027"></script>
+<script src="js/battle-store.js?v=favorites-20261027"></script>
+<script src="js/ui.js?v=favorites-20261027"></script>
+<script src="js/garage.js?v=favorites-20261027"></script>
 </body>
 </html>

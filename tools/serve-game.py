@@ -4,10 +4,12 @@ from pathlib import Path
 import os
 import subprocess
 import urllib.request
+from urllib.parse import urlsplit
 import webbrowser
 
 ROOT = Path(__file__).resolve().parents[1]
-URL = 'http://127.0.0.1:8765/home.html'
+URL = 'http://127.0.0.1:8765/index.html?intro=full'
+HEALTH_URL = 'http://127.0.0.1:8765/home.html'
 
 
 def open_game():
@@ -27,13 +29,20 @@ class GameHandler(SimpleHTTPRequestHandler):
         super().__init__(*args, directory=str(ROOT), **kwargs)
 
 
+    def end_headers(self):
+        # Revalidate code after updates; leave large music/image assets cacheable.
+        if Path(urlsplit(self.path).path).suffix.lower() in ('.html', '.js', '.css') or urlsplit(self.path).path.endswith('/'):
+            self.send_header('Cache-Control', 'no-cache')
+        super().end_headers()
+
+
 def main():
     try:
         server = ThreadingHTTPServer(('127.0.0.1', 8765), GameHandler)
     except OSError:
         # Do not silently change ports: browser saves belong to a specific origin.
         try:
-            with urllib.request.urlopen(URL, timeout=2) as response:
+            with urllib.request.urlopen(HEALTH_URL, timeout=2) as response:
                 page = response.read().decode('utf-8')
             if 'js/battle-store.js' not in page or 'js/home.js' not in page:
                 raise ValueError('This port is serving another application.')

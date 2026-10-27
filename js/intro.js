@@ -139,7 +139,7 @@
     setTimeout(() => { location.href = 'home.html'; }, 850);
   });
 
-  const start = () => play(Store.introSeenToday());
+  const start = () => play(new URLSearchParams(location.search).get('intro')==='full'?false:Store.introSeenToday());
   if (document.fonts && document.fonts.ready) {
     Promise.race([document.fonts.ready, new Promise((r) => setTimeout(r, 900))]).then(start);
   } else start();

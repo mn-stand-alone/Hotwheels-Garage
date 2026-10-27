@@ -23,15 +23,24 @@
     const result=[first.p,second.p];matches.set(key,result);return result;
   }
   function forecast(race,car,index){
-    const horizon=index===1?3:5,speed=Math.max(18,car.speed),length=BattleTracks.tracks[race.track].length;
+    const horizon=1,speed=Math.max(18,car.speed),length=BattleTracks.tracks[race.track].length;
     const zones=[];for(let t=0;t<=horizon;t+=.5)zones.push(BattleTracks.zone(race.track,Math.min(length,car.s+speed*t)));
-    return {horizon,current:zones[0],future:zones.at(-1),safeBoost:zones.slice(0,6).every(z=>z.boost>=.8),exitSoon:zones[0].curve>.8&&zones.some(z=>z.curve<.3)};
+    return {horizon,current:zones[0],future:zones.at(-1),safeBoost:zones.every(z=>z.boost>=.8),exitSoon:zones[0].curve>.8&&zones.some(z=>z.curve<.3)};
   }
   function opportunity(race,car,index){
     const length=BattleTracks.tracks[race.track].length,fraction=car.s/length,remaining=length-car.s,used=race.inputs.filter(input=>input.car===index).length;
     const f=forecast(race,car,index);
     const sprint=remaining<=Math.max(100,car.speed*4)&&remaining>15;
     if(sprint&&f.current.boost>=.8)return '终点冲刺';
+    if(race.version>=4){
+      if(remaining<=15)return '';
+      if(f.current.boost<.8)return f.exitSoon?'':index===1?'回环持续加速':'回环稳定加速';
+      if(!f.safeBoost)return '';
+      const behind=BattleTracks.zone(race.track,Math.max(0,car.s-Math.max(18,car.speed)*1.5));
+      if(behind.curve>.8&&f.current.curve<.3)return '出弯加速';
+      if(index===2&&f.future.curve>.8)return ''; // Hold for the exit rather than spend the upcoming cooldown in it.
+      return index===1?'有效直道抢速':'路段预判加速';
+    }
     const targets=index===1?[.025,.10,.20,.30,.41,.52,.64,.76,.88]:[.045,.14,.24,.35,.46,.57,.69,.80,.91];
     const pace=Math.max(18,car.speed),timeLeft=remaining/pace;
     const cycle=2.5+cooldown(car.profile)/60+.4;
@@ -56,7 +65,7 @@
       return car.nitro>0&&car.boost===0&&fraction>=thresholds[2-car.nitro]&&BattleTracks.zone(race.track,car.s).boost>=.8;
     }
     const a=car.ai;
-    if(car.nitro<=0||car.boost>0||car.cooldown>0||car.finish!==null){a.fireAt=null;return false;}
+    if((race.version<4&&car.nitro<=0)||car.boost>0||car.cooldown>0||car.finish!==null){a.fireAt=null;return false;}
     if(a.fireAt!==null){
       if(race.tick<a.fireAt)return false;
       a.fireAt=null;

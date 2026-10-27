@@ -2,3 +2,7 @@
 node_modules/
 *.tgz
 test-results/
+
+# Python generated files
+__pycache__/
+*.py[cod]
