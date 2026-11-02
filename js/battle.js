@@ -22,9 +22,10 @@ function fillCars(){
 function profileUI(){
   if(!race&&!Store.isFavorite($('carSelect').value)){$('carProfile').innerHTML='<p class="profile-note">暂无收藏车辆。<a href="garage.html">前往车库添加收藏 →</a></p>';$('opponents').innerHTML='收藏并选车后匹配对手。';return;}
   const p=selectedProfile(),card=Store.byId[p.id];
-  $('carProfile').innerHTML=`<div class="car-card">${card?`<img src="${esc(card.thumb)}" alt="${esc(p.name)}">`:'<div class="trial-car" aria-hidden="true">🏎</div>'}<div><b>${esc(p.name)}</b><small>${BattleData.templates[p.type].name}${card?'':' · 体验车'}</small></div></div>${BattleData.statsHTML(p)}<p class="profile-note">${p.reviewed?'已配置车型定位 · 同车型共享性能':'按车型与名称估算 · 游戏性能'}<br>${BattleData.bodies[p.shape]?.name||"经典车身"} · 同车型跨批次共享性能。</p>`;
+  $('carProfile').innerHTML=`<div class="car-card">${card?`<img src="${esc(card.thumb)}" alt="${esc(p.name)}">`:'<div class="trial-car" aria-hidden="true">🏎</div>'}<div><b>${esc(p.name)}</b><small>${BattleData.templates[p.type].name}${card?'':' · 体验车'}</small></div></div>${BattleData.statsHTML(p)}<p class="profile-note">${p.reviewed?'已配置车型定位 · 同车型同稀有度共享性能':'按车型与名称估算 · 游戏性能'}<br>${BattleData.bodies[p.shape]?.name||"经典车身"} · 同车型同稀有度共享性能。</p>`;
+  if(!race)$('nitroText').textContent=`持续 ${(BattleEngine.duration(p)/60).toFixed(2)} 秒 · 持续 ${(BattleEngine.duration(p)/60).toFixed(2)} 秒 · 恢复 ${(BattleAI.cooldown(p)/60).toFixed(2)} 秒`;
   const img=$('carProfile').querySelector('img');if(img)img.addEventListener('error',()=>{img.hidden=true;});
-  $('opponents').innerHTML=(race?race.cars.slice(1).map(c=>c.profile):BattleData.opponents(track,p)).map((p,i)=>`<div class="opponent"><b>AI 0${i+2} · ${esc(p.name)} / ${BattleData.templates[p.type].name}</b><small>${race&&race.version<3?'旧版策略 · 氮气 2 次':`${BattleAI.styles[i]} · 氮气 ${race&&race.version===3?'限次':'无限次'} · 恢复 ${(BattleAI.cooldown(p)/60).toFixed(2)} 秒`}</small>${BattleData.statsHTML(p)}</div>`).join('');
+  $('opponents').innerHTML=(race?race.cars.slice(1).map(c=>c.profile):BattleData.opponents(track,p)).map((p,i)=>`<div class="opponent"><b>AI ${i+1} · ${esc(p.name)} / ${BattleData.templates[p.type].name}</b><small>${race&&race.version<3?'旧版策略 · 氮气 2 次':`${BattleAI.styles[i]} · 氮气 ${race&&race.version===3?'限次':'无限次'} · 持续 ${(BattleEngine.duration(p)/60).toFixed(2)} 秒 · 恢复 ${(BattleAI.cooldown(p)/60).toFixed(2)} 秒`}</small>${BattleData.statsHTML(p)}</div>`).join('');
 }
 function syncRaceUI(){
   const c=race.cars[0].profile;
@@ -40,7 +41,7 @@ function refreshRecords(){
   document.querySelectorAll('[data-quota]').forEach(el=>el.textContent=b.daily.tracks.includes(el.dataset.quota)?'今日已游玩':BattleStore.remaining(el.dataset.quota)?'今日可玩 1 次':'今日总次数已用完');
   $('stats').innerHTML=`<div><b>${b.total}</b><small>累计比赛</small></div><div><b>${b.wins}</b><small>冠军次数</small></div><div><b>${b.badges.length} / 3</b><small>赛道首胜徽章</small></div>`;
   $('history').innerHTML=b.history.length?b.history.map(h=>`<div class="history-card"><b>${h.abandoned?'已弃赛':`${h.tie?'并列 ':''}P${h.rank}`} · ${BattleTracks.tracks[h.track].name}</b>${esc(h.car)}<small>${h.time!==null?(h.time/1000).toFixed(3)+' 秒':'未完成'} · ${esc(h.date.slice(0,10))}</small></div>`).join(''):'<p class="history-empty">还没有比赛记录。第一次冲线，会被记在这里。</p>';
-  const best=b.best[`4:long:${track}`];if(!race)$('gap').textContent=best?`本站个人最佳 ${(best/1000).toFixed(3)} 秒 · ${b.badges.includes(track)?'已获得首胜徽章':'等待首胜'}`:'玩家无限氮气 · AI 无限氮气';
+  const best=b.best[`6:long:${track}`];if(!race)$('gap').textContent=best?`本站个人最佳 ${(best/1000).toFixed(3)} 秒 · ${b.badges.includes(track)?'已获得首胜徽章':'等待首胜'}`:'玩家无限氮气 · AI 无限氮气';
   if(!Store.persistent())notice('浏览器无法保存进度：当前为会话内体验，关闭后战绩及每日次数可能丢失。');
 }
 function setDisabled(value){$('carSelect').disabled=value;document.querySelectorAll('.track-option').forEach(b=>b.disabled=value);document.body.classList.toggle('racing',value);}
@@ -60,6 +61,8 @@ function hud(){
   const c=race.cars[0],rows=BattleEngine.ranking(race),me=rows.find(x=>x.i===0),leader=race.cars[rows[0].i];
   $('position').innerHTML=`${me.rank}<span> / 3</span>`;$('clock').textContent=(race.tick/60).toFixed(3).padStart(6,'0');$('speed').textContent=Math.round(c.speed*3.6);
   $('raceProgress').style.width=`${100*c.s/BattleTracks.tracks[race.track].length}%`;
+  $('raceMarkers').hidden=false;
+  document.querySelectorAll('[data-racer]').forEach(marker=>{const index=Number(marker.dataset.racer),car=race.cars[index],percent=Math.max(0,Math.min(100,100*car.s/BattleTracks.tracks[race.track].length));marker.style.left=`${percent}%`;marker.style.transform=`translateX(${-percent}%)`;marker.title=`${index===0?'你':'AI '+index} · ${car.profile.name} · ${percent.toFixed(1)}%`;marker.setAttribute('aria-label',marker.title);});
   $('zone').textContent=BattleTracks.zone(race.track,c.s).name+' / 自动驾驶';
   $('gap').textContent=me.rank===1?'你正在领跑':`距离领跑车辆 ${Math.max(0,leader.s-c.s).toFixed(1)} 米`;
   $('raceHint').textContent=race.status==='finished'?'比赛结束，查看下方成绩与关键事件。':race.status==='abandoned'?'本场已弃赛。':c.finish!==null?'你已冲线，等待其他车辆完成。':c.boost?'氮气生效中！车辆仍由自动驾驶控制。':'观察前方路段，点击按钮或按空格释放氮气。';
@@ -67,7 +70,7 @@ function hud(){
   $('nitro').disabled=!running||(!unlimited&&c.nitro<=0)||c.boost>0||(unlimited&&c.cooldown>0)||c.finish!==null;
   $('nitro').classList.toggle('boosting',c.boost>0);
   $('nitroText').textContent=c.finish!==null?'已冲线':!running?'比赛未进行':c.boost?`加速 ${(c.boost/60).toFixed(1)} 秒`:unlimited?(c.cooldown?`恢复中 ${(c.cooldown/60).toFixed(2)} 秒`:'无限次 · 空格释放'):c.nitro?`剩余 ${c.nitro} 次 · 空格键`:'本场氮气已用完';
-  $('nitro').style.setProperty('--nitro-ready',`${unlimited&&c.cooldown?100*(1-c.cooldown/BattleEngine.COOLDOWN):100}%`);
+  $('nitro').style.setProperty('--nitro-ready',`${unlimited&&c.cooldown?100*(1-c.cooldown/BattleAI.cooldown(c.profile)):100}%`);
   if(race.events.length!==lastEvent){lastEvent=race.events.length;$('eventLine').textContent=race.events.at(-1)?.text||'绿灯亮起，全自动竞速开始！';}
 }
 async function begin(){
@@ -116,8 +119,8 @@ function finish(abandoned=false){
 function showResult(entry){
   $('overlay').hidden=true;$('result').hidden=false;$('resultTitle').textContent=entry.abandoned?'已结束本场比赛':entry.rank===1?`${entry.tie?'并列冠军':'冠军！'} 这次，跑在最前。`:`第 ${entry.rank} 名 · 下一次，再快一点。`;
   const rows=BattleEngine.ranking(race);
-  $('resultRows').innerHTML=rows.map(row=>`<div class="result-row ${row.i===0?'me':''}"><b>P${row.rank}</b><span>${row.i===0?'你':'AI 0'+(row.i+1)} · ${esc(race.cars[row.i].profile.name)}</span><b>${row.time!==null?(row.time/1000).toFixed(3)+'s':'未完成'}</b></div>`).join('');
-  const c=race.cars[0];$('resultAnalysis').textContent=`${BattleData.templates[c.profile.type].name} · 使用 ${race.inputs.filter(e=>e.car===0).length} 次氮气 · 经历 ${c.hits} 次碰撞。${entry.abandoned?'本次已计入每日次数，不影响抽卡。':race.track==='fork'?'交汇区会发生推挤，重量和稳定有助于降低速度损失。':race.track==='loop'?'回环中操控影响限速，出环直道能发挥更完整的氮气增益。':'极速决定长直道上限，加速影响起步及氮气响应。'}`;
+  $('resultRows').innerHTML=rows.map(row=>`<div class="result-row ${row.i===0?'me':''}"><b>P${row.rank}</b><span>${row.i===0?'你':'AI '+row.i} · ${esc(race.cars[row.i].profile.name)}</span><b>${row.time!==null?(row.time/1000).toFixed(3)+'s':'未完成'}</b></div>`).join('');
+  const c=race.cars[0];$('resultAnalysis').textContent=`${BattleData.templates[c.profile.type].name} · 使用 ${race.inputs.filter(e=>e.car===0).length} 次氮气 · 经历 ${c.hits} 次碰撞。${entry.abandoned?'本次已计入每日次数，不影响抽卡。':race.track==='fork'?'交汇区会发生推挤，重量有助于降低速度损失。':race.track==='loop'?'回环中操控影响限速，出环直道能发挥更完整的氮气增益。':'极速决定长直道上限，加速影响起步及氮气响应。'}`;
   $('resultEvents').innerHTML=race.events.length?race.events.map(e=>`<li>${(e.tick/60).toFixed(2)}s · ${esc(e.text)}</li>`).join(''):'<li>本场没有氮气或碰撞事件。</li>';
   $('result').focus({preventScroll:true});
 }
@@ -126,7 +129,7 @@ async function abandon(){
   if(!running){if(!await BattleStore.acquire()){notice('其他标签页正在比赛，请先切回该页面。');return;}const saved=BattleStore.read().active;if(!saved){BattleStore.release();notice('比赛已经结束，请刷新页面');return;}race=saved;}
   race.status='abandoned';finish(true);
 }
-function reset(){race=null;running=false;lastEvent=-1;setDisabled(false);$('result').hidden=true;$('abandon').hidden=true;$('clock').textContent='00.000';$('speed').textContent='0';$('position').innerHTML='—<span> / 3</span>';$('raceProgress').style.width='0%';$('raceHint').textContent='起步、转向与冲线交给赛车，氮气时机交给你。';$('zone').textContent='AUTOPILOT / 自动驾驶';$('nitroText').textContent='无限次 · 恢复 1.25 秒';$('nitro').classList.remove('boosting');fillCars();profileUI();buildPreview();}
+function reset(){$('raceMarkers').hidden=true;race=null;running=false;lastEvent=-1;setDisabled(false);$('result').hidden=true;$('abandon').hidden=true;$('clock').textContent='00.000';$('speed').textContent='0';$('position').innerHTML='—<span> / 3</span>';$('raceProgress').style.width='0%';$('raceHint').textContent='起步、转向与冲线交给赛车，氮气时机交给你。';$('zone').textContent='AUTOPILOT / 自动驾驶';$('nitroText').textContent='无限次 · 按氮气属性恢复';$('nitro').classList.remove('boosting');fillCars();profileUI();buildPreview();}
 function frame(now){
   const elapsed=last?(now-last)/1000:0;last=now;
   if(!document.hidden&&elapsed>0&&elapsed<1){fpsElapsed+=elapsed;fpsFrames++;if(fpsElapsed>=1){$('fps').textContent=`${Math.round(fpsFrames/fpsElapsed)} FPS`;fpsElapsed=0;fpsFrames=0;}}

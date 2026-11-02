@@ -1,8 +1,8 @@
 (function () {
   const CHARGES=9;
   const styles=['积极加速','出弯冲刺'];
-  // Literal positive correlation requested: handling 0..100 => 1..3.5 seconds.
-  const cooldown=profile=>Math.round((1+profile.stats[2]*.025)*60);
+  // Shared player/AI nitro timing, quantized to 60 Hz.
+  const cooldown=profile=>Math.round((2-(Math.max(60,Math.min(100,profile.stats[3]))-60)*.0125)*60);
   const estimates=new Map(),matches=new Map();
   const modelKeys=new Map((window.CARDS||[]).map(c=>[c.id,(c.nameEn||c.cardName||c.id).trim().toLowerCase()]));
   const modelKey=p=>modelKeys.get(p.id)||p.name;
@@ -12,20 +12,25 @@
     while(s<length&&time<150){speed=BattleEngine.advanceSpeed(speed,profile,track,s,false,dt);const distance=speed*dt;time+=Math.min(dt,(length-s)/Math.max(speed,.001));s+=distance;}
     estimates.set(key,time);return time;
   }
+  const tiers={common:0,rare:1,epic:2,legend:3};
+  const tier=p=>tiers[p.rarity]??tiers[BattleData.profiles[p.id]?.rarity]??0;
   function match(track,player){
-    const key=track+':'+player.id+':'+player.stats.join(',');if(matches.has(key))return matches.get(key);
-    const target=estimate(track,player),seen=new Set([modelKey(player)]);
-    const candidates=Object.values(BattleData.profiles).filter(p=>{if(seen.has(modelKey(p)))return false;seen.add(modelKey(p));return true;})
-      .map(p=>({p,time:estimate(track,p)})).sort((a,b)=>Math.abs(a.time-target)-Math.abs(b.time-target)||a.p.id.localeCompare(b.p.id));
+    const key=track+':'+player.id+':'+tier(player)+':'+player.stats.join(',');if(matches.has(key))return matches.get(key);
+    const target=estimate(track,player);
+    const seen=new Set([modelKey(player)]);
+    const candidates=Object.values(BattleData.profiles).filter(p=>tier(p)<=tier(player)&&modelKey(p)!==modelKey(player))
+      .map(p=>({p,time:estimate(track,p)})).sort((a,b)=>Math.abs(a.time-target)-Math.abs(b.time-target)||a.p.id.localeCompare(b.p.id))
+      .filter(c=>{const key=modelKey(c.p);if(seen.has(key))return false;seen.add(key);return true;});
     const first=candidates[0],pool=candidates.filter(c=>c!==first);
     // Prefer a different performance archetype while keeping predicted pace within 3%.
     const second=pool.find(c=>c.p.type!==first.p.type&&Math.abs(c.time-target)/target<=.03)||pool.find(c=>c.p.shape!==first.p.shape&&Math.abs(c.time-target)/target<=.03)||pool[0];
     const result=[first.p,second.p];matches.set(key,result);return result;
   }
   function forecast(race,car,index){
-    const horizon=1,speed=Math.max(18,car.speed),length=BattleTracks.tracks[race.track].length;
-    const zones=[];for(let t=0;t<=horizon;t+=.5)zones.push(BattleTracks.zone(race.track,Math.min(length,car.s+speed*t)));
-    return {horizon,current:zones[0],future:zones.at(-1),safeBoost:zones.every(z=>z.boost>=.8),exitSoon:zones[0].curve>.8&&zones.some(z=>z.curve<.3)};
+    const horizon=.5,speed=Math.max(18,car.speed),length=BattleTracks.tracks[race.track].length;
+    const current=BattleTracks.zone(race.track,car.s);
+    const zones=[.2,.35,.5].map(t=>BattleTracks.zone(race.track,Math.min(length,car.s+speed*t)));
+    return {horizon,current,future:zones.at(-1),safeBoost:zones.every(z=>z.boost>=.8),exitSoon:current.curve>.8&&zones.some(z=>z.curve<.3)};
   }
   function opportunity(race,car,index){
     const length=BattleTracks.tracks[race.track].length,fraction=car.s/length,remaining=length-car.s,used=race.inputs.filter(input=>input.car===index).length;

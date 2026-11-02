@@ -5,6 +5,7 @@
     if (!state.battle) state.battle=fresh();
     if (!valid(state.battle)) throw new Error('对战存档格式异常，请先在首页导出备份；原存档未被覆盖');
     const b=state.battle;
+    if(b.active)BattleEngine.upgrade(b.active);
     if (b.daily.date!==Store.today()) b.daily={version:2,date:Store.today(),used:0,ids:[],tracks:[]};
     if(b.daily.version!==2){
       const charged=new Set(b.daily.ids),records=[...b.history,...(b.active?[b.active]:[])];
@@ -14,6 +15,7 @@
       // stay spent conservatively, capped at the new three-race daily limit.
       const unknown=Math.max(0,b.daily.used-new Set(matches.map(r=>r.id)).size);
       b.daily.used=Math.min(3,Math.max(b.daily.tracks.length,b.daily.tracks.length+unknown));
+      b.daily.ids=b.daily.ids.slice(0,b.daily.used);
       b.daily.version=2;
     }
     return b;

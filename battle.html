@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>犇犇的车库 · 对战赛场</title>
-<link rel="stylesheet" href="fonts/fonts.css"><link rel="stylesheet" href="css/style.css?v=favorites-20261027"><link rel="stylesheet" href="css/battle.css?v=audio-20261023">
+<link rel="stylesheet" href="fonts/fonts.css"><link rel="stylesheet" href="css/style.css?v=favorites-20261102"><link rel="stylesheet" href="css/battle.css?v=progress-20261102">
 <link rel="stylesheet" href="css/audio.css?v=audio-20261023">
 <script src="js/audio.js?v=playlist-20261026" defer></script>
 </head>
@@ -19,9 +19,9 @@
         <div class="hud" id="hud"><div><small>当前名次</small><strong id="position">—<span> / 3</span></strong></div><div><small>比赛用时</small><strong id="clock">00.000</strong></div><div><small>速度 KM/H</small><strong id="speed">0</strong></div></div>
         <div class="scene-caption" id="sceneCaption"><b>赛道待命</b><span>选择座驾，准备发车</span></div>
         <div class="race-overlay" id="overlay"><span class="eyebrow">准备赛道</span><strong id="overlayTitle">加载 3D 场景…</strong><p id="overlayText">加载完成前不会扣除对战次数。</p><button id="resume" class="race-button" hidden>继续比赛</button></div>
-        <div class="race-progress" aria-label="比赛进度"><i id="raceProgress"></i></div>
+        <div class="race-progress" aria-label="比赛进度"><i id="raceProgress"></i><div id="raceMarkers" hidden><span class="race-marker player" data-racer="0">你</span><span class="race-marker ai-one" data-racer="1">AI 1</span><span class="race-marker ai-two" data-racer="2">AI 2</span></div></div>
       </div>
-      <div class="control-deck"><div><span class="eyebrow" id="zone">AUTOPILOT / 自动驾驶</span><p id="raceHint">起步、转向与冲线交给赛车，氮气时机交给你。</p><small id="gap">玩家无限氮气 · AI 无限氮气</small></div><button id="nitro" class="nitro" disabled><span>⚡ 氮气加速</span><small id="nitroText">无限次 · 恢复 1.25 秒</small></button></div>
+      <div class="control-deck"><div><span class="eyebrow" id="zone">AUTOPILOT / 自动驾驶</span><p id="raceHint">起步、转向与冲线交给赛车，氮气时机交给你。</p><small id="gap">玩家无限氮气 · AI 无限氮气</small></div><button id="nitro" class="nitro" disabled><span>⚡ 氮气加速</span><small id="nitroText">无限次 · 按氮气属性恢复</small></button></div>
       <div class="event-line" id="eventLine" aria-live="polite">准备好你的第一场比赛。</div>
       <section class="result panel" id="result" hidden tabindex="-1"><span class="eyebrow">RACE CLASSIFICATION</span><h2 id="resultTitle"></h2><div id="resultRows"></div><p id="resultAnalysis"></p><details><summary>查看关键事件</summary><ol id="resultEvents"></ol></details><button class="race-button" id="again">返回选车 / 再次挑战</button></section>
     </section>
@@ -35,6 +35,6 @@
   <section class="record-panel"><div><span class="eyebrow">YOUR RACING JOURNAL</span><h2>车库战报</h2></div><div class="record-stats" id="stats"></div><div class="history" id="history"></div></section>
   <footer class="battle-footer">AUTOPILOT ON. NITRO IS YOUR CALL. <span>场景参考 FH3: Hot Wheels · 程序化重建 · 本地单机战绩</span></footer>
 </main>
-<script src="js/data.js?v=audio-20261023"></script><script src="js/store.js?v=favorites-20261027"></script><script src="js/battle-data.js?v=daily3-20261027"></script><script src="js/battle-tracks.js?v=tracks-20261026"></script><script src="js/battle-ai.js?v=lookahead1-20261027"></script><script src="js/battle-engine.js?v=daily3-20261027"></script><script src="js/battle-store.js?v=favorites-20261027"></script>
-<script src="js/battle-entry.js?v=favorites-20261027"></script>
+<script src="js/data.js?v=audio-20261023"></script><script src="js/store.js?v=favorites-20261102"></script><script src="js/battle-data.js?v=ratings5-20261102"></script><script src="js/battle-tracks.js?v=ratings5-20261102"></script><script src="js/battle-ai.js?v=tier-cap-20261102"></script><script src="js/battle-engine.js?v=handling6-20261102"></script><script src="js/battle-store.js?v=ratings5-20261102"></script>
+<script src="js/battle-entry.js?v=handling6-20261102"></script>
 </body></html>

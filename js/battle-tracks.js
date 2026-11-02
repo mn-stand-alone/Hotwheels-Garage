@@ -1,8 +1,8 @@
 (function () {
   const tracks = {
     sprint: { id: 'sprint', name: '滨海天际线', subtitle: 'THRILL CITY / 城市高架', label: '01 / THRILL CITY', reference: 'Thrill City', length: 2900, elevation: 26, color: '#ff963d', desc: '驶上橙色跨海高架，在玻璃楼群与蓝色海湾之间全速冲刺。', focus: '高速 S 弯 · 极速 / 加速', icon: '↗', difficulty: '起伏高速弯' },
-    fork: { id: 'fork', name: '恐龙丛林', subtitle: 'JURASSIC JUNGLE / 丛林山路', label: '02 / JURASSIC JUNGLE', reference: 'Jurassic Jungle', length: 2500, elevation: 23, color: '#54dcca', desc: '穿越热带岛屿与机械霸王龙地标，沿连续蛇形山路与起伏坡道争夺领先。', focus: '连续弯道 · 重量 / 稳定', icon: '⋈', difficulty: '蛇形山路' },
-    loop: { id: 'loop', name: '海上巨环', subtitle: 'HYPERLOOP / 垂直回环', label: '03 / HYPERLOOP', reference: 'Hyperloop', length: 2600, elevation: 28, color: '#bfa1ff', desc: '冲上碧海上空的双重错位橙色回环，倒悬驶过顶点，再向岛岸终点冲刺。', focus: '立体回环 · 操控 / 稳定', icon: '∞', difficulty: '立体回环' },
+    fork: { id: 'fork', name: '恐龙丛林', subtitle: 'JURASSIC JUNGLE / 丛林山路', label: '02 / JURASSIC JUNGLE', reference: 'Jurassic Jungle', length: 2500, elevation: 23, color: '#54dcca', desc: '穿越热带岛屿与机械霸王龙地标，沿连续蛇形山路与起伏坡道争夺领先。', focus: '连续弯道 · 操控 / 重量', icon: '⋈', difficulty: '蛇形山路' },
+    loop: { id: 'loop', name: '海上巨环', subtitle: 'HYPERLOOP / 垂直回环', label: '03 / HYPERLOOP', reference: 'Hyperloop', length: 2600, elevation: 28, color: '#bfa1ff', desc: '冲上碧海上空的双重错位橙色回环，倒悬驶过顶点，再向岛岸终点冲刺。', focus: '立体回环 · 操控 / 氮气', icon: '∞', difficulty: '立体回环' },
   };
   // Raw routes are resampled by arc length: simulation metres equal road metres.
   // Each loop moves sideways by 36m, so entry and exit never share a deck.

@@ -38,6 +38,15 @@
   }
   const namesByModel={};
   for(const c of window.CARDS||[]){const key=(c.nameEn||c.cardName||c.id).trim().toLowerCase();namesByModel[key]=(namesByModel[key]||key)+' '+(c.nameZh||'');}
+  const budgets={common:360,rare:390,epic:420,legend:450};
+  // Weighted, capped allocation: adding rarity points never lowers an attribute.
+  function allocate(base,total){
+    const stats=Array(5).fill(60),weights=base.map(v=>Math.max(1,v-35));
+    for(let points=total-300;points>0;points--){let best=-1;
+      for(let i=0;i<5;i++)if(stats[i]<100&&(best<0||weights[i]/(stats[i]-59)>weights[best]/(stats[best]-59)))best=i;
+      stats[best]++;
+    }return stats;
+  }
   function profile(card) {
     const key = (card.nameEn || card.cardName || card.id).trim().toLowerCase();
     let shape=classify(namesByModel[key]||key);
@@ -47,11 +56,11 @@
     // Stable per-model trade-offs; same model and all its paint/batch cards stay equal.
     for(let i=0;i<5;i++){const j=(i+1)%5,delta=hash(key+':'+i)%11-5;if(stats[i]+delta>=40&&stats[i]+delta<=98&&stats[j]-delta>=40&&stats[j]-delta<=98){stats[i]+=delta;stats[j]-=delta;}}
     return { id: card.id, name: card.nameZh || card.nameEn || card.cardName || card.id, type, shape,
-      stats, reviewed: Boolean(exact[key]), source:exact[key]?'车型定位覆盖':'名称规则估算', color: ['#ff652b', '#ffca45', '#ef4f6b', '#4fd2be', '#a498ff'][hash(key) % 5] };
+      stats:allocate(stats,budgets[card.rarity]||360), rarity:card.rarity, reviewed: Boolean(exact[key]), source:exact[key]?'车型定位覆盖':'名称规则估算', color: ['#ff652b', '#ffca45', '#ef4f6b', '#4fd2be', '#a498ff'][hash(key) % 5] };
   }
-  const trial = { id: 'trial', name: '车库体验 GT', type: 'balanced', shape: 'sport', stats: [...templates.balanced.stats], reviewed: true, color: '#ff652b' };
+  const trial = { id: 'trial', name: '车库体验 GT', type: 'balanced', shape: 'sport', stats: allocate(templates.balanced.stats,360), reviewed: true, color: '#ff652b' };
   const profiles = Object.fromEntries((window.CARDS || []).map(c => [c.id, profile(c)]));
-  window.BattleData = { version: 2, bodies, classify, templates, profiles, profile, trial, hash, labels: ['极速', '加速', '操控', '稳定', '重量'],
+  window.BattleData = { version: 3, budgets, allocate, bodies, classify, templates, profiles, profile, trial, hash, labels: ['速度', '加速', '操控', '氮气', '重量'],
     get: id => profiles[id] || trial,
     opponents(track,player=trial) { return BattleAI.match(track,player); },
     statsHTML(p) { return `<div class="performance">${p.stats.map((v,i) => `<div><span>${this.labels[i]}</span><meter min="0" max="100" value="${v}">${v}</meter><b>${v}</b></div>`).join('')}</div>`; },

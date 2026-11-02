@@ -19,6 +19,7 @@ S.setFavorite(id,true);const race=make(c.BattleData.get(id));B.start(race);S.set
 S.update(s=>{delete s.battle.daily.version;s.battle.daily.used=5;s.battle.daily.ids=['a','b','c','d','e'];s.battle.history=s.battle.daily.ids.map(id=>({...s.battle.history[0],id}));delete s.battle.daily.tracks;});
 assert.equal(B.remaining(),2);assert.equal(B.read().daily.used,1);assert.equal(B.remaining('sprint'),0);
 const bad=B.read();bad.daily.used=5;assert.equal(B.valid(bad),false);
+S.setFavorite(id,true);const next=c.BattleEngine.create('fork',[c.BattleData.get(id),...c.BattleData.opponents('fork')],2,'after-migration');B.start(next);assert.ok(B.valid(B.read()));B.settle(next,true);assert.equal(B.remaining(),1);
 S.update(s=>s.battle.daily.date='2000-01-01');assert.equal(B.remaining(),3);
 const legacy=JSON.parse(backup);delete legacy.favorites;S.importJSON(JSON.stringify(legacy));assert.equal(S.favoriteCards().length,0);assert.ok(S.isOwned(id));
 console.log('PASS favorites persistence, import validation, start guard, active continuation, legacy migration and daily reset');

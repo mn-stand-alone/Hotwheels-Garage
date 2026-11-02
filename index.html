@@ -5,12 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>犇犇的车库</title>
 <link rel="stylesheet" href="fonts/fonts.css">
-<link rel="stylesheet" href="css/style.css?v=favorites-20261027">
+<link rel="stylesheet" href="css/style.css?v=favorites-20261102">
 <link rel="stylesheet" href="css/intro.css?v=audio-20261023">
 <link rel="stylesheet" href="css/audio.css?v=audio-20261023">
 <script src="js/audio.js?v=playlist-20261026" defer></script>
 </head>
 <body class="intro-page">
+<aside id="localLaunchHelp" hidden style="position:fixed;z-index:1000;top:16px;left:16px;right:16px;max-width:620px;margin:auto;padding:18px 22px;background:#20232b;color:#fff;border:1px solid #ffd166;border-radius:12px;line-height:1.7;font:14px sans-serif">
+  <strong>请通过 start-game.cmd 启动完整游戏</strong>
+  <p>你正在直接打开本地 HTML 文件。请返回游戏文件夹，双击 start-game.cmd，并保持启动窗口开启，浏览器会自动打开游戏。直接打开 HTML 无法加载完整 3D 对战。</p>
+  <a href="http://127.0.0.1:8765/index.html?intro=full" style="color:#ffd166">已启动服务？进入游戏 →</a>
+  <p>若出现 ERR_CONNECTION_REFUSED，请重新运行 start-game.cmd，然后刷新游戏页面。</p>
+</aside>
+<script>if(location.protocol==='file:')document.getElementById('localLaunchHelp').hidden=false;</script>
 <div class="intro" id="intro">
   <div class="bg"></div>
 
@@ -71,7 +78,7 @@
 </div>
 
 <script src="js/data.js?v=audio-20261023"></script>
-<script src="js/store.js?v=favorites-20261027"></script>
+<script src="js/store.js?v=favorites-20261102"></script>
 <script src="js/fx.js?v=audio-20261023"></script>
 <script src="js/intro.js?v=daily3-20261027"></script>
 </body>

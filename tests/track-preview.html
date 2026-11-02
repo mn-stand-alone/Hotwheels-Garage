@@ -3,8 +3,8 @@
 <h1>加长赛道验收 · 不消耗比赛次数</h1>
 <label>赛道<select id="track"><option value="sprint">滨海天际线 · 2900m</option><option value="fork">恐龙丛林 · 2500m</option><option value="loop">海上巨环 · 2600m</option></select></label>
 <label>视角<select id="camera"><option value="chase">赛车追身</option><option value="overview">路线全景</option></select></label><button id="play">自动行驶</button><label>位置<input id="position" type="range" min="0" max="2900" value="0" step="1"></label><div id="view"></div><pre id="status"></pre>
-<script src="../js/data.js"></script><script src="../js/battle-data.js?v=daily3-20261027"></script><script src="../js/battle-tracks.js?v=tracks-20261026"></script>
-<script src="../js/battle-ai.js?v=lookahead1-20261027"></script><script src="../js/battle-engine.js?v=daily3-20261027"></script>
+<script src="../js/data.js"></script><script src="../js/battle-data.js?v=ratings5-20261102"></script><script src="../js/battle-tracks.js?v=ratings5-20261102"></script>
+<script src="../js/battle-ai.js?v=tier-cap-20261102"></script><script src="../js/battle-engine.js?v=handling6-20261102"></script>
 <script type="module">
 import {BattleScene} from '../js/battle-scene.js?v=tracks-20261026';
 const $=id=>document.getElementById(id),scene=new BattleScene($('view'),()=>{},()=>{});scene.quality(true);
