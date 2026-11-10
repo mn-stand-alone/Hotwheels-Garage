@@ -1,4 +1,4 @@
-# 犇犇的车库
+# Hotwheels Garage
 
 原生 HTML / CSS / JavaScript 的车辆收藏游戏，包含自动驾驶的 3D 人机对战。
 
@@ -80,3 +80,9 @@ Three.js 0.180.0 使用 MIT 许可；完整许可位于 `vendor/three/LICENSE`�
 ### 2026-11-02 属性规则更新
 
 五项属性为速度、加速、操控、氮气、重量，每项 60–100；普通/稀有/史诗/传说总分分别为 360/390/420/450。双方按各自氮气属性计算持续 2–2.5 秒、恢复 2–1.5 秒。全部地图启用碰撞，AI 预判 0.5 秒。未完成的旧比赛恢复时迁移为新规则，不重复扣次。刷新已打开的页面以加载新版脚本。
+
+## GitHub Pages 发布
+
+仓库建议命名 `Hotwheels-Garage`。在 Settings → Pages → Build and deployment 中选择 GitHub Actions。推送 main 后，Publish Hotwheels Garage 工作流发布游戏。发布包只包含游戏页面与运行资源，不包含测试页、本地工具或根目录原始音频素材。
+
+线上存档按浏览器和网址单独保存。迁移本地进度时，先在本地首页导出 JSON，再到线上首页导入。

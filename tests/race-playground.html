@@ -41,6 +41,6 @@
 // This page uses only ephemeral memory. Never write test races to localStorage.
 (()=>{const original=Store;let state={owned:Object.fromEntries(CARDS.map(c=>[c.id,1])),favorites:CARDS.map(c=>c.id)};
 window.Store={...original,state:()=>JSON.parse(JSON.stringify(state)),update:fn=>fn(state),isOwned:id=>Boolean(state.owned[id]),isFavorite:id=>Boolean(state.owned[id]),favoriteCards:()=>CARDS,remaining:()=>10,ownedCount:()=>CARDS.length,persistent:()=>true};})();
-</script><script src="js/battle-data.js?v=ratings5-20261102"></script><script src="js/battle-tracks.js?v=ratings5-20261102"></script><script src="js/battle-ai.js?v=tier-cap-20261102"></script><script src="js/battle-engine.js?v=handling6-20261102"></script><script src="js/battle-store.js?v=ratings5-20261102"></script>
-<script src="js/battle-entry.js?v=handling6-20261102"></script>
+</script><script src="js/battle-data.js?v=ratings5-20261102"></script><script src="js/battle-tracks.js?v=ratings5-20261102"></script><script src="js/battle-ai.js?v=ai-minus2-20261104"></script><script src="js/battle-engine.js?v=ai-minus2-20261104"></script><script src="js/battle-store.js?v=ratings5-20261102"></script>
+<script src="js/battle-entry.js?v=ai-minus2-20261104"></script>
 </body></html>

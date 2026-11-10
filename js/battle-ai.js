@@ -2,7 +2,8 @@
   const CHARGES=9;
   const styles=['积极加速','出弯冲刺'];
   // Shared player/AI nitro timing, quantized to 60 Hz.
-  const cooldown=profile=>Math.round((2-(Math.max(60,Math.min(100,profile.stats[3]))-60)*.0125)*60);
+  const cooldown=profile=>Math.round((2-(Math.max(50,Math.min(100,profile.stats[3]))-60)*.0125)*60);
+  const weaken=p=>({...p,stats:p.stats.map(v=>v+(p.aiPenalty===10?10:p.aiPenalty===3?3:p.aiPenalty===2?2:0)-2),aiPenalty:2});
   const estimates=new Map(),matches=new Map();
   const modelKeys=new Map((window.CARDS||[]).map(c=>[c.id,(c.nameEn||c.cardName||c.id).trim().toLowerCase()]));
   const modelKey=p=>modelKeys.get(p.id)||p.name;
@@ -24,7 +25,7 @@
     const first=candidates[0],pool=candidates.filter(c=>c!==first);
     // Prefer a different performance archetype while keeping predicted pace within 3%.
     const second=pool.find(c=>c.p.type!==first.p.type&&Math.abs(c.time-target)/target<=.03)||pool.find(c=>c.p.shape!==first.p.shape&&Math.abs(c.time-target)/target<=.03)||pool[0];
-    const result=[first.p,second.p];matches.set(key,result);return result;
+    const result=[first.p,second.p].map(weaken);matches.set(key,result);return result;
   }
   function forecast(race,car,index){
     const horizon=.5,speed=Math.max(18,car.speed),length=BattleTracks.tracks[race.track].length;
@@ -84,5 +85,5 @@
     const hash=(Math.imul(race.seed^race.tick,index===1?1664525:1013904223)>>>0);
     a.fireAt=race.tick+9+(hash%16);a.reason=reason;return false;
   }
-  window.BattleAI={CHARGES,nitro,cooldown,estimate,match,forecast,styles};
+  window.BattleAI={weaken,CHARGES,nitro,cooldown,estimate,match,forecast,styles};
 })();

@@ -6,3 +6,6 @@ test-results/
 # Python generated files
 __pycache__/
 *.py[cod]
+
+# Generated GitHub Pages artifact
+_site/

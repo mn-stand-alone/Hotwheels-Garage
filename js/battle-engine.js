@@ -1,7 +1,7 @@
 (function () {
   const DT = 1 / 60, MAX = 9000, BOOST = 150, COOLDOWN = 75;
-  const duration=p=>Math.round((2+(Math.max(60,Math.min(100,p.stats[3]))-60)*.0125)*60);
-  function upgrade(r){
+  const duration=p=>Math.round((2+(Math.max(50,Math.min(100,p.stats[3]))-60)*.0125)*60);
+  function upgradePrevious(r){
     if(r.version>=6)return r;
     if(r.version===5){r.version=6;return r;}
     for(const [i,c] of r.cars.entries()){
@@ -12,9 +12,20 @@
       c.nitro=i?0:2;if(i)c.ai={nextThink:r.tick,fireAt:null,reason:''};
     }r.version=6;return r;
   }
+  function upgrade(r){
+    if(r.version>=9)return r;
+    upgradePrevious(r);
+    for(const c of r.cars.slice(1)){
+      const oldDuration=duration(c.profile),oldCooldown=BattleAI.cooldown(c.profile);
+      c.profile=BattleAI.weaken(c.profile);
+      c.boost=Math.round(c.boost/oldDuration*duration(c.profile));
+      c.cooldown=Math.round(c.cooldown/oldCooldown*BattleAI.cooldown(c.profile));
+    }
+    r.version=9;return r;
+  }
   function create(track, profiles, seed, id) {
-    return { version: 6, id, track, seed: seed >>> 0, tick: 0, status: 'running', inputs: [], events: [],
-      cars: profiles.map((p,i) => ({ profile: JSON.parse(JSON.stringify(p)), s: 0, prevS: 0, speed: 0, lane: [-3.5, 0, 3.5][i], prevLane: [-3.5,0,3.5][i], nitro: i ? 0 : 2, ai: i ? { nextThink: 0, fireAt: null, reason: '' } : null, boost: 0, cooldown:0, finish: null, hitUntil: 0, hits: 0 })), contacts: {} };
+    return { version: 9, id, track, seed: seed >>> 0, tick: 0, status: 'running', inputs: [], events: [],
+      cars: profiles.map((p,i) => ({ profile: JSON.parse(JSON.stringify(i?BattleAI.weaken(p):p)), s: 0, prevS: 0, speed: 0, lane: [-3.5, 0, 3.5][i], prevLane: [-3.5,0,3.5][i], nitro: i ? 0 : 2, ai: i ? { nextThink: 0, fireAt: null, reason: '' } : null, boost: 0, cooldown:0, finish: null, hitUntil: 0, hits: 0 })), contacts: {} };
   }
   function boost(r, i = 0) {
     upgrade(r);
@@ -81,10 +92,10 @@
     return result;
   }
   function valid(r) {
-    return r && [1,2,3,4,5,6].includes(r.version) && typeof r.id==='string' && r.id.length<100 && BattleTracks.tracks[r.track] && Number.isInteger(r.seed) &&
+    return r && [1,2,3,4,5,6,7,8,9].includes(r.version) && typeof r.id==='string' && r.id.length<100 && BattleTracks.tracks[r.track] && Number.isInteger(r.seed) &&
       Number.isInteger(r.tick) && r.tick>=0 && r.tick<=MAX && ['running','finished','abandoned'].includes(r.status) &&
       Array.isArray(r.cars) && r.cars.length===3 && r.cars.every((c,i)=> c && c.profile && typeof c.profile.name==='string' && typeof c.profile.id==='string' && BattleData.templates[c.profile.type] &&
-        Array.isArray(c.profile.stats) && c.profile.stats.length===5 && c.profile.stats.every(v=>Number.isFinite(v)&&v>=(r.version>=5?60:0)&&v<=100) &&
+        Array.isArray(c.profile.stats) && c.profile.stats.length===5 && c.profile.stats.every(v=>Number.isFinite(v)&&v>=(r.version>=9&&i?58:r.version>=8&&i?57:r.version>=7&&i?50:r.version>=5?60:0)&&v<=100) &&
         ['s','prevS','speed','lane','prevLane','hitUntil','hits'].every(k=>Number.isFinite(c[k])) && c.s>=0 && c.s<=BattleTracks.tracks[r.track].length && c.speed>=0 && c.speed<=120 && Math.abs(c.lane)<=5 &&
         (r.version===1||Number.isInteger(c.cooldown)&&c.cooldown>=0&&c.cooldown<=(r.version>=5?BattleAI.cooldown(c.profile):i&&r.version>=3?Math.round((1+c.profile.stats[2]*.025)*60):COOLDOWN)) &&
         Number.isInteger(c.nitro)&&c.nitro>=0&&c.nitro<=(i&&r.version>=4?0:i&&r.version>=3?BattleAI.CHARGES:2) && Number.isInteger(c.boost)&&c.boost>=0&&c.boost<=(r.version>=5?duration(c.profile):BOOST) && (r.version<3||i===0||c.ai&&Number.isInteger(c.ai.nextThink)&&c.ai.nextThink>=0&&c.ai.nextThink<=MAX+60&&(c.ai.fireAt===null||Number.isInteger(c.ai.fireAt)&&c.ai.fireAt>=0&&c.ai.fireAt<=MAX+60)&&typeof c.ai.reason==='string'&&c.ai.reason.length<80) && (c.finish===null || Number.isInteger(c.finish)&&c.finish>=0&&c.finish<=150000)) &&

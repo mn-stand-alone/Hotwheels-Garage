@@ -9,7 +9,7 @@
     document.getElementById('start').textContent='请先使用 start-game.cmd 启动';
     return;
   }
-  const script=document.createElement('script');script.type='module';script.src='js/battle.js?v=handling6-20261102';
+  const script=document.createElement('script');script.type='module';script.src='js/battle.js?v=ai-minus2-20261104';
   script.onerror=()=>{
     document.getElementById('overlayTitle').textContent='比赛程序加载失败';
     document.getElementById('overlayText').textContent='请确认本地启动窗口仍在运行，然后刷新页面。';

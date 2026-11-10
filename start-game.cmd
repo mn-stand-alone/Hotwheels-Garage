@@ -5,7 +5,13 @@ cd /d "%~dp0"
 title 犇犇的车库 - 游戏启动器
 if not exist "tools\serve-game.py" goto missing
 if not exist "index.html" goto missing
-if not exist "js\battle-engine.js" goto missing
+for %%F in ("battle.html" "js\battle-engine.js" "js\battle-ai.js" "js\battle-data.js" "js\battle-store.js" "js\battle-scene.js" "vendor\three\three.module.js") do (
+  if not exist "%%~F" (
+    echo 缺少游戏文件：%%~F
+    goto missing
+  )
+)
+echo 当前版本：AI 全属性减 2，档次不高于玩家；每日三个场景各一次。
 
 py -3 -c "import sys; sys.exit(sys.version_info.major != 3)" >nul 2>nul
 if not errorlevel 1 goto pythonlauncher

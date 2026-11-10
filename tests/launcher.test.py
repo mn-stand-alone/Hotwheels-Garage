@@ -31,7 +31,10 @@ class LauncherTests(unittest.TestCase):
                 self.assertIn('js/intro.js', response.read().decode('utf-8'))
             with urllib.request.urlopen(origin + '/js/battle-ai.js') as response:
                 self.assertEqual(response.headers.get('Cache-Control'), 'no-cache')
-                self.assertIn('const horizon=.5,', response.read().decode('utf-8-sig'))
+                code = response.read().decode('utf-8-sig')
+                self.assertIn('const horizon=.5,', code)
+                self.assertIn('aiPenalty:2', code)
+                self.assertIn('tier(p)<=tier(player)', code)
         finally:
             server.shutdown()
             server.server_close()
