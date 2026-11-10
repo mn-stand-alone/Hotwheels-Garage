@@ -2,6 +2,14 @@
 
 原生 HTML / CSS / JavaScript 的车辆收藏游戏，包含自动驾驶的 3D 人机对战。
 
+## 20 秒宣发视频
+
+[![Hotwheels Garage 宣发视频封面](media/promo/Hotwheels-Garage-Cover.jpg)](https://mn-stand-alone.github.io/Hotwheels-Garage/media/promo/)
+
+[▶ 在线观看](https://mn-stand-alone.github.io/Hotwheels-Garage/media/promo/) · [下载 MP4](https://mn-stand-alone.github.io/Hotwheels-Garage/media/promo/Hotwheels-Garage-Promo-20s.mp4) · [中英字幕](media/promo/Hotwheels-Garage-中英字幕.srt)
+
+20 秒，1080p / 30 fps，中英双语字幕，展示车辆收藏、三条赛道与氮气加速。
+
 ## 本地运行
 
 推荐双击项目目录的 `start-game.cmd`，它会启动本地服务并优先用 Chrome 播放完整片头，点击进入后打开首页。游玩时保持启动窗口开启；首次运行需要安装 Python 3。启动器自动检测 `py -3` / `python`；HTML、JavaScript 与 CSS 请求会重新验证缓存，以便加载更新。更新启动器后，如旧服务窗口仍在运行，请关闭旧窗口再重新启动。

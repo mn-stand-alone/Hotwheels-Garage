@@ -22,7 +22,7 @@ jobs:
         run: |
           mkdir -p _site
           cp index.html home.html draw.html garage.html battle.html _site/
-          cp -R assets css fonts images js thumbs vendor _site/
+          cp -R assets css fonts images js thumbs vendor media _site/
           touch _site/.nojekyll
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
